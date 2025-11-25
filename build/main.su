@@ -1,0 +1,12 @@
+main.c:53:6:button_init	0	static
+main.c:58:5:button_pressed	8	static
+main.c:70:6:led_init	24	static
+main.c:78:6:led_on	0	static
+main.c:82:6:led_off	0	static
+main.c:86:6:led_toggle	0	static
+main.c:90:6:all_leds_off	16	static
+main.c:94:6:all_leds_on	16	static
+main.c:98:6:fade_led	32	static
+main.c:122:6:heartbeat_pattern	16	static
+main.c:136:6:snake_pattern	72	static
+main.c:171:5:main	24	static

@@ -1,0 +1,523 @@
+
+;; Function gpio_init_output (gpio_init_output, funcdef_no=134, decl_uid=7352, cgraph_uid=135, symbol_order=134)
+
+Partition 0: size 12 align 4
+	gpio_cfg
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 23.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:SI 115 [ port ])
+        (reg:SI 0 r0 [ port ])) "gpio.c":14:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 116 [ pin ])
+        (reg:SI 1 r1 [ pin ])) "gpio.c":14:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "gpio.c":15:5 -1
+     (nil))
+(debug_insn 8 7 9 2 (debug_marker) "gpio.c":17:5 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 gpio_cfg.port+0 S4 A32])
+        (reg/v/f:SI 115 [ port ])) "gpio.c":17:19 -1
+     (nil))
+(debug_insn 10 9 11 2 (debug_marker) "gpio.c":18:5 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 gpio_cfg.mask+0 S4 A32])
+        (reg/v:SI 116 [ pin ])) "gpio.c":18:19 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "gpio.c":19:5 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "gpio.c":20:5 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "gpio.c":21:5 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "gpio.c":22:5 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 117)
+        (const_int 1 [0x1])) "gpio.c":20:19 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 MEM <vector(4) unsigned char> [(<unnamed type> *)&gpio_cfg + 8B]+0 S4 A32])
+        (reg:SI 117)) "gpio.c":20:19 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "gpio.c":24:5 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 118)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -12 [0xfffffffffffffff4]))) "gpio.c":24:12 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 0 r0)
+        (reg:SI 118)) "gpio.c":24:12 -1
+     (nil))
+(call_insn 21 20 22 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("MXC_GPIO_Config") [flags 0x41]  <function_decl 00000188b7620100 MXC_GPIO_Config>) [0 MXC_GPIO_Config S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "gpio.c":24:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_Config") [flags 0x41]  <function_decl 00000188b7620100 MXC_GPIO_Config>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 22 21 26 2 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "gpio.c":24:12 -1
+     (nil))
+(insn 26 22 27 2 (set (reg/i:SI 0 r0)
+        (reg:SI 114 [ <retval> ])) "gpio.c":25:1 -1
+     (nil))
+(insn 27 26 0 2 (use (reg/i:SI 0 r0)) "gpio.c":25:1 -1
+     (nil))
+
+;; Function gpio_init_input (gpio_init_input, funcdef_no=135, decl_uid=7355, cgraph_uid=136, symbol_order=135)
+
+Partition 0: size 12 align 4
+	gpio_cfg
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 23.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:SI 115 [ port ])
+        (reg:SI 0 r0 [ port ])) "gpio.c":28:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 116 [ pin ])
+        (reg:SI 1 r1 [ pin ])) "gpio.c":28:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "gpio.c":29:5 -1
+     (nil))
+(debug_insn 8 7 9 2 (debug_marker) "gpio.c":31:5 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 gpio_cfg.port+0 S4 A32])
+        (reg/v/f:SI 115 [ port ])) "gpio.c":31:19 -1
+     (nil))
+(debug_insn 10 9 11 2 (debug_marker) "gpio.c":32:5 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 gpio_cfg.mask+0 S4 A32])
+        (reg/v:SI 116 [ pin ])) "gpio.c":32:19 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "gpio.c":33:5 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "gpio.c":34:5 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "gpio.c":35:5 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "gpio.c":36:5 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 117)
+        (const_int 0 [0])) "gpio.c":34:19 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 MEM <vector(4) unsigned char> [(<unnamed type> *)&gpio_cfg + 8B]+0 S4 A32])
+        (reg:SI 117)) "gpio.c":34:19 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "gpio.c":38:5 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 118)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -12 [0xfffffffffffffff4]))) "gpio.c":38:12 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 0 r0)
+        (reg:SI 118)) "gpio.c":38:12 -1
+     (nil))
+(call_insn 21 20 22 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("MXC_GPIO_Config") [flags 0x41]  <function_decl 00000188b7620100 MXC_GPIO_Config>) [0 MXC_GPIO_Config S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "gpio.c":38:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_Config") [flags 0x41]  <function_decl 00000188b7620100 MXC_GPIO_Config>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 22 21 26 2 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "gpio.c":38:12 -1
+     (nil))
+(insn 26 22 27 2 (set (reg/i:SI 0 r0)
+        (reg:SI 114 [ <retval> ])) "gpio.c":39:1 -1
+     (nil))
+(insn 27 26 0 2 (use (reg/i:SI 0 r0)) "gpio.c":39:1 -1
+     (nil))
+
+;; Function gpio_set (gpio_set, funcdef_no=136, decl_uid=7358, cgraph_uid=137, symbol_order=136)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:SI 114 [ port ])
+        (reg:SI 0 r0 [ port ])) "gpio.c":42:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 115 [ pin ])
+        (reg:SI 1 r1 [ pin ])) "gpio.c":42:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "gpio.c":43:5 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 r1)
+        (reg/v:SI 115 [ pin ])) "gpio.c":43:5 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 0 r0)
+        (reg/v/f:SI 114 [ port ])) "gpio.c":43:5 -1
+     (nil))
+(call_insn/j 10 9 11 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("MXC_GPIO_OutSet") [flags 0x41]  <function_decl 00000188b7620300 MXC_GPIO_OutSet>) [0 MXC_GPIO_OutSet S4 A32])
+                (const_int 0 [0]))
+            (return)
+            (use (const_int 0 [0]))
+        ]) "gpio.c":43:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_OutSet") [flags 0x41]  <function_decl 00000188b7620300 MXC_GPIO_OutSet>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(barrier 11 10 0)
+
+;; Function gpio_clear (gpio_clear, funcdef_no=137, decl_uid=7361, cgraph_uid=138, symbol_order=137)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:SI 114 [ port ])
+        (reg:SI 0 r0 [ port ])) "gpio.c":47:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 115 [ pin ])
+        (reg:SI 1 r1 [ pin ])) "gpio.c":47:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "gpio.c":48:5 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 r1)
+        (reg/v:SI 115 [ pin ])) "gpio.c":48:5 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 0 r0)
+        (reg/v/f:SI 114 [ port ])) "gpio.c":48:5 -1
+     (nil))
+(call_insn/j 10 9 11 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("MXC_GPIO_OutClr") [flags 0x41]  <function_decl 00000188b7620400 MXC_GPIO_OutClr>) [0 MXC_GPIO_OutClr S4 A32])
+                (const_int 0 [0]))
+            (return)
+            (use (const_int 0 [0]))
+        ]) "gpio.c":48:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_OutClr") [flags 0x41]  <function_decl 00000188b7620400 MXC_GPIO_OutClr>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(barrier 11 10 0)
+
+;; Function gpio_toggle (gpio_toggle, funcdef_no=138, decl_uid=7364, cgraph_uid=139, symbol_order=138)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:SI 114 [ port ])
+        (reg:SI 0 r0 [ port ])) "gpio.c":52:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 115 [ pin ])
+        (reg:SI 1 r1 [ pin ])) "gpio.c":52:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "gpio.c":53:5 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 r1)
+        (reg/v:SI 115 [ pin ])) "gpio.c":53:5 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 0 r0)
+        (reg/v/f:SI 114 [ port ])) "gpio.c":53:5 -1
+     (nil))
+(call_insn/j 10 9 11 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("MXC_GPIO_OutToggle") [flags 0x41]  <function_decl 00000188b7620700 MXC_GPIO_OutToggle>) [0 MXC_GPIO_OutToggle S4 A32])
+                (const_int 0 [0]))
+            (return)
+            (use (const_int 0 [0]))
+        ]) "gpio.c":53:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_OutToggle") [flags 0x41]  <function_decl 00000188b7620700 MXC_GPIO_OutToggle>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(barrier 11 10 0)
+
+;; Function gpio_write (gpio_write, funcdef_no=139, decl_uid=7368, cgraph_uid=140, symbol_order=139)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+deleting block 7
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg/v/f:SI 114 [ port ])
+        (reg:SI 0 r0 [ port ])) "gpio.c":57:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 115 [ pin ])
+        (reg:SI 1 r1 [ pin ])) "gpio.c":57:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 116 [ state ])
+        (reg:SI 2 r2 [ state ])) "gpio.c":57:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 8 5 9 2 (debug_marker) "gpio.c":58:5 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 116 [ state ])
+            (const_int 1 [0x1]))) "gpio.c":58:8 -1
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 17)
+            (pc))) "gpio.c":58:8 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 17)
+(note 11 10 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 12 11 13 4 (debug_marker) "gpio.c":59:9 -1
+     (nil))
+(insn 13 12 14 4 (set (reg:SI 1 r1)
+        (reg/v:SI 115 [ pin ])) "gpio.c":59:9 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:SI 0 r0)
+        (reg/v/f:SI 114 [ port ])) "gpio.c":59:9 -1
+     (nil))
+(call_insn/j 15 14 16 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("MXC_GPIO_OutSet") [flags 0x41]  <function_decl 00000188b7620300 MXC_GPIO_OutSet>) [0 MXC_GPIO_OutSet S4 A32])
+                (const_int 0 [0]))
+            (return)
+            (use (const_int 0 [0]))
+        ]) "gpio.c":59:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_OutSet") [flags 0x41]  <function_decl 00000188b7620300 MXC_GPIO_OutSet>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(barrier 16 15 17)
+(code_label 17 16 18 5 10 (nil) [1 uses])
+(note 18 17 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 19 18 20 5 (debug_marker) "gpio.c":61:9 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:SI 1 r1)
+        (reg/v:SI 115 [ pin ])) "gpio.c":61:9 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:SI 0 r0)
+        (reg/v/f:SI 114 [ port ])) "gpio.c":61:9 -1
+     (nil))
+(call_insn/j 22 21 23 5 (parallel [
+            (call (mem:SI (symbol_ref:SI ("MXC_GPIO_OutClr") [flags 0x41]  <function_decl 00000188b7620400 MXC_GPIO_OutClr>) [0 MXC_GPIO_OutClr S4 A32])
+                (const_int 0 [0]))
+            (return)
+            (use (const_int 0 [0]))
+        ]) "gpio.c":61:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_OutClr") [flags 0x41]  <function_decl 00000188b7620400 MXC_GPIO_OutClr>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(barrier 23 22 0)
+
+;; Function gpio_read (gpio_read, funcdef_no=140, decl_uid=7371, cgraph_uid=141, symbol_order=140)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 17.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:SI 117 [ port ])
+        (reg:SI 0 r0 [ port ])) "gpio.c":66:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 118 [ pin ])
+        (reg:SI 1 r1 [ pin ])) "gpio.c":66:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "gpio.c":67:5 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 r1)
+        (reg/v:SI 118 [ pin ])) "gpio.c":67:13 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 0 r0)
+        (reg/v/f:SI 117 [ port ])) "gpio.c":67:13 -1
+     (nil))
+(call_insn 10 9 11 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("MXC_GPIO_InGet") [flags 0x41]  <function_decl 00000188b7620200 MXC_GPIO_InGet>) [0 MXC_GPIO_InGet S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "gpio.c":67:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_InGet") [flags 0x41]  <function_decl 00000188b7620200 MXC_GPIO_InGet>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 11 10 12 2 (set (reg:SI 114 [ _1 ])
+        (reg:SI 0 r0)) "gpio.c":67:13 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 0 [0]))) "gpio.c":67:47 discrim 1 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 120)
+        (ne:SI (reg:CC 100 cc)
+            (const_int 0 [0]))) "gpio.c":67:47 discrim 1 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:QI 119 [ _2 ])
+        (subreg:QI (reg:SI 120) 0)) "gpio.c":67:47 discrim 1 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 121)
+        (zero_extend:SI (reg:QI 119 [ _2 ]))) "gpio.c":67:47 discrim 1 -1
+     (nil))
+(insn 16 15 20 2 (set (reg:SI 116 [ <retval> ])
+        (reg:SI 121)) "gpio.c":67:47 discrim 1 -1
+     (nil))
+(insn 20 16 21 2 (set (reg/i:SI 0 r0)
+        (reg:SI 116 [ <retval> ])) "gpio.c":68:1 -1
+     (nil))
+(insn 21 20 0 2 (use (reg/i:SI 0 r0)) "gpio.c":68:1 -1
+     (nil))

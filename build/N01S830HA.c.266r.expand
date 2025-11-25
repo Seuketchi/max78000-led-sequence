@@ -1,0 +1,2039 @@
+
+;; Function N01S830HA_enter_quadmode (N01S830HA_enter_quadmode, funcdef_no=144, decl_uid=8867, cgraph_uid=145, symbol_order=150)
+
+Partition 0: size 1 align 1
+	tx_data
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->8 redirected to 9
+Edge 4->8 redirected to 9
+Forwarding edge 5->6 to 9 failed.
+Redirecting jump 42 from 8 to 9.
+Redirecting jump 54 from 6 to 9.
+deleting block 8
+Removing jump 54.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 5->6 to 9 failed.
+Deleted label in block 6.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 5 2 6 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":119:5 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 115)
+        (const_int 56 [0x38])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":119:13 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:QI 116)
+        (subreg:QI (reg:SI 115) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":119:13 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [0 tx_data+0 S1 A8])
+        (reg:QI 116)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":119:13 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":121:5 -1
+     (nil))
+(call_insn 10 9 11 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_exit_quadmode") [flags 0x41]  <function_decl 000001a78d268800 spi_exit_quadmode>) [0 spi_exit_quadmode S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":121:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_exit_quadmode") [flags 0x41]  <function_decl 000001a78d268800 spi_exit_quadmode>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 11 10 12 2 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":121:5 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 117)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":121:5 discrim 1 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/c:SI (reg/f:SI 117) [1 _g_err+0 S4 A32])
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":121:5 discrim 1 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":121:5 discrim 1 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 60)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":121:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 60)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 17 16 18 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":121:35 -1
+     (nil))
+(debug_insn 18 17 19 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:SI 118)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -1 [0xffffffffffffffff]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:SI 119)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (nil))
+(insn 21 20 22 4 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 119)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (nil))
+(insn 24 23 25 4 (set (reg:SI 1 r1)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:SI 0 r0)
+        (reg:SI 118)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (nil))
+(call_insn 26 25 27 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 27 26 28 4 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 -1
+     (nil))
+(insn 28 27 29 4 (set (reg/f:SI 120)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 discrim 1 -1
+     (nil))
+(insn 29 28 30 4 (set (mem/c:SI (reg/f:SI 120) [1 _g_err+0 S4 A32])
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 discrim 1 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 discrim 1 -1
+     (nil))
+(jump_insn 31 30 32 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 60)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 60)
+(note 32 31 33 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 33 32 34 5 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":122:56 -1
+     (nil))
+(debug_insn 34 33 35 5 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":123:5 -1
+     (nil))
+(call_insn 35 34 36 5 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_enter_quadmode") [flags 0x41]  <function_decl 000001a78d268900 spi_enter_quadmode>) [0 spi_enter_quadmode S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":123:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_enter_quadmode") [flags 0x41]  <function_decl 000001a78d268900 spi_enter_quadmode>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 36 35 37 5 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":123:5 -1
+     (nil))
+(insn 37 36 38 5 (set (reg/f:SI 121)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":123:5 discrim 1 -1
+     (nil))
+(insn 38 37 39 5 (set (mem/c:SI (reg/f:SI 121) [1 _g_err+0 S4 A32])
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":123:5 discrim 1 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":123:5 discrim 1 -1
+     (nil))
+(jump_insn 40 39 41 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":123:5 discrim 1 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 44)
+(note 41 40 42 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 42 41 43 6 (set (pc)
+        (label_ref:SI 60)) 288 {*arm_jump}
+     (nil)
+ -> 60)
+(barrier 43 42 44)
+(code_label 44 43 45 7 3 (nil) [1 uses])
+(note 45 44 46 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 46 45 47 7 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":123:36 -1
+     (nil))
+(debug_insn 47 46 48 7 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":125:5 -1
+     (nil))
+(insn 48 47 49 7 (set (reg/f:SI 122)
+        (symbol_ref:SI ("g_current_mode") [flags 0x2]  <var_decl 000001a78d24b6c0 g_current_mode>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":125:20 -1
+     (nil))
+(insn 49 48 50 7 (set (reg:SI 123)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":125:20 -1
+     (nil))
+(insn 50 49 51 7 (set (reg:QI 124)
+        (subreg:QI (reg:SI 123) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":125:20 -1
+     (nil))
+(insn 51 50 52 7 (set (mem/c:QI (reg/f:SI 122) [0 g_current_mode+0 S1 A8])
+        (reg:QI 124)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":125:20 -1
+     (nil))
+(debug_insn 52 51 60 7 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":127:5 -1
+     (nil))
+(code_label 60 52 63 9 1 (nil) [3 uses])
+(note 63 60 61 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 61 63 62 9 (set (reg/i:SI 0 r0)
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":128:1 -1
+     (nil))
+(insn 62 61 0 9 (use (reg/i:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":128:1 -1
+     (nil))
+
+;; Function N01S830HA_exit_quadmode (N01S830HA_exit_quadmode, funcdef_no=145, decl_uid=8869, cgraph_uid=146, symbol_order=151)
+
+Partition 0: size 1 align 1
+	tx_data
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->8 redirected to 9
+Edge 4->8 redirected to 9
+Edge 5->7 redirected to 9
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+Merging block 8 into block 6...
+Merged blocks 6 and 8.
+Merged 6 and 8 without moving.
+Removing jump 54.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 5 2 6 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":132:5 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 115)
+        (const_int 255 [0xff])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":132:13 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:QI 116)
+        (subreg:QI (reg:SI 115) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":132:13 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [0 tx_data+0 S1 A8])
+        (reg:QI 116)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":132:13 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":134:5 -1
+     (nil))
+(call_insn 10 9 11 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_enter_quadmode") [flags 0x41]  <function_decl 000001a78d268900 spi_enter_quadmode>) [0 spi_enter_quadmode S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":134:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_enter_quadmode") [flags 0x41]  <function_decl 000001a78d268900 spi_enter_quadmode>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 11 10 12 2 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":134:5 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 117)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":134:5 discrim 1 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/c:SI (reg/f:SI 117) [1 _g_err+0 S4 A32])
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":134:5 discrim 1 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":134:5 discrim 1 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 56)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":134:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 56)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 17 16 18 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":134:36 -1
+     (nil))
+(debug_insn 18 17 19 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:SI 118)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -1 [0xffffffffffffffff]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:SI 119)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (nil))
+(insn 21 20 22 4 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 119)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (nil))
+(insn 24 23 25 4 (set (reg:SI 1 r1)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:SI 0 r0)
+        (reg:SI 118)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (nil))
+(call_insn 26 25 27 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 27 26 28 4 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 -1
+     (nil))
+(insn 28 27 29 4 (set (reg/f:SI 120)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 discrim 1 -1
+     (nil))
+(insn 29 28 30 4 (set (mem/c:SI (reg/f:SI 120) [1 _g_err+0 S4 A32])
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 discrim 1 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 discrim 1 -1
+     (nil))
+(jump_insn 31 30 32 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 56)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 56)
+(note 32 31 33 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 33 32 34 5 (debug_marker:BLK) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":130:5 -1
+     (nil))
+(debug_insn 34 33 35 5 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":135:56 -1
+     (nil))
+(debug_insn 35 34 36 5 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":136:5 -1
+     (nil))
+(call_insn 36 35 37 5 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_exit_quadmode") [flags 0x41]  <function_decl 000001a78d268800 spi_exit_quadmode>) [0 spi_exit_quadmode S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":136:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_exit_quadmode") [flags 0x41]  <function_decl 000001a78d268800 spi_exit_quadmode>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 37 36 38 5 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":136:5 -1
+     (nil))
+(insn 38 37 39 5 (set (reg/f:SI 121)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":136:5 discrim 1 -1
+     (nil))
+(insn 39 38 40 5 (set (mem/c:SI (reg/f:SI 121) [1 _g_err+0 S4 A32])
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":136:5 discrim 1 -1
+     (nil))
+(insn 40 39 41 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":136:5 discrim 1 -1
+     (nil))
+(jump_insn 41 40 42 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 56)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":136:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 56)
+(note 42 41 43 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 43 42 44 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":136:35 -1
+     (nil))
+(debug_insn 44 43 45 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":138:5 -1
+     (nil))
+(insn 45 44 46 6 (set (reg/f:SI 122)
+        (symbol_ref:SI ("g_current_mode") [flags 0x2]  <var_decl 000001a78d24b6c0 g_current_mode>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":138:20 -1
+     (nil))
+(insn 46 45 47 6 (set (reg:SI 123)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":138:20 -1
+     (nil))
+(insn 47 46 48 6 (set (reg:QI 124)
+        (subreg:QI (reg:SI 123) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":138:20 -1
+     (nil))
+(insn 48 47 49 6 (set (mem/c:QI (reg/f:SI 122) [0 g_current_mode+0 S1 A8])
+        (reg:QI 124)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":138:20 -1
+     (nil))
+(debug_insn 49 48 56 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":140:5 -1
+     (nil))
+(code_label 56 49 59 9 10 (nil) [3 uses])
+(note 59 56 57 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 57 59 58 9 (set (reg/i:SI 0 r0)
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":141:1 -1
+     (nil))
+(insn 58 57 0 9 (use (reg/i:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":141:1 -1
+     (nil))
+
+;; Function N01S830HA_read (N01S830HA_read, funcdef_no=146, decl_uid=8873, cgraph_uid=147, symbol_order=152)
+
+Partition 1: size 5 align 4
+	header	header
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 6->7 to 11 failed.
+Edge 6->8 redirected to 9
+Forwarding edge 6->7 to 11 failed.
+Redirecting jump 102 from 10 to 11.
+deleting block 8
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+Removing jump 120.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 6->7 to 11 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg/v:SI 125 [ address ])
+        (reg:SI 0 r0 [ address ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":144:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:SI 126 [ out ])
+        (reg:SI 1 r1 [ out ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":144:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 127 [ len ])
+        (reg:SI 2 r2 [ len ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":144:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 8 5 9 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":158:5 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 128)
+        (symbol_ref:SI ("g_current_mode") [flags 0x2]  <var_decl 000001a78d24b6c0 g_current_mode>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":158:24 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 114 [ g_current_mode.22_1 ])
+        (zero_extend:SI (mem/c:QI (reg/f:SI 128) [0 g_current_mode+0 S1 A8]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":158:24 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ g_current_mode.22_1 ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":158:8 -1
+     (nil))
+(jump_insn 12 11 13 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 55)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":158:8 -1
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 55)
+(note 13 12 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 14 13 15 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":159:9 -1
+     (nil))
+(debug_insn 15 14 16 4 (var_location:QI cmd (const_int 3 [0x3])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":159:9 -1
+     (nil))
+(debug_insn 16 15 17 4 (var_location:SI address (reg/v:SI 125 [ address ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":159:9 -1
+     (nil))
+(debug_insn 17 16 18 4 (debug_marker:BLK) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":53:12 -1
+     (nil))
+(debug_insn 18 17 19 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":57:5 -1
+     (nil))
+(debug_insn 19 18 20 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 20 19 21 4 (var_location:QI cmd (const_int 3 [0x3])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 21 20 22 4 (var_location:SI address (reg/v:SI 125 [ address ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 22 21 23 4 (var_location:SI out (plus:SI (reg/f:SI 109 virtual-stack-vars)
+        (const_int -8 [0xfffffffffffffff8]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 23 22 24 4 (debug_marker:BLK) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":45:13 -1
+     (nil))
+(debug_insn 24 23 25 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:5 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:SI 129)
+        (const_int 3 [0x3])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:12 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:QI 130)
+        (subreg:QI (reg:SI 129) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:12 -1
+     (nil))
+(insn 27 26 28 4 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 MEM[(uint8_t *)_30]+0 S1 A64])
+        (reg:QI 130)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:12 -1
+     (nil))
+(debug_insn 28 27 29 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:5 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:SI 131 [ _27 ])
+        (lshiftrt:SI (reg/v:SI 125 [ address ])
+            (const_int 16 [0x10]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:23 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:QI 132)
+        (subreg:QI (reg:SI 131 [ _27 ]) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:12 -1
+     (nil))
+(insn 31 30 32 4 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -7 [0xfffffffffffffff9])) [0 MEM[(uint8_t *)_30 + 1B]+0 S1 A8])
+        (reg:QI 132)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:12 -1
+     (nil))
+(debug_insn 32 31 33 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":49:5 -1
+     (nil))
+(debug_insn 33 32 34 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":50:5 -1
+     (nil))
+(insn 34 33 35 4 (set (reg:HI 133 [ _61 ])
+        (bswap:HI (subreg:HI (reg/v:SI 125 [ address ]) 0))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":49:12 -1
+     (nil))
+(insn 35 34 36 4 (set (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -6 [0xfffffffffffffffa])) [0 MEM <unsigned short> [(uint8_t *)_30 + 2B]+0 S2 A16])
+        (reg:HI 133 [ _61 ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":49:12 -1
+     (nil))
+(debug_insn 36 35 37 4 (var_location:QI cmd (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 37 36 38 4 (var_location:SI address (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 38 37 39 4 (var_location:SI out (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 39 38 40 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:SI 134)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -8 [0xfffffffffffffff8]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 41 40 42 4 (set (reg:SI 135)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 42 41 43 4 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 135)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 43 42 44 4 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:SI 1 r1)
+        (const_int 4 [0x4])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:SI 0 r0)
+        (reg:SI 134)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(call_insn 47 46 48 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 48 47 49 4 (set (reg:SI 119 [ _32 ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 49 48 50 4 (set (reg/f:SI 136)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 discrim 1 -1
+     (nil))
+(insn 50 49 51 4 (set (mem/c:SI (reg/f:SI 136) [1 _g_err+0 S4 A32])
+        (reg:SI 119 [ _32 ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 discrim 1 -1
+     (nil))
+(debug_insn 51 50 52 4 (var_location:QI cmd (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":159:9 -1
+     (nil))
+(debug_insn 52 51 53 4 (var_location:SI address (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":159:9 -1
+     (nil))
+(jump_insn 53 52 54 4 (set (pc)
+        (label_ref 107)) -1
+     (nil)
+ -> 107)
+(barrier 54 53 55)
+(code_label 55 54 56 5 18 (nil) [1 uses])
+(note 56 55 57 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 57 56 58 5 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":160:12 -1
+     (nil))
+(insn 58 57 59 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ g_current_mode.22_1 ])
+            (const_int 1 [0x1]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":160:15 -1
+     (nil))
+(jump_insn 59 58 60 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 107)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":160:15 -1
+     (int_list:REG_BR_PROB 856416484 (nil))
+ -> 107)
+(note 60 59 61 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 61 60 62 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":162:9 -1
+     (nil))
+(debug_insn 62 61 63 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":163:9 -1
+     (nil))
+(insn 63 62 64 6 (set (reg:SI 137)
+        (const_int 255 [0xff])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":163:9 -1
+     (nil))
+(insn 64 63 65 6 (set (reg:QI 138)
+        (subreg:QI (reg:SI 137) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":163:9 -1
+     (nil))
+(insn 65 64 66 6 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 MEM <char> [(void *)_30 + 4B]+0 S1 A32])
+        (reg:QI 138)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":163:9 -1
+     (nil))
+(debug_insn 66 65 67 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":164:9 -1
+     (nil))
+(debug_insn 67 66 68 6 (var_location:QI cmd (const_int 3 [0x3])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":164:9 -1
+     (nil))
+(debug_insn 68 67 69 6 (var_location:SI address (reg/v:SI 125 [ address ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":164:9 -1
+     (nil))
+(debug_insn 69 68 70 6 (var_location:SI out (plus:SI (reg/f:SI 109 virtual-stack-vars)
+        (const_int -8 [0xfffffffffffffff8]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":164:9 -1
+     (nil))
+(debug_insn 70 69 71 6 (debug_marker:BLK) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":45:13 -1
+     (nil))
+(debug_insn 71 70 72 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:5 -1
+     (nil))
+(insn 72 71 73 6 (set (reg:SI 139)
+        (const_int 3 [0x3])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:12 -1
+     (nil))
+(insn 73 72 74 6 (set (reg:QI 140)
+        (subreg:QI (reg:SI 139) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:12 -1
+     (nil))
+(insn 74 73 75 6 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 MEM[(uint8_t *)_30]+0 S1 A64])
+        (reg:QI 140)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:12 -1
+     (nil))
+(debug_insn 75 74 76 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:5 -1
+     (nil))
+(insn 76 75 77 6 (set (reg:SI 141 [ _18 ])
+        (lshiftrt:SI (reg/v:SI 125 [ address ])
+            (const_int 16 [0x10]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:23 -1
+     (nil))
+(insn 77 76 78 6 (set (reg:QI 142)
+        (subreg:QI (reg:SI 141 [ _18 ]) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:12 -1
+     (nil))
+(insn 78 77 79 6 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -7 [0xfffffffffffffff9])) [0 MEM[(uint8_t *)_30 + 1B]+0 S1 A8])
+        (reg:QI 142)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:12 -1
+     (nil))
+(debug_insn 79 78 80 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":49:5 -1
+     (nil))
+(debug_insn 80 79 81 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":50:5 -1
+     (nil))
+(insn 81 80 82 6 (set (reg:HI 143 [ _59 ])
+        (bswap:HI (subreg:HI (reg/v:SI 125 [ address ]) 0))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":49:12 -1
+     (nil))
+(insn 82 81 83 6 (set (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -6 [0xfffffffffffffffa])) [0 MEM <unsigned short> [(uint8_t *)_30 + 2B]+0 S2 A16])
+        (reg:HI 143 [ _59 ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":49:12 -1
+     (nil))
+(debug_insn 83 82 84 6 (var_location:QI cmd (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":164:9 -1
+     (nil))
+(debug_insn 84 83 85 6 (var_location:SI address (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":164:9 -1
+     (nil))
+(debug_insn 85 84 86 6 (var_location:SI out (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":164:9 -1
+     (nil))
+(debug_insn 86 85 87 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (nil))
+(insn 87 86 88 6 (set (reg:SI 144)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -8 [0xfffffffffffffff8]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (nil))
+(insn 88 87 89 6 (set (reg:SI 145)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (nil))
+(insn 89 88 90 6 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 145)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (nil))
+(insn 90 89 91 6 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (nil))
+(insn 91 90 92 6 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (nil))
+(insn 92 91 93 6 (set (reg:SI 1 r1)
+        (const_int 5 [0x5])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (nil))
+(insn 93 92 94 6 (set (reg:SI 0 r0)
+        (reg:SI 144)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (nil))
+(call_insn 94 93 95 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 95 94 96 6 (set (reg:SI 124 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 -1
+     (nil))
+(insn 96 95 97 6 (set (reg/f:SI 146)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 discrim 1 -1
+     (nil))
+(insn 97 96 98 6 (set (mem/c:SI (reg/f:SI 146) [1 _g_err+0 S4 A32])
+        (reg:SI 124 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 discrim 1 -1
+     (nil))
+(insn 98 97 99 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 124 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 discrim 1 -1
+     (nil))
+(jump_insn 99 98 100 6 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 107)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 107)
+(note 100 99 101 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 101 100 102 7 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 discrim 1 -1
+     (nil))
+(jump_insn 102 101 103 7 (set (pc)
+        (label_ref:SI 122)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":165:9 discrim 2 288 {*arm_jump}
+     (nil)
+ -> 122)
+(barrier 103 102 107)
+(code_label 107 103 108 9 19 (nil) [3 uses])
+(note 108 107 109 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 109 108 110 9 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":169:5 -1
+     (nil))
+(insn 110 109 111 9 (set (reg:SI 147)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":169:12 -1
+     (nil))
+(insn 111 110 112 9 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 147)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":169:12 -1
+     (nil))
+(insn 112 111 113 9 (set (reg:SI 3 r3)
+        (reg/v:SI 127 [ len ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":169:12 -1
+     (nil))
+(insn 113 112 114 9 (set (reg:SI 2 r2)
+        (reg/v/f:SI 126 [ out ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":169:12 -1
+     (nil))
+(insn 114 113 115 9 (set (reg:SI 1 r1)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":169:12 -1
+     (nil))
+(insn 115 114 116 9 (set (reg:SI 0 r0)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":169:12 -1
+     (nil))
+(call_insn 116 115 117 9 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":169:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 117 116 122 9 (set (reg:SI 124 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":169:12 -1
+     (nil))
+(code_label 122 117 125 11 17 (nil) [1 uses])
+(note 125 122 123 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 123 125 124 11 (set (reg/i:SI 0 r0)
+        (reg:SI 124 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":170:1 -1
+     (nil))
+(insn 124 123 0 11 (use (reg/i:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":170:1 -1
+     (nil))
+
+;; Function N01S830HA_write (N01S830HA_write, funcdef_no=147, decl_uid=8877, cgraph_uid=148, symbol_order=153)
+
+Partition 0: size 4 align 4
+	header
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 56.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg/v:SI 120 [ address ])
+        (reg:SI 0 r0 [ address ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":173:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:SI 121 [ data ])
+        (reg:SI 1 r1 [ data ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":173:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 122 [ len ])
+        (reg:SI 2 r2 [ len ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":173:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 8 5 9 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":174:5 -1
+     (nil))
+(debug_insn 9 8 10 2 (var_location:QI cmd (const_int 2 [0x2])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":174:5 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:SI address (reg/v:SI 120 [ address ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":174:5 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker:BLK) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":53:12 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":57:5 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 14 13 15 2 (var_location:QI cmd (const_int 2 [0x2])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 15 14 16 2 (var_location:SI address (reg/v:SI 120 [ address ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 16 15 17 2 (var_location:SI out (plus:SI (reg/f:SI 109 virtual-stack-vars)
+        (const_int -4 [0xfffffffffffffffc]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 17 16 18 2 (debug_marker:BLK) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":45:13 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:5 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 123)
+        (const_int 2 [0x2])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:12 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:QI 124)
+        (subreg:QI (reg:SI 123) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:12 -1
+     (nil))
+(insn 21 20 22 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 MEM[(uint8_t *)&header]+0 S1 A32])
+        (reg:QI 124)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":47:12 -1
+     (nil))
+(debug_insn 22 21 23 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:5 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:SI 125 [ _8 ])
+        (lshiftrt:SI (reg/v:SI 120 [ address ])
+            (const_int 16 [0x10]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:23 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:QI 126)
+        (subreg:QI (reg:SI 125 [ _8 ]) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:12 -1
+     (nil))
+(insn 25 24 26 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -3 [0xfffffffffffffffd])) [0 MEM[(uint8_t *)&header + 1B]+0 S1 A8])
+        (reg:QI 126)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":48:12 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":49:5 -1
+     (nil))
+(debug_insn 27 26 28 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":50:5 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:HI 127 [ _30 ])
+        (bswap:HI (subreg:HI (reg/v:SI 120 [ address ]) 0))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":49:12 -1
+     (nil))
+(insn 29 28 30 2 (set (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -2 [0xfffffffffffffffe])) [0 MEM <unsigned short> [(uint8_t *)&header + 2B]+0 S2 A16])
+        (reg:HI 127 [ _30 ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":49:12 -1
+     (nil))
+(debug_insn 30 29 31 2 (var_location:QI cmd (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 31 30 32 2 (var_location:SI address (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 32 31 33 2 (var_location:SI out (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":58:5 -1
+     (nil))
+(debug_insn 33 32 34 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 128)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -4 [0xfffffffffffffffc]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:SI 129)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 36 35 37 2 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 129)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 38 37 39 2 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 39 38 40 2 (set (reg:SI 1 r1)
+        (const_int 4 [0x4])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 40 39 41 2 (set (reg:SI 0 r0)
+        (reg:SI 128)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(call_insn 41 40 42 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 42 41 43 2 (set (reg:SI 116 [ _13 ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 -1
+     (nil))
+(insn 43 42 44 2 (set (reg/f:SI 130)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 discrim 1 -1
+     (nil))
+(insn 44 43 45 2 (set (mem/c:SI (reg/f:SI 130) [1 _g_err+0 S4 A32])
+        (reg:SI 116 [ _13 ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":61:5 discrim 1 -1
+     (nil))
+(debug_insn 45 44 46 2 (var_location:QI cmd (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":174:5 -1
+     (nil))
+(debug_insn 46 45 47 2 (var_location:SI address (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":174:5 -1
+     (nil))
+(debug_insn 47 46 48 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":175:5 -1
+     (nil))
+(insn 48 47 49 2 (set (reg:SI 131)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":175:12 -1
+     (nil))
+(insn 49 48 50 2 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 131)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":175:12 -1
+     (nil))
+(insn 50 49 51 2 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":175:12 -1
+     (nil))
+(insn 51 50 52 2 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":175:12 -1
+     (nil))
+(insn 52 51 53 2 (set (reg:SI 1 r1)
+        (reg/v:SI 122 [ len ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":175:12 -1
+     (nil))
+(insn 53 52 54 2 (set (reg:SI 0 r0)
+        (reg/v/f:SI 121 [ data ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":175:12 -1
+     (nil))
+(call_insn 54 53 55 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":175:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 55 54 59 2 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":175:12 -1
+     (nil))
+(insn 59 55 60 2 (set (reg/i:SI 0 r0)
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":176:1 -1
+     (nil))
+(insn 60 59 0 2 (use (reg/i:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":176:1 -1
+     (nil))
+
+;; Function N01S830HA_write_mode_reg (N01S830HA_write_mode_reg, funcdef_no=148, decl_uid=8879, cgraph_uid=149, symbol_order=154)
+
+Partition 0: size 2 align 4
+	data
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+Removing jump 34.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 115 [ val ])
+        (reg:SI 0 r0 [ val ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":179:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:5 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 116)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:QI 117)
+        (subreg:QI (reg:SI 116) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 data[0]+0 S1 A32])
+        (reg:QI 117)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:QI 118)
+        (subreg/s/v:QI (reg/v:SI 115 [ val ]) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -3 [0xfffffffffffffffd])) [0 data[1]+0 S1 A8])
+        (reg:QI 118)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 119)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -4 [0xfffffffffffffffc]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 120)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 15 14 16 2 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 120)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 1 r1)
+        (const_int 2 [0x2])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 0 r0)
+        (reg:SI 119)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(call_insn 20 19 21 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 21 20 22 2 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 22 21 23 2 (set (reg/f:SI 121)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (nil))
+(insn 23 22 24 2 (set (mem/c:SI (reg/f:SI 121) [1 _g_err+0 S4 A32])
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (nil))
+(jump_insn 25 24 26 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 36)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 36)
+(note 26 25 27 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 27 26 28 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:52 -1
+     (nil))
+(debug_insn 28 27 29 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":182:5 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":182:5 -1
+     (nil))
+(call_insn 30 29 31 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("MXC_Delay") [flags 0x41]  <function_decl 000001a78d26f100 MXC_Delay>) [0 MXC_Delay S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":182:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_Delay") [flags 0x41]  <function_decl 000001a78d26f100 MXC_Delay>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 31 30 36 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":184:5 -1
+     (nil))
+(code_label 36 31 39 6 34 (nil) [1 uses])
+(note 39 36 37 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 37 39 38 6 (set (reg/i:SI 0 r0)
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":185:1 -1
+     (nil))
+(insn 38 37 0 6 (use (reg/i:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":185:1 -1
+     (nil))
+
+;; Function N01S830HA_read_mode_reg (N01S830HA_read_mode_reg, funcdef_no=149, decl_uid=8881, cgraph_uid=150, symbol_order=155)
+
+Partition 0: size 1 align 1
+	cmd
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+Removing jump 40.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v/f:SI 115 [ out ])
+        (reg:SI 0 r0 [ out ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":188:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":189:5 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 116)
+        (const_int 5 [0x5])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":189:13 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:QI 117)
+        (subreg:QI (reg:SI 116) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":189:13 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [0 cmd+0 S1 A8])
+        (reg:QI 117)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":189:13 -1
+     (nil))
+(debug_insn 10 9 11 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 118)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -1 [0xffffffffffffffff]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 119)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (nil))
+(insn 13 12 14 2 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 119)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 1 r1)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 0 r0)
+        (reg:SI 118)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (nil))
+(call_insn 18 17 19 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 19 18 20 2 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 -1
+     (nil))
+(insn 20 19 21 2 (set (reg/f:SI 120)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 discrim 1 -1
+     (nil))
+(insn 21 20 22 2 (set (mem/c:SI (reg/f:SI 120) [1 _g_err+0 S4 A32])
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 discrim 1 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 discrim 1 -1
+     (nil))
+(jump_insn 23 22 24 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 42)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 42)
+(note 24 23 25 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 25 24 26 4 (var_location:SI out (reg/v/f:SI 115 [ out ])) -1
+     (nil))
+(debug_insn 26 25 27 4 (debug_marker:BLK) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":187:5 -1
+     (nil))
+(debug_insn 27 26 28 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":190:53 -1
+     (nil))
+(debug_insn 28 27 29 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":191:5 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:SI 121)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":191:12 -1
+     (nil))
+(insn 30 29 31 4 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 121)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":191:12 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 3 r3)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":191:12 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:SI 2 r2)
+        (reg/v/f:SI 115 [ out ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":191:12 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:SI 1 r1)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":191:12 -1
+     (nil))
+(insn 34 33 35 4 (set (reg:SI 0 r0)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":191:12 -1
+     (nil))
+(call_insn 35 34 36 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":191:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 36 35 37 4 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":191:12 -1
+     (nil))
+(debug_insn 37 36 42 4 (var_location:SI out (clobber (const_int 0 [0]))) -1
+     (nil))
+(code_label 42 37 45 6 39 (nil) [1 uses])
+(note 45 42 43 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 43 45 44 6 (set (reg/i:SI 0 r0)
+        (reg:SI 114 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":192:1 -1
+     (nil))
+(insn 44 43 0 6 (use (reg/i:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":192:1 -1
+     (nil))
+
+;; Function N01S830HA_init (N01S830HA_init, funcdef_no=143, decl_uid=8865, cgraph_uid=144, symbol_order=149)
+
+Partition 2: size 2 align 4
+	data	validate	data
+Partition 0: size 1 align 1
+	mode_reg
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+Edge 8->15 redirected to 19
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->18 redirected to 19
+Edge 4->18 redirected to 19
+Edge 5->18 redirected to 19
+Forwarding edge 6->7 to 19 failed.
+Redirecting jump 64 from 18 to 19.
+Edge 8->18 redirected to 19
+Edge 10->13 redirected to 19
+Edge 11->18 redirected to 19
+Forwarding edge 11->12 to 14 failed.
+Forwarding edge 11->12 to 14 failed.
+deleting block 13
+Removing jump 145.
+Merging block 14 into block 12...
+Merged blocks 12 and 14.
+Merged 12 and 14 without moving.
+Redirecting jump 169 from 18 to 19.
+Redirecting jump 186 from 18 to 19.
+Merging block 18 into block 17...
+Merged blocks 17 and 18.
+Merged 17 and 18 without moving.
+Removing jump 180.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 6->7 to 19 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 5 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 2 8 2 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":67:5 -1
+     (nil))
+(call_insn 8 7 9 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_init") [flags 0x41]  <function_decl 000001a78d268600 spi_init>) [0 spi_init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":67:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_init") [flags 0x41]  <function_decl 000001a78d268600 spi_init>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 9 8 10 2 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":67:5 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 120)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":67:5 discrim 1 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (reg/f:SI 120) [1 _g_err+0 S4 A32])
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":67:5 discrim 1 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":67:5 discrim 1 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 182)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":67:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 182)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 15 14 16 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":67:26 -1
+     (nil))
+(debug_insn 16 15 17 4 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":68:5 -1
+     (nil))
+(call_insn 17 16 18 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("N01S830HA_exit_quadmode") [flags 0x3]  <function_decl 000001a78d268a00 N01S830HA_exit_quadmode>) [0 N01S830HA_exit_quadmode S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":68:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("N01S830HA_exit_quadmode") [flags 0x3]  <function_decl 000001a78d268a00 N01S830HA_exit_quadmode>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 18 17 19 4 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":68:5 -1
+     (nil))
+(insn 19 18 20 4 (set (reg/f:SI 121)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":68:5 discrim 1 -1
+     (nil))
+(insn 20 19 21 4 (set (mem/c:SI (reg/f:SI 121) [1 _g_err+0 S4 A32])
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":68:5 discrim 1 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":68:5 discrim 1 -1
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 182)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":68:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 182)
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 24 23 25 5 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":68:41 -1
+     (nil))
+(debug_insn 25 24 26 5 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:5 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 122)
+        (symbol_ref:SI ("N01S830HA_hold_pin") [flags 0x2]  <var_decl 000001a78d24b510 N01S830HA_hold_pin>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:5 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:SI 0 r0)
+        (reg:SI 122)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:5 -1
+     (nil))
+(call_insn 28 27 29 5 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("MXC_GPIO_Config") [flags 0x41]  <function_decl 000001a78d1d5500 MXC_GPIO_Config>) [0 MXC_GPIO_Config S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_Config") [flags 0x41]  <function_decl 000001a78d1d5500 MXC_GPIO_Config>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 29 28 30 5 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:5 -1
+     (nil))
+(insn 30 29 31 5 (set (reg/f:SI 123)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:5 discrim 1 -1
+     (nil))
+(insn 31 30 32 5 (set (mem/c:SI (reg/f:SI 123) [1 _g_err+0 S4 A32])
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:5 discrim 1 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:5 discrim 1 -1
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 182)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 182)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 35 34 36 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":75:52 -1
+     (nil))
+(debug_insn 36 35 37 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":76:5 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:SI 124)
+        (const_int 1073774592 [0x40008000])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":76:5 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:SI 1 r1)
+        (const_int 512 [0x200])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":76:5 -1
+     (nil))
+(insn 39 38 40 6 (set (reg:SI 0 r0)
+        (reg:SI 124)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":76:5 -1
+     (nil))
+(call_insn 40 39 41 6 (parallel [
+            (call (mem:SI (symbol_ref:SI ("MXC_GPIO_OutSet") [flags 0x41]  <function_decl 000001a78d1d5700 MXC_GPIO_OutSet>) [0 MXC_GPIO_OutSet S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":76:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_GPIO_OutSet") [flags 0x41]  <function_decl 000001a78d1d5700 MXC_GPIO_OutSet>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(debug_insn 41 40 42 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":78:5 -1
+     (nil))
+(debug_insn 42 41 43 6 (var_location:QI val (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":78:5 -1
+     (nil))
+(debug_insn 43 42 44 6 (debug_marker:BLK) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":178:5 -1
+     (nil))
+(debug_insn 44 43 45 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:5 -1
+     (nil))
+(insn 45 44 46 6 (set (reg:SI 126)
+        (const_int 257 [0x101])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (nil))
+(insn 46 45 47 6 (set (reg:HI 125)
+        (subreg:HI (reg:SI 126) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (expr_list:REG_EQUAL (const_int 257 [0x101])
+        (nil)))
+(insn 47 46 48 6 (set (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 MEM <vector(2) unsigned char> [(unsigned char *)_50]+0 S2 A32])
+        (reg:HI 125)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (nil))
+(debug_insn 48 47 49 6 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 49 48 50 6 (set (reg:SI 127)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -4 [0xfffffffffffffffc]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 50 49 51 6 (set (reg:SI 128)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 51 50 52 6 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 128)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 52 51 53 6 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 53 52 54 6 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 54 53 55 6 (set (reg:SI 1 r1)
+        (const_int 2 [0x2])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 55 54 56 6 (set (reg:SI 0 r0)
+        (reg:SI 127)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(call_insn 56 55 57 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 57 56 58 6 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 58 57 59 6 (set (reg/f:SI 129)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (nil))
+(insn 59 58 60 6 (set (mem/c:SI (reg/f:SI 129) [1 _g_err+0 S4 A32])
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (nil))
+(insn 60 59 61 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (nil))
+(jump_insn 61 60 62 6 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 66)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 66)
+(note 62 61 63 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 63 62 64 7 (var_location:QI val (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":78:5 -1
+     (nil))
+(jump_insn 64 63 65 7 (set (pc)
+        (label_ref:SI 182)) 288 {*arm_jump}
+     (nil)
+ -> 182)
+(barrier 65 64 66)
+(code_label 66 65 67 8 46 (nil) [1 uses])
+(note 67 66 68 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 68 67 69 8 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:52 -1
+     (nil))
+(debug_insn 69 68 70 8 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":182:5 -1
+     (nil))
+(insn 70 69 71 8 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":182:5 -1
+     (nil))
+(call_insn 71 70 72 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("MXC_Delay") [flags 0x41]  <function_decl 000001a78d26f100 MXC_Delay>) [0 MXC_Delay S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":182:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_Delay") [flags 0x41]  <function_decl 000001a78d26f100 MXC_Delay>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 72 71 73 8 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":184:5 -1
+     (nil))
+(debug_insn 73 72 74 8 (var_location:QI val (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":78:5 -1
+     (nil))
+(insn 74 73 75 8 (set (reg/f:SI 130)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":78:5 discrim 1 -1
+     (nil))
+(insn 75 74 76 8 (set (reg:SI 131)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":78:5 discrim 1 -1
+     (nil))
+(insn 76 75 77 8 (set (mem/c:SI (reg/f:SI 130) [1 _g_err+0 S4 A32])
+        (reg:SI 131)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":78:5 discrim 1 -1
+     (nil))
+(debug_insn 77 76 78 8 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":78:45 -1
+     (nil))
+(debug_insn 78 77 79 8 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":83:5 -1
+     (nil))
+(debug_insn 79 78 80 8 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:5 -1
+     (nil))
+(insn 80 79 81 8 (set (reg:SI 132)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -5 [0xfffffffffffffffb]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:5 -1
+     (nil))
+(insn 81 80 82 8 (set (reg:SI 0 r0)
+        (reg:SI 132)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:5 -1
+     (nil))
+(call_insn 82 81 83 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("N01S830HA_read_mode_reg") [flags 0x3]  <function_decl 000001a78d26f000 N01S830HA_read_mode_reg>) [0 N01S830HA_read_mode_reg S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("N01S830HA_read_mode_reg") [flags 0x3]  <function_decl 000001a78d26f000 N01S830HA_read_mode_reg>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 83 82 84 8 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:5 -1
+     (nil))
+(insn 84 83 85 8 (set (reg/f:SI 133)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:5 discrim 1 -1
+     (nil))
+(insn 85 84 86 8 (set (mem/c:SI (reg/f:SI 133) [1 _g_err+0 S4 A32])
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:5 discrim 1 -1
+     (nil))
+(insn 86 85 87 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:5 discrim 1 -1
+     (nil))
+(jump_insn 87 86 88 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 182)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 182)
+(note 88 87 89 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 89 88 90 9 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":84:50 -1
+     (nil))
+(debug_insn 90 89 91 9 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":85:5 -1
+     (nil))
+(insn 91 90 92 9 (set (reg:SI 134)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -5 [0xfffffffffffffffb])) [0 mode_reg+0 S1 A8]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":85:8 -1
+     (nil))
+(insn 92 91 93 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 134)
+            (const_int 1 [0x1]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":85:8 -1
+     (nil))
+(jump_insn 93 92 94 9 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 189)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":85:8 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 42734932 (nil))
+ -> 189)
+(note 94 93 95 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 95 94 96 10 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":98:5 -1
+     (nil))
+(debug_insn 96 95 97 10 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":99:5 -1
+     (nil))
+(insn 97 96 98 10 (set (reg:SI 135)
+        (const_int 65 [0x41])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":99:14 -1
+     (nil))
+(insn 98 97 99 10 (set (reg:QI 136)
+        (subreg:QI (reg:SI 135) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":99:14 -1
+     (nil))
+(insn 99 98 100 10 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -5 [0xfffffffffffffffb])) [0 mode_reg+0 S1 A8])
+        (reg:QI 136)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":99:14 -1
+     (nil))
+(debug_insn 100 99 101 10 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":100:5 -1
+     (nil))
+(debug_insn 101 100 102 10 (var_location:QI val (const_int 65 [0x41])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":100:5 -1
+     (nil))
+(debug_insn 102 101 103 10 (debug_marker:BLK) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":178:5 -1
+     (nil))
+(debug_insn 103 102 104 10 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:5 -1
+     (nil))
+(insn 104 103 105 10 (set (reg:SI 138)
+        (const_int 16641 [0x4101])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (nil))
+(insn 105 104 106 10 (set (reg:HI 137)
+        (subreg:HI (reg:SI 138) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (expr_list:REG_EQUAL (const_int 16641 [0x4101])
+        (nil)))
+(insn 106 105 107 10 (set (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 MEM <vector(2) unsigned char> [(unsigned char *)_50]+0 S2 A32])
+        (reg:HI 137)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":180:13 -1
+     (nil))
+(debug_insn 107 106 108 10 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 108 107 109 10 (set (reg:SI 139)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -4 [0xfffffffffffffffc]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 109 108 110 10 (set (reg:SI 140)
+        (const_int 1 [0x1])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 110 109 111 10 (set (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S4 A32])
+        (reg:SI 140)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 111 110 112 10 (set (reg:SI 3 r3)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 112 111 113 10 (set (reg:SI 2 r2)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 113 112 114 10 (set (reg:SI 1 r1)
+        (const_int 2 [0x2])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 114 113 115 10 (set (reg:SI 0 r0)
+        (reg:SI 139)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(call_insn 115 114 116 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>) [0 spi_transmit S4 A32])
+                    (const_int 8 [0x8])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_transmit") [flags 0x41]  <function_decl 000001a78d268700 spi_transmit>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (expr_list:QI (use (mem:SI (reg/f:SI 111 virtual-outgoing-args) [0  S1 A32]))
+                            (nil))))))))
+(insn 116 115 117 10 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 -1
+     (nil))
+(insn 117 116 118 10 (set (reg/f:SI 141)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (nil))
+(insn 118 117 119 10 (set (mem/c:SI (reg/f:SI 141) [1 _g_err+0 S4 A32])
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (nil))
+(insn 119 118 120 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 -1
+     (nil))
+(jump_insn 120 119 121 10 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 182)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 182)
+(note 121 120 122 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 122 121 123 11 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":181:52 -1
+     (nil))
+(debug_insn 123 122 124 11 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":182:5 -1
+     (nil))
+(insn 124 123 125 11 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":182:5 -1
+     (nil))
+(call_insn 125 124 126 11 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("MXC_Delay") [flags 0x41]  <function_decl 000001a78d26f100 MXC_Delay>) [0 MXC_Delay S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":182:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("MXC_Delay") [flags 0x41]  <function_decl 000001a78d26f100 MXC_Delay>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 126 125 127 11 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":184:5 -1
+     (nil))
+(debug_insn 127 126 128 11 (var_location:QI val (clobber (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":100:5 -1
+     (nil))
+(insn 128 127 129 11 (set (reg/f:SI 142)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":100:5 discrim 1 -1
+     (nil))
+(insn 129 128 130 11 (set (reg:SI 143)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":100:5 discrim 1 -1
+     (nil))
+(insn 130 129 131 11 (set (mem/c:SI (reg/f:SI 142) [1 _g_err+0 S4 A32])
+        (reg:SI 143)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":100:5 discrim 1 -1
+     (nil))
+(debug_insn 131 130 132 11 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":100:50 -1
+     (nil))
+(debug_insn 132 131 133 11 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":103:5 -1
+     (nil))
+(insn 133 132 134 11 (set (reg:SI 144)
+        (const_int 0 [0])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":103:13 -1
+     (nil))
+(insn 134 133 135 11 (set (reg:QI 145)
+        (subreg:QI (reg:SI 144) 0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":103:13 -1
+     (nil))
+(insn 135 134 136 11 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 MEM[(unsigned char *)_50]+0 S1 A32])
+        (reg:QI 145)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":103:13 -1
+     (nil))
+(debug_insn 136 135 137 11 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:5 -1
+     (nil))
+(insn 137 136 138 11 (set (reg:SI 146)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -4 [0xfffffffffffffffc]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:5 -1
+     (nil))
+(insn 138 137 139 11 (set (reg:SI 0 r0)
+        (reg:SI 146)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:5 -1
+     (nil))
+(call_insn 139 138 140 11 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("N01S830HA_read_mode_reg") [flags 0x3]  <function_decl 000001a78d26f000 N01S830HA_read_mode_reg>) [0 N01S830HA_read_mode_reg S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("N01S830HA_read_mode_reg") [flags 0x3]  <function_decl 000001a78d26f000 N01S830HA_read_mode_reg>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 140 139 141 11 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:5 -1
+     (nil))
+(insn 141 140 142 11 (set (reg/f:SI 147)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:5 discrim 1 -1
+     (nil))
+(insn 142 141 143 11 (set (mem/c:SI (reg/f:SI 147) [1 _g_err+0 S4 A32])
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:5 discrim 1 -1
+     (nil))
+(insn 143 142 144 11 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ <retval> ])
+            (const_int 0 [0]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:5 discrim 1 -1
+     (nil))
+(jump_insn 144 143 147 11 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 182)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:5 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 182)
+(note 147 144 155 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 155 147 156 12 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":104:50 -1
+     (nil))
+(debug_insn 156 155 157 12 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":105:5 -1
+     (nil))
+(insn 157 156 158 12 (set (reg:SI 115 [ validate.11_9 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [0 MEM[(unsigned char *)_50]+0 S1 A32]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":105:18 -1
+     (nil))
+(insn 158 157 159 12 (set (reg:SI 116 [ mode_reg.12_10 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -5 [0xfffffffffffffffb])) [0 mode_reg+0 S1 A8]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":105:18 -1
+     (nil))
+(insn 159 158 160 12 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ validate.11_9 ])
+            (reg:SI 116 [ mode_reg.12_10 ]))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":105:8 -1
+     (nil))
+(jump_insn 160 159 161 12 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 171)
+            (pc))) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":105:8 -1
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 171)
+(note 161 160 162 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 162 161 163 15 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":106:9 -1
+     (nil))
+(insn 163 162 164 15 (set (reg:SI 148)
+        (symbol_ref/v/f:SI ("*.LC0") [flags 0x82]  <var_decl 000001a78d57abd0 *.LC0>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":106:9 -1
+     (nil))
+(insn 164 163 165 15 (set (reg:SI 2 r2)
+        (reg:SI 115 [ validate.11_9 ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":106:9 -1
+     (nil))
+(insn 165 164 166 15 (set (reg:SI 1 r1)
+        (reg:SI 116 [ mode_reg.12_10 ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":106:9 -1
+     (nil))
+(insn 166 165 167 15 (set (reg:SI 0 r0)
+        (reg:SI 148)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":106:9 -1
+     (nil))
+(call_insn 167 166 168 15 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("printf") [flags 0x41]  <function_decl 000001a78cba0f00 printf>) [0 __builtin_printf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":106:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("printf") [flags 0x41]  <function_decl 000001a78cba0f00 printf>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(debug_insn 168 167 4 15 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":107:9 -1
+     (nil))
+(insn 4 168 169 15 (set (reg:SI 119 [ <retval> ])
+        (const_int -9 [0xfffffffffffffff7])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":107:16 -1
+     (nil))
+(jump_insn 169 4 170 15 (set (pc)
+        (label_ref:SI 182)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":107:16 288 {*arm_jump}
+     (nil)
+ -> 182)
+(barrier 170 169 171)
+(code_label 171 170 172 16 49 (nil) [1 uses])
+(note 172 171 173 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 173 172 174 16 (debug_marker) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":112:5 -1
+     (nil))
+(call_insn 174 173 175 16 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("spi_init") [flags 0x41]  <function_decl 000001a78d268600 spi_init>) [0 spi_init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":112:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("spi_init") [flags 0x41]  <function_decl 000001a78d268600 spi_init>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 175 174 176 16 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":112:5 -1
+     (nil))
+(insn 176 175 177 16 (set (reg/f:SI 149)
+        (symbol_ref:SI ("_g_err") [flags 0x2]  <var_decl 000001a78d24b750 _g_err>)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":112:5 discrim 1 -1
+     (nil))
+(insn 177 176 186 16 (set (mem/c:SI (reg/f:SI 149) [1 _g_err+0 S4 A32])
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":112:5 discrim 1 -1
+     (nil))
+(jump_insn 186 177 187 16 (set (pc)
+        (label_ref:SI 182)) 288 {*arm_jump}
+     (nil)
+ -> 182)
+(barrier 187 186 189)
+(code_label 189 187 188 17 50 (nil) [1 uses])
+(note 188 189 3 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 3 188 182 17 (set (reg:SI 119 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":86:16 -1
+     (nil))
+(code_label 182 3 185 19 44 (nil) [9 uses])
+(note 185 182 183 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 183 185 184 19 (set (reg/i:SI 0 r0)
+        (reg:SI 119 [ <retval> ])) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":115:1 -1
+     (nil))
+(insn 184 183 0 19 (use (reg/i:SI 0 r0)) "C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/SRAM/N01S830HA.c":115:1 -1
+     (nil))

@@ -1,0 +1,2614 @@
+Trivially needed symbols: main/155 snake_pattern/154 heartbeat_pattern/153 fade_led/152 all_leds_on/151 all_leds_off/150 led_toggle/149 led_off/148 led_on/147 led_init/146 button_pressed/145 button_init/144 leds/143 mode/142
+
+
+Initial Symbol table:
+
+printf/165 (printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 main/155 
+  Calls: 
+puts/164 (__builtin_puts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 main/155 main/155 main/155 main/155 main/155 
+  Calls: 
+*.LC0/163 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition artificial
+  Aux: @0000025f0dcfd9d8
+  References: 
+  Referring: snake_pattern/154 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+gpio_toggle/162 (gpio_toggle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: led_toggle/149 
+  Calls: 
+gpio_set/161 (gpio_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fade_led/152 all_leds_on/151 led_on/147 
+  Calls: 
+gpio_clear/160 (gpio_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fade_led/152 all_leds_off/150 led_off/148 led_init/146 
+  Calls: 
+gpio_init_output/159 (gpio_init_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: led_init/146 
+  Calls: 
+MXC_Delay/158 (MXC_Delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 snake_pattern/154 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 fade_led/152 button_pressed/145 
+  Calls: 
+gpio_read/157 (gpio_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: button_pressed/145 button_pressed/145 
+  Calls: 
+gpio_init_input/156 (gpio_init_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: button_init/144 
+  Calls: 
+main/155 (main)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @00007ff6ba510e40
+  References: mode/142 (read) mode/142 (write) mode/142 (read) mode/142 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: snake_pattern/154 heartbeat_pattern/153 MXC_Delay/158 printf/165 button_pressed/145 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
+snake_pattern/154 (snake_pattern)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcfd9d8
+  References: *.LC0/163 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: MXC_Delay/158 led_off/148 led_off/148 MXC_Delay/158 led_on/147 led_on/147 all_leds_off/150 
+heartbeat_pattern/153 (heartbeat_pattern)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcfd8c0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 
+fade_led/152 (fade_led)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcfd690
+  References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_Delay/158 gpio_clear/160 gpio_set/161 
+all_leds_on/151 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcfd578
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: heartbeat_pattern/153 heartbeat_pattern/153 
+  Calls: gpio_set/161 
+all_leds_off/150 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcfd460
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
+  Calls: gpio_clear/160 
+led_toggle/149 (led_toggle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcfd348
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_toggle/162 
+led_off/148 (led_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcfd230
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 snake_pattern/154 snake_pattern/154 
+  Calls: gpio_clear/160 
+led_on/147 (led_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcfd118
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 snake_pattern/154 snake_pattern/154 
+  Calls: gpio_set/161 
+led_init/146 (led_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcfd000
+  References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_clear/160 gpio_init_output/159 
+button_pressed/145 (button_pressed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dbcbe38
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_read/157 MXC_Delay/158 gpio_read/157 
+button_init/144 (button_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dbcbd20
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_init_input/156 
+leds/143 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dbcbc08
+  References: 
+  Referring: led_init/146 (read) led_init/146 (read) led_init/146 (read) led_init/146 (read) led_on/147 (read) led_on/147 (read) led_off/148 (read) led_off/148 (read) led_toggle/149 (read) led_toggle/149 (read) all_leds_off/150 (read) all_leds_off/150 (read) all_leds_on/151 (read) all_leds_on/151 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+mode/142 (mode)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000025f0dcf7280
+  References: 
+  Referring: main/155 (read) main/155 (write) main/155 (read) main/155 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+MXC_SYS_In_Crit_Section/141 (MXC_SYS_In_Crit_Section)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+MXC_SYS_Crit_Exit/140 (MXC_SYS_Crit_Exit)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+MXC_SYS_Crit_Enter/139 (MXC_SYS_Crit_Enter)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_mxc_crit_get_state/138 (_mxc_crit_get_state)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_state/137 (_state)
+  Type: variable definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+ITM_CheckChar/136 (ITM_CheckChar)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ITM_ReceiveChar/135 (ITM_ReceiveChar)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ITM_SendChar/134 (ITM_SendChar)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+SysTick_Config/133 (SysTick_Config)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+SCB_GetFPUType/132 (SCB_GetFPUType)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_Load/131 (ARM_MPU_Load)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_OrderedMemcpy/130 (ARM_MPU_OrderedMemcpy)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_SetRegionEx/129 (ARM_MPU_SetRegionEx)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_SetRegion/128 (ARM_MPU_SetRegion)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_ClrRegion/127 (ARM_MPU_ClrRegion)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_Disable/126 (ARM_MPU_Disable)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_Enable/125 (ARM_MPU_Enable)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SystemReset/124 (__NVIC_SystemReset)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetVector/123 (__NVIC_GetVector)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetVector/122 (__NVIC_SetVector)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_DecodePriority/121 (NVIC_DecodePriority)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_EncodePriority/120 (NVIC_EncodePriority)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetPriority/119 (__NVIC_GetPriority)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetPriority/118 (__NVIC_SetPriority)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetActive/117 (__NVIC_GetActive)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_ClearPendingIRQ/116 (__NVIC_ClearPendingIRQ)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetPendingIRQ/115 (__NVIC_SetPendingIRQ)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetPendingIRQ/114 (__NVIC_GetPendingIRQ)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_DisableIRQ/113 (__NVIC_DisableIRQ)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetEnableIRQ/112 (__NVIC_GetEnableIRQ)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_EnableIRQ/111 (__NVIC_EnableIRQ)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetPriorityGrouping/110 (__NVIC_GetPriorityGrouping)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetPriorityGrouping/109 (__NVIC_SetPriorityGrouping)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMMLA/108 (__SMMLA)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSUB/107 (__QSUB)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QADD/106 (__QADD)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SEL/105 (__SEL)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSLDX/104 (__SMLSLDX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSLD/103 (__SMLSLD)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSDX/102 (__SMLSDX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSD/101 (__SMLSD)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUSDX/100 (__SMUSDX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUSD/99 (__SMUSD)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLALDX/98 (__SMLALDX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLALD/97 (__SMLALD)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLADX/96 (__SMLADX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLAD/95 (__SMLAD)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUADX/94 (__SMUADX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUAD/93 (__SMUAD)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTAB16_RORn/92 (__SXTAB16_RORn)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTAB16/91 (__SXTAB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTB16_RORn/90 (__SXTB16_RORn)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTB16/89 (__SXTB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UXTAB16/88 (__UXTAB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UXTB16/87 (__UXTB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USADA8/86 (__USADA8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USAD8/85 (__USAD8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHSAX/84 (__UHSAX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQSAX/83 (__UQSAX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USAX/82 (__USAX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHSAX/81 (__SHSAX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSAX/80 (__QSAX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SSAX/79 (__SSAX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHASX/78 (__UHASX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQASX/77 (__UQASX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UASX/76 (__UASX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHASX/75 (__SHASX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QASX/74 (__QASX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SASX/73 (__SASX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHSUB16/72 (__UHSUB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQSUB16/71 (__UQSUB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USUB16/70 (__USUB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHSUB16/69 (__SHSUB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSUB16/68 (__QSUB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SSUB16/67 (__SSUB16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHADD16/66 (__UHADD16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQADD16/65 (__UQADD16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UADD16/64 (__UADD16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHADD16/63 (__SHADD16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QADD16/62 (__QADD16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SADD16/61 (__SADD16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHSUB8/60 (__UHSUB8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQSUB8/59 (__UQSUB8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USUB8/58 (__USUB8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHSUB8/57 (__SHSUB8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSUB8/56 (__QSUB8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SSUB8/55 (__SSUB8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHADD8/54 (__UHADD8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQADD8/53 (__UQADD8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UADD8/52 (__UADD8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHADD8/51 (__SHADD8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QADD8/50 (__QADD8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SADD8/49 (__SADD8)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_FPSCR/48 (__set_FPSCR)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_FPSCR/47 (__get_FPSCR)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_FAULTMASK/46 (__set_FAULTMASK)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_FAULTMASK/45 (__get_FAULTMASK)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_BASEPRI_MAX/44 (__set_BASEPRI_MAX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_BASEPRI/43 (__set_BASEPRI)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_BASEPRI/42 (__get_BASEPRI)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__disable_fault_irq/41 (__disable_fault_irq)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__enable_fault_irq/40 (__enable_fault_irq)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_PRIMASK/39 (__set_PRIMASK)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_PRIMASK/38 (__get_PRIMASK)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_MSP/37 (__set_MSP)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_MSP/36 (__get_MSP)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_PSP/35 (__set_PSP)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_PSP/34 (__get_PSP)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_xPSR/33 (__get_xPSR)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_APSR/32 (__get_APSR)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_IPSR/31 (__get_IPSR)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_CONTROL/30 (__set_CONTROL)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_CONTROL/29 (__get_CONTROL)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__disable_irq/28 (__disable_irq)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__enable_irq/27 (__enable_irq)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRT/26 (__STRT)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRHT/25 (__STRHT)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRBT/24 (__STRBT)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRT/23 (__LDRT)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRHT/22 (__LDRHT)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRBT/21 (__LDRBT)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__RRX/20 (__RRX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__CLREX/19 (__CLREX)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXW/18 (__STREXW)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXH/17 (__STREXH)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXB/16 (__STREXB)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXW/15 (__LDREXW)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXH/14 (__LDREXH)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXB/13 (__LDREXB)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__CLZ/12 (__CLZ)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__RBIT/11 (__RBIT)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__ROR/10 (__ROR)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REVSH/9 (__REVSH)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REV16/8 (__REV16)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REV/7 (__REV)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__DMB/6 (__DMB)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__DSB/5 (__DSB)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__ISB/4 (__ISB)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__cmsis_start/3 (__cmsis_start)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/2 (_putchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/1 (_getchar_unlocked)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/0 (__sputc_r)
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: MXC_SYS_In_Crit_Section/141 MXC_SYS_Crit_Exit/140 MXC_SYS_Crit_Enter/139 _mxc_crit_get_state/138 _state/137 ITM_CheckChar/136 ITM_ReceiveChar/135 ITM_SendChar/134 SysTick_Config/133 SCB_GetFPUType/132 ARM_MPU_Load/131 ARM_MPU_OrderedMemcpy/130 ARM_MPU_SetRegionEx/129 ARM_MPU_SetRegion/128 ARM_MPU_ClrRegion/127 ARM_MPU_Disable/126 ARM_MPU_Enable/125 __NVIC_SystemReset/124 __NVIC_GetVector/123 __NVIC_SetVector/122 NVIC_DecodePriority/121 NVIC_EncodePriority/120 __NVIC_GetPriority/119 __NVIC_SetPriority/118 __NVIC_GetActive/117 __NVIC_ClearPendingIRQ/116 __NVIC_SetPendingIRQ/115 __NVIC_GetPendingIRQ/114 __NVIC_DisableIRQ/113 __NVIC_GetEnableIRQ/112 __NVIC_EnableIRQ/111 __NVIC_GetPriorityGrouping/110 __NVIC_SetPriorityGrouping/109 __SMMLA/108 __QSUB/107 __QADD/106 __SEL/105 __SMLSLDX/104 __SMLSLD/103 __SMLSDX/102 __SMLSD/101 __SMUSDX/100 __SMUSD/99 __SMLALDX/98 __SMLALD/97 __SMLADX/96 __SMLAD/95 __SMUADX/94 __SMUAD/93 __SXTAB16_RORn/92 __SXTAB16/91 __SXTB16_RORn/90 __SXTB16/89 __UXTAB16/88 __UXTB16/87 __USADA8/86 __USAD8/85 __UHSAX/84 __UQSAX/83 __USAX/82 __SHSAX/81 __QSAX/80 __SSAX/79 __UHASX/78 __UQASX/77 __UASX/76 __SHASX/75 __QASX/74 __SASX/73 __UHSUB16/72 __UQSUB16/71 __USUB16/70 __SHSUB16/69 __QSUB16/68 __SSUB16/67 __UHADD16/66 __UQADD16/65 __UADD16/64 __SHADD16/63 __QADD16/62 __SADD16/61 __UHSUB8/60 __UQSUB8/59 __USUB8/58 __SHSUB8/57 __QSUB8/56 __SSUB8/55 __UHADD8/54 __UQADD8/53 __UADD8/52 __SHADD8/51 __QADD8/50 __SADD8/49 __set_FPSCR/48 __get_FPSCR/47 __set_FAULTMASK/46 __get_FAULTMASK/45 __set_BASEPRI_MAX/44 __set_BASEPRI/43 __get_BASEPRI/42 __disable_fault_irq/41 __enable_fault_irq/40 __set_PRIMASK/39 __get_PRIMASK/38 __set_MSP/37 __get_MSP/36 __set_PSP/35 __get_PSP/34 __get_xPSR/33 __get_APSR/32 __get_IPSR/31 __set_CONTROL/30 __get_CONTROL/29 __disable_irq/28 __enable_irq/27 __STRT/26 __STRHT/25 __STRBT/24 __LDRT/23 __LDRHT/22 __LDRBT/21 __RRX/20 __CLREX/19 __STREXW/18 __STREXH/17 __STREXB/16 __LDREXW/15 __LDREXH/14 __LDREXB/13 __CLZ/12 __RBIT/11 __ROR/10 __REVSH/9 __REV16/8 __REV/7 __DMB/6 __DSB/5 __ISB/4 __cmsis_start/3 _putchar_unlocked/2 _getchar_unlocked/1 __sputc_r/0
+
+Reclaimed Symbol table:
+
+printf/165 (printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 main/155 
+  Calls: 
+puts/164 (__builtin_puts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 main/155 main/155 main/155 main/155 main/155 
+  Calls: 
+*.LC0/163 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition artificial
+  References: 
+  Referring: snake_pattern/154 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+gpio_toggle/162 (gpio_toggle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: led_toggle/149 
+  Calls: 
+gpio_set/161 (gpio_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fade_led/152 all_leds_on/151 led_on/147 
+  Calls: 
+gpio_clear/160 (gpio_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fade_led/152 all_leds_off/150 led_off/148 led_init/146 
+  Calls: 
+gpio_init_output/159 (gpio_init_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: led_init/146 
+  Calls: 
+MXC_Delay/158 (MXC_Delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 snake_pattern/154 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 fade_led/152 button_pressed/145 
+  Calls: 
+gpio_read/157 (gpio_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: button_pressed/145 button_pressed/145 
+  Calls: 
+gpio_init_input/156 (gpio_init_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: button_init/144 
+  Calls: 
+main/155 (main)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: mode/142 (read) mode/142 (write) mode/142 (read) mode/142 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: snake_pattern/154 heartbeat_pattern/153 MXC_Delay/158 printf/165 button_pressed/145 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
+snake_pattern/154 (snake_pattern)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: *.LC0/163 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: MXC_Delay/158 led_off/148 led_off/148 MXC_Delay/158 led_on/147 led_on/147 all_leds_off/150 
+heartbeat_pattern/153 (heartbeat_pattern)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 
+fade_led/152 (fade_led)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_Delay/158 gpio_clear/160 gpio_set/161 
+all_leds_on/151 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: heartbeat_pattern/153 heartbeat_pattern/153 
+  Calls: gpio_set/161 
+all_leds_off/150 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
+  Calls: gpio_clear/160 
+led_toggle/149 (led_toggle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_toggle/162 
+led_off/148 (led_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 snake_pattern/154 snake_pattern/154 
+  Calls: gpio_clear/160 
+led_on/147 (led_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 snake_pattern/154 snake_pattern/154 
+  Calls: gpio_set/161 
+led_init/146 (led_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_clear/160 gpio_init_output/159 
+button_pressed/145 (button_pressed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_read/157 MXC_Delay/158 gpio_read/157 
+button_init/144 (button_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_init_input/156 
+leds/143 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: led_init/146 (read) led_init/146 (read) led_init/146 (read) led_init/146 (read) led_on/147 (read) led_on/147 (read) led_off/148 (read) led_off/148 (read) led_toggle/149 (read) led_toggle/149 (read) all_leds_off/150 (read) all_leds_off/150 (read) all_leds_on/151 (read) all_leds_on/151 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+mode/142 (mode)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: main/155 (read) main/155 (write) main/155 (read) main/155 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+
+Initial Symbol table:
+
+printf/165 (printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 main/155 
+  Calls: 
+puts/164 (__builtin_puts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 main/155 main/155 main/155 main/155 main/155 
+  Calls: 
+*.LC0/163 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition artificial
+  References: 
+  Referring: snake_pattern/154 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+gpio_toggle/162 (gpio_toggle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: led_toggle/149 
+  Calls: 
+gpio_set/161 (gpio_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fade_led/152 all_leds_on/151 led_on/147 
+  Calls: 
+gpio_clear/160 (gpio_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fade_led/152 all_leds_off/150 led_off/148 led_init/146 
+  Calls: 
+gpio_init_output/159 (gpio_init_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: led_init/146 
+  Calls: 
+MXC_Delay/158 (MXC_Delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 snake_pattern/154 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 fade_led/152 button_pressed/145 
+  Calls: 
+gpio_read/157 (gpio_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: button_pressed/145 button_pressed/145 
+  Calls: 
+gpio_init_input/156 (gpio_init_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: button_init/144 
+  Calls: 
+main/155 (main)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: mode/142 (read) mode/142 (write) mode/142 (read) mode/142 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: snake_pattern/154 heartbeat_pattern/153 MXC_Delay/158 printf/165 button_pressed/145 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
+snake_pattern/154 (snake_pattern)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: *.LC0/163 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: MXC_Delay/158 led_off/148 led_off/148 MXC_Delay/158 led_on/147 led_on/147 all_leds_off/150 
+heartbeat_pattern/153 (heartbeat_pattern)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 
+fade_led/152 (fade_led)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_Delay/158 gpio_clear/160 gpio_set/161 
+all_leds_on/151 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: heartbeat_pattern/153 heartbeat_pattern/153 
+  Calls: gpio_set/161 
+all_leds_off/150 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
+  Calls: gpio_clear/160 
+led_toggle/149 (led_toggle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_toggle/162 
+led_off/148 (led_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 snake_pattern/154 snake_pattern/154 
+  Calls: gpio_clear/160 
+led_on/147 (led_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 snake_pattern/154 snake_pattern/154 
+  Calls: gpio_set/161 
+led_init/146 (led_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_clear/160 gpio_init_output/159 
+button_pressed/145 (button_pressed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_read/157 MXC_Delay/158 gpio_read/157 
+button_init/144 (button_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_init_input/156 
+leds/143 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: led_init/146 (read) led_init/146 (read) led_init/146 (read) led_init/146 (read) led_on/147 (read) led_on/147 (read) led_off/148 (read) led_off/148 (read) led_toggle/149 (read) led_toggle/149 (read) all_leds_off/150 (read) all_leds_off/150 (read) all_leds_on/151 (read) all_leds_on/151 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+mode/142 (mode)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: main/155 (read) main/155 (write) main/155 (read) main/155 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+printf/165 (printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 main/155 
+  Calls: 
+puts/164 (__builtin_puts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 main/155 main/155 main/155 main/155 main/155 
+  Calls: 
+*.LC0/163 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition artificial
+  References: 
+  Referring: snake_pattern/154 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+gpio_toggle/162 (gpio_toggle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: led_toggle/149 
+  Calls: 
+gpio_set/161 (gpio_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fade_led/152 all_leds_on/151 led_on/147 
+  Calls: 
+gpio_clear/160 (gpio_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: fade_led/152 all_leds_off/150 led_off/148 led_init/146 
+  Calls: 
+gpio_init_output/159 (gpio_init_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: led_init/146 
+  Calls: 
+MXC_Delay/158 (MXC_Delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: main/155 main/155 snake_pattern/154 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 fade_led/152 button_pressed/145 
+  Calls: 
+gpio_read/157 (gpio_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: button_pressed/145 button_pressed/145 
+  Calls: 
+gpio_init_input/156 (gpio_init_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: button_init/144 
+  Calls: 
+main/155 (main)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: mode/142 (read) mode/142 (write) mode/142 (read) mode/142 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: snake_pattern/154 heartbeat_pattern/153 MXC_Delay/158 printf/165 button_pressed/145 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
+snake_pattern/154 (snake_pattern)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: *.LC0/163 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: MXC_Delay/158 led_off/148 led_off/148 MXC_Delay/158 led_on/147 led_on/147 all_leds_off/150 
+heartbeat_pattern/153 (heartbeat_pattern)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 
+fade_led/152 (fade_led)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_Delay/158 gpio_clear/160 gpio_set/161 
+all_leds_on/151 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: heartbeat_pattern/153 heartbeat_pattern/153 
+  Calls: gpio_set/161 
+all_leds_off/150 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
+  Calls: gpio_clear/160 
+led_toggle/149 (led_toggle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_toggle/162 
+led_off/148 (led_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 snake_pattern/154 snake_pattern/154 
+  Calls: gpio_clear/160 
+led_on/147 (led_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 snake_pattern/154 snake_pattern/154 
+  Calls: gpio_set/161 
+led_init/146 (led_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_clear/160 gpio_init_output/159 
+button_pressed/145 (button_pressed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_read/157 MXC_Delay/158 gpio_read/157 
+button_init/144 (button_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: main/155 
+  Calls: gpio_init_input/156 
+leds/143 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: led_init/146 (read) led_init/146 (read) led_init/146 (read) led_init/146 (read) led_on/147 (read) led_on/147 (read) led_off/148 (read) led_off/148 (read) led_toggle/149 (read) led_toggle/149 (read) all_leds_off/150 (read) all_leds_off/150 (read) all_leds_on/151 (read) all_leds_on/151 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+mode/142 (mode)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: main/155 (read) main/155 (write) main/155 (read) main/155 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+all_leds_off/191 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 190
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_off/191 is inline copy in snake_pattern/154
+  Clone of all_leds_off/150
+  Availability: local
+  Function flags: count:107374182 (estimated locally) body local
+  Called by: snake_pattern/154 (inlined) (107374182 (estimated locally),1.00 per call) 
+  Calls: gpio_clear/160 (966367622 (estimated locally),9.00 per call) 
+all_leds_off/190 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 189
+  previous sharing asm name: 191
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_off/190 is inline copy in heartbeat_pattern/153
+  Clone of all_leds_off/150
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: gpio_clear/160 (9663676256 (estimated locally),9.00 per call) 
+all_leds_off/189 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 184
+  previous sharing asm name: 190
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_off/189 is inline copy in heartbeat_pattern/153
+  Clone of all_leds_off/150
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: gpio_clear/160 (9663676256 (estimated locally),9.00 per call) 
+all_leds_on/188 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 187
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_on/188 is inline copy in heartbeat_pattern/153
+  Clone of all_leds_on/151
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: gpio_set/161 (9663676256 (estimated locally),9.00 per call) 
+all_leds_on/187 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 178
+  previous sharing asm name: 188
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_on/187 is inline copy in heartbeat_pattern/153
+  Clone of all_leds_on/151
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: gpio_set/161 (9663676256 (estimated locally),9.00 per call) 
+led_on.part.0/186 (led_on.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 182
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_on.part.0/186 is inline copy in snake_pattern/154
+  Clone of led_on.part.0/166
+  Availability: local
+  Function flags: count:204096845 (estimated locally) body local split_part
+  Called by: snake_pattern/154 (inlined) (204096845 (estimated locally),1.90 per call) 
+  Calls: gpio_set/161 (204096845 (estimated locally),1.90 per call) 
+led_off.part.0/185 (led_off.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 181
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_off.part.0/185 is inline copy in snake_pattern/154
+  Clone of led_off.part.0/167
+  Availability: local
+  Function flags: count:204096846 (estimated locally) body local split_part
+  Called by: snake_pattern/154 (inlined) (204096846 (estimated locally),1.90 per call) 
+  Calls: gpio_clear/160 (204096846 (estimated locally),1.90 per call) 
+all_leds_off/184 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 183
+  previous sharing asm name: 189
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_off/184 is inline copy in main/155
+  Clone of all_leds_off/150
+  Availability: local
+  Function flags: count:719407024 (estimated locally) body local
+  Called by: heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) 
+  Calls: gpio_clear/160 (6474663109 (estimated locally),609.03 per call) 
+all_leds_off/183 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 150
+  previous sharing asm name: 184
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_off/183 is inline copy in main/155
+  Clone of all_leds_off/150
+  Availability: local
+  Function flags: count:719407024 (estimated locally) body local
+  Called by: heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) 
+  Calls: gpio_clear/160 (6474663109 (estimated locally),609.03 per call) 
+led_on.part.0/182 (led_on.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 180
+  previous sharing asm name: 186
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_on.part.0/182 is inline copy in snake_pattern/154
+  Clone of led_on.part.0/166
+  Availability: local
+  Function flags: count:318901320 (estimated locally) body local split_part
+  Called by: snake_pattern/154 (inlined) (318901320 (estimated locally),2.97 per call) 
+  Calls: gpio_set/161 (318901320 (estimated locally),2.97 per call) 
+led_off.part.0/181 (led_off.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 179
+  previous sharing asm name: 185
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_off.part.0/181 is inline copy in snake_pattern/154
+  Clone of led_off.part.0/167
+  Availability: local
+  Function flags: count:318901321 (estimated locally) body local split_part
+  Called by: snake_pattern/154 (inlined) (318901321 (estimated locally),2.97 per call) 
+  Calls: gpio_clear/160 (318901321 (estimated locally),2.97 per call) 
+led_on.part.0/180 (led_on.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 166
+  previous sharing asm name: 182
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_on.part.0/180 is inline copy in main/155
+  Clone of led_on.part.0/166
+  Availability: local
+  Function flags: count:95679970 (estimated locally) body local split_part
+  Called by: main/155 (inlined) (95679970 (estimated locally),9.00 per call) 
+  Calls: gpio_set/161 (95679970 (estimated locally),9.00 per call) 
+led_off.part.0/179 (led_off.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 167
+  previous sharing asm name: 181
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_off.part.0/179 is inline copy in main/155
+  Clone of led_off.part.0/167
+  Availability: local
+  Function flags: count:95679970 (estimated locally) body local split_part
+  Called by: main/155 (inlined) (95679970 (estimated locally),9.00 per call) 
+  Calls: gpio_clear/160 (95679970 (estimated locally),9.00 per call) 
+all_leds_on/178 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 177
+  previous sharing asm name: 187
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_on/178 is inline copy in main/155
+  Clone of all_leds_on/151
+  Availability: local
+  Function flags: count:719407024 (estimated locally) body local
+  Called by: heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) 
+  Calls: gpio_set/161 (6474663109 (estimated locally),609.03 per call) 
+all_leds_on/177 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 151
+  previous sharing asm name: 178
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_on/177 is inline copy in main/155
+  Clone of all_leds_on/151
+  Availability: local
+  Function flags: count:719407024 (estimated locally) body local
+  Called by: heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) 
+  Calls: gpio_set/161 (6474663109 (estimated locally),609.03 per call) 
+heartbeat_pattern/176 (heartbeat_pattern)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 153
+  References: 
+  Referring: 
+  Function heartbeat_pattern/176 is inline copy in main/155
+  Clone of heartbeat_pattern/153
+  Availability: local
+  Function flags: count:719407024 (estimated locally) body local
+  Called by: main/155 (inlined) (719407024 (estimated locally),67.67 per call) 
+  Calls: all_leds_on/178 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (719407024 (estimated locally),67.67 per call) all_leds_off/184 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (719407024 (estimated locally),67.67 per call) all_leds_on/177 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (719407024 (estimated locally),67.67 per call) all_leds_off/183 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (719407024 (estimated locally),67.67 per call) 
+button_pressed/175 (button_pressed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 145
+  References: 
+  Referring: 
+  Function button_pressed/175 is inline copy in main/155
+  Clone of button_pressed/145
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) body local
+  Called by: main/155 (inlined) (1073741823 (estimated locally),101.00 per call) 
+  Calls: gpio_read/157 (1073741823 (estimated locally),101.00 per call) MXC_Delay/158 (354334800 (estimated locally),33.33 per call) gpio_read/157 (354334800 (estimated locally),33.33 per call) 
+led_off.part.0/167 (led_off.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 179
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_off.part.0/167 is inline copy in led_off/148
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local split_part
+  Called by: led_off/148 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: gpio_clear/160 (354334800 (estimated locally),0.33 per call) 
+led_on.part.0/166 (led_on.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 180
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_on.part.0/166 is inline copy in led_on/147
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local split_part
+  Called by: led_on/147 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: gpio_set/161 (354334800 (estimated locally),0.33 per call) 
+printf/165 (printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/155 (536870912 (estimated locally),50.50 per call) main/155 (95679970 (estimated locally),9.00 per call) main/155 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+puts/164 (__builtin_puts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) 
+  Calls: 
+*.LC0/163 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  References: 
+  Referring: snake_pattern/154 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+gpio_toggle/162 (gpio_toggle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: led_toggle/149 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+gpio_set/161 (gpio_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: all_leds_on/188 (9663676256 (estimated locally),9.00 per call) all_leds_on/187 (9663676256 (estimated locally),9.00 per call) led_on.part.0/186 (204096845 (estimated locally),1.90 per call) led_on.part.0/182 (318901320 (estimated locally),2.97 per call) led_on.part.0/180 (95679970 (estimated locally),9.00 per call) all_leds_on/178 (6474663109 (estimated locally),609.03 per call) all_leds_on/177 (6474663109 (estimated locally),609.03 per call) fade_led/152 (531502204 (estimated locally),4900.49 per call) all_leds_on/151 (966367640 (estimated locally),9.00 per call) led_on.part.0/166 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+gpio_clear/160 (gpio_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: all_leds_off/191 (966367622 (estimated locally),9.00 per call) all_leds_off/190 (9663676256 (estimated locally),9.00 per call) all_leds_off/189 (9663676256 (estimated locally),9.00 per call) led_off.part.0/185 (204096846 (estimated locally),1.90 per call) all_leds_off/184 (6474663109 (estimated locally),609.03 per call) all_leds_off/183 (6474663109 (estimated locally),609.03 per call) led_off.part.0/181 (318901321 (estimated locally),2.97 per call) led_off.part.0/179 (95679970 (estimated locally),9.00 per call) fade_led/152 (531502204 (estimated locally),4900.49 per call) all_leds_off/150 (966367640 (estimated locally),9.00 per call) led_off.part.0/167 (354334800 (estimated locally),0.33 per call) led_init/146 (966367640 (estimated locally),9.00 per call) 
+  Calls: 
+gpio_init_output/159 (gpio_init_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: led_init/146 (966367640 (estimated locally),9.00 per call) 
+  Calls: 
+MXC_Delay/158 (MXC_Delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: heartbeat_pattern/176 (719407024 (estimated locally),67.67 per call) heartbeat_pattern/176 (719407024 (estimated locally),67.67 per call) heartbeat_pattern/176 (719407024 (estimated locally),67.67 per call) heartbeat_pattern/176 (719407024 (estimated locally),67.67 per call) button_pressed/175 (354334800 (estimated locally),33.33 per call) main/155 (536870912 (estimated locally),50.50 per call) main/155 (95679970 (estimated locally),9.00 per call) snake_pattern/154 (107374184 (estimated locally),1.00 per call) snake_pattern/154 (966367643 (estimated locally),9.00 per call) heartbeat_pattern/153 (1073741824 (estimated locally),1.00 per call) heartbeat_pattern/153 (1073741824 (estimated locally),1.00 per call) heartbeat_pattern/153 (1073741824 (estimated locally),1.00 per call) heartbeat_pattern/153 (1073741824 (estimated locally),1.00 per call) fade_led/152 (1063004408 (estimated locally),9800.98 per call) button_pressed/145 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+gpio_read/157 (gpio_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: button_pressed/175 (1073741823 (estimated locally),101.00 per call) button_pressed/175 (354334800 (estimated locally),33.33 per call) button_pressed/145 (354334800 (estimated locally),0.33 per call) button_pressed/145 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+gpio_init_input/156 (gpio_init_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/155 (10631108 (estimated locally),1.00 per call) button_init/144 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+main/155 (main)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: mode/142 (read) mode/142 (write) mode/142 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) body only_called_at_startup executed_once
+  Called by: 
+  Calls: snake_pattern/154 (354334800 (estimated locally),33.33 per call) heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (536870912 (estimated locally),50.50 per call) printf/165 (536870912 (estimated locally),50.50 per call) button_pressed/175 (inlined) (1073741823 (estimated locally),101.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) led_off.part.0/179 (inlined) (95679970 (estimated locally),9.00 per call) MXC_Delay/158 (95679970 (estimated locally),9.00 per call) led_on.part.0/180 (inlined) (95679970 (estimated locally),9.00 per call) printf/165 (95679970 (estimated locally),9.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) gpio_init_input/156 (10631108 (estimated locally),1.00 per call) led_init/146 (10631108 (estimated locally),1.00 per call) printf/165 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) 
+snake_pattern/154 (snake_pattern)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: *.LC0/163 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:107374182 (estimated locally) body
+  Called by: main/155 (354334800 (estimated locally),33.33 per call) 
+  Calls: MXC_Delay/158 (107374184 (estimated locally),1.00 per call) led_off.part.0/181 (inlined) (318901321 (estimated locally),2.97 per call) led_off.part.0/185 (inlined) (204096846 (estimated locally),1.90 per call) MXC_Delay/158 (966367643 (estimated locally),9.00 per call) led_on.part.0/186 (inlined) (204096845 (estimated locally),1.90 per call) led_on.part.0/182 (inlined) (318901320 (estimated locally),2.97 per call) all_leds_off/191 (inlined) (107374182 (estimated locally),1.00 per call) 
+heartbeat_pattern/153 (heartbeat_pattern)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  previous sharing asm name: 176
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: MXC_Delay/158 (1073741824 (estimated locally),1.00 per call) all_leds_off/189 (inlined) (1073741824 (estimated locally),1.00 per call) MXC_Delay/158 (1073741824 (estimated locally),1.00 per call) all_leds_on/188 (inlined) (1073741824 (estimated locally),1.00 per call) MXC_Delay/158 (1073741824 (estimated locally),1.00 per call) all_leds_off/190 (inlined) (1073741824 (estimated locally),1.00 per call) MXC_Delay/158 (1073741824 (estimated locally),1.00 per call) all_leds_on/187 (inlined) (1073741824 (estimated locally),1.00 per call) 
+fade_led/152 (fade_led)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:108459 (estimated locally) body
+  Called by: 
+  Calls: MXC_Delay/158 (1063004408 (estimated locally),9800.98 per call) gpio_clear/160 (531502204 (estimated locally),4900.49 per call) gpio_set/161 (531502204 (estimated locally),4900.49 per call) 
+all_leds_on/151 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  previous sharing asm name: 177
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally) body
+  Called by: 
+  Calls: gpio_set/161 (966367640 (estimated locally),9.00 per call) 
+all_leds_off/150 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  previous sharing asm name: 183
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally) body
+  Called by: 
+  Calls: gpio_clear/160 (966367640 (estimated locally),9.00 per call) 
+led_toggle/149 (led_toggle)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: gpio_toggle/162 (354334800 (estimated locally),0.33 per call) 
+led_off/148 (led_off)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: led_off.part.0/167 (inlined) (354334800 (estimated locally),0.33 per call) 
+led_on/147 (led_on)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: led_on.part.0/166 (inlined) (354334800 (estimated locally),0.33 per call) 
+led_init/146 (led_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally) body
+  Called by: main/155 (10631108 (estimated locally),1.00 per call) 
+  Calls: gpio_clear/160 (966367640 (estimated locally),9.00 per call) gpio_init_output/159 (966367640 (estimated locally),9.00 per call) 
+button_pressed/145 (button_pressed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  previous sharing asm name: 175
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: gpio_read/157 (354334800 (estimated locally),0.33 per call) MXC_Delay/158 (354334800 (estimated locally),0.33 per call) gpio_read/157 (1073741824 (estimated locally),1.00 per call) 
+button_init/144 (button_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: gpio_init_input/156 (1073741824 (estimated locally),1.00 per call) 
+leds/143 (leds)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: led_toggle/149 (read) led_toggle/149 (read) all_leds_off/150 (read) all_leds_off/150 (read) all_leds_on/151 (read) all_leds_on/151 (read) led_init/146 (read) led_init/146 (read) led_on.part.0/166 (read) led_on.part.0/166 (read) led_off.part.0/167 (read) led_off.part.0/167 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) all_leds_on/177 (read) all_leds_on/177 (read) all_leds_on/178 (read) all_leds_on/178 (read) led_off.part.0/179 (read) led_off.part.0/179 (read) led_on.part.0/180 (read) led_on.part.0/180 (read) led_off.part.0/181 (read) led_off.part.0/181 (read) led_on.part.0/182 (read) led_on.part.0/182 (read) all_leds_off/183 (read) all_leds_off/183 (read) all_leds_off/184 (read) all_leds_off/184 (read) led_off.part.0/185 (read) led_off.part.0/185 (read) led_on.part.0/186 (read) led_on.part.0/186 (read) all_leds_on/187 (read) all_leds_on/187 (read) all_leds_on/188 (read) all_leds_on/188 (read) all_leds_off/189 (read) all_leds_off/189 (read) all_leds_off/190 (read) all_leds_off/190 (read) all_leds_off/191 (read) all_leds_off/191 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+mode/142 (mode)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: main/155 (read) main/155 (write) main/155 (read) 
+  Availability: available
+  Varpool flags: initialized
+updating call of heartbeat_pattern/153 -> all_leds_off/189: all_leds_off ();
+  updated to:all_leds_off ();
+updating call of heartbeat_pattern/153 -> all_leds_off/190: all_leds_off ();
+  updated to:all_leds_off ();
+updating call of heartbeat_pattern/153 -> all_leds_on/187: all_leds_on ();
+  updated to:all_leds_on ();
+updating call of main/155 -> all_leds_on/188: all_leds_on ();
+  updated to:all_leds_on ();
+updating call of main/155 -> all_leds_off/191: all_leds_off ();
+  updated to:all_leds_off ();
+updating call of main/155 -> all_leds_on/177: all_leds_on ();
+  updated to:all_leds_on ();
+updating call of main/155 -> all_leds_off/183: all_leds_off ();
+  updated to:all_leds_off ();
+Trivially needed variables: *.LC0/163 leds/143 mode/142
+Removing variables:
+
+Final Symbol table:
+
+printf/165 (printf)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+puts/164 (__builtin_puts)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+*.LC0/163 (*.LC0)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written artificial
+  Aux: @0000000000000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+gpio_toggle/162 (gpio_toggle)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+gpio_set/161 (gpio_set)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+gpio_clear/160 (gpio_clear)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+gpio_init_output/159 (gpio_init_output)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+MXC_Delay/158 (MXC_Delay)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+gpio_read/157 (gpio_read)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+gpio_init_input/156 (gpio_init_input)
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+main/155 (main)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.main (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:10631108 (estimated locally) only_called_at_startup executed_once
+  Called by: 
+  Calls: 
+snake_pattern/154 (snake_pattern)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.snake_pattern (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:107374182 (estimated locally)
+  Called by: 
+  Calls: 
+heartbeat_pattern/153 (heartbeat_pattern)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.heartbeat_pattern (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+fade_led/152 (fade_led)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fade_led (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:108459 (estimated locally)
+  Called by: 
+  Calls: 
+all_leds_on/151 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.all_leds_on (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally)
+  Called by: 
+  Calls: 
+all_leds_off/150 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.all_leds_off (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally)
+  Called by: 
+  Calls: 
+led_toggle/149 (led_toggle)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.led_toggle (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+led_off/148 (led_off)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.led_off (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+led_on/147 (led_on)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.led_on (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+led_init/146 (led_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.led_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally)
+  Called by: 
+  Calls: 
+button_pressed/145 (button_pressed)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.button_pressed (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+button_init/144 (button_init)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.button_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+leds/143 (leds)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.rodata.leds (implicit_section)
+  Aux: @0000025f0dd3c900
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+mode/142 (mode)
+  Type: variable definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.bss.mode (implicit_section)
+  Aux: @0000025f0dcf7280
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
