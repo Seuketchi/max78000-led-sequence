@@ -22,7 +22,7 @@ puts/164 (__builtin_puts)
 *.LC0/163 (*.LC0)
   Type: variable definition analyzed
   Visibility: semantic_interposition artificial
-  Aux: @0000025f0dcfd9d8
+  Aux: @000001cc3a8619d8
   References: 
   Referring: snake_pattern/154 (read) 
   Availability: not-ready
@@ -86,34 +86,34 @@ gpio_init_input/156 (gpio_init_input)
 main/155 (main)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @00007ff6ba510e40
-  References: mode/142 (read) mode/142 (write) mode/142 (read) mode/142 (read) 
+  Aux: @00007ff71adb0e40
+  References: mode/142 (read) mode/142 (read) mode/142 (write) mode/142 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: snake_pattern/154 heartbeat_pattern/153 MXC_Delay/158 printf/165 button_pressed/145 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
+  Calls: MXC_Delay/158 printf/165 all_leds_off/150 snake_pattern/154 heartbeat_pattern/153 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
 snake_pattern/154 (snake_pattern)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcfd9d8
+  Aux: @000001cc3a8619d8
   References: *.LC0/163 (read) 
   Referring: 
   Function flags: body
   Called by: main/155 
-  Calls: MXC_Delay/158 led_off/148 led_off/148 MXC_Delay/158 led_on/147 led_on/147 all_leds_off/150 
+  Calls: button_pressed/145 MXC_Delay/158 led_off/148 led_off/148 button_pressed/145 MXC_Delay/158 led_on/147 led_on/147 button_pressed/145 all_leds_off/150 
 heartbeat_pattern/153 (heartbeat_pattern)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcfd8c0
+  Aux: @000001cc3a8618c0
   References: 
   Referring: 
   Function flags: body
   Called by: main/155 
-  Calls: MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 
+  Calls: button_pressed/145 MXC_Delay/158 all_leds_off/150 button_pressed/145 MXC_Delay/158 all_leds_on/151 button_pressed/145 MXC_Delay/158 all_leds_off/150 button_pressed/145 MXC_Delay/158 all_leds_on/151 
 fade_led/152 (fade_led)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcfd690
+  Aux: @000001cc3a861690
   References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
@@ -122,7 +122,7 @@ fade_led/152 (fade_led)
 all_leds_on/151 (all_leds_on)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcfd578
+  Aux: @000001cc3a861578
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
@@ -131,16 +131,16 @@ all_leds_on/151 (all_leds_on)
 all_leds_off/150 (all_leds_off)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcfd460
+  Aux: @000001cc3a861460
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
-  Called by: snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
+  Called by: main/155 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
   Calls: gpio_clear/160 
 led_toggle/149 (led_toggle)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcfd348
+  Aux: @000001cc3a861348
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
@@ -149,7 +149,7 @@ led_toggle/149 (led_toggle)
 led_off/148 (led_off)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcfd230
+  Aux: @000001cc3a861230
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
@@ -158,7 +158,7 @@ led_off/148 (led_off)
 led_on/147 (led_on)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcfd118
+  Aux: @000001cc3a861118
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
@@ -167,7 +167,7 @@ led_on/147 (led_on)
 led_init/146 (led_init)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcfd000
+  Aux: @000001cc3a861000
   References: leds/143 (read) leds/143 (read) leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
@@ -176,16 +176,16 @@ led_init/146 (led_init)
 button_pressed/145 (button_pressed)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dbcbe38
+  Aux: @000001cc3a72be38
   References: 
   Referring: 
   Function flags: body
-  Called by: main/155 
+  Called by: snake_pattern/154 snake_pattern/154 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 
   Calls: gpio_read/157 MXC_Delay/158 gpio_read/157 
 button_init/144 (button_init)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dbcbd20
+  Aux: @000001cc3a72bd20
   References: 
   Referring: 
   Function flags: body
@@ -194,7 +194,7 @@ button_init/144 (button_init)
 leds/143 (leds)
   Type: variable definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dbcbc08
+  Aux: @000001cc3a72bc08
   References: 
   Referring: led_init/146 (read) led_init/146 (read) led_init/146 (read) led_init/146 (read) led_on/147 (read) led_on/147 (read) led_off/148 (read) led_off/148 (read) led_toggle/149 (read) led_toggle/149 (read) all_leds_off/150 (read) all_leds_off/150 (read) all_leds_on/151 (read) all_leds_on/151 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) 
   Availability: not-ready
@@ -202,9 +202,9 @@ leds/143 (leds)
 mode/142 (mode)
   Type: variable definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0000025f0dcf7280
+  Aux: @000001cc3a85b280
   References: 
-  Referring: main/155 (read) main/155 (write) main/155 (read) main/155 (read) 
+  Referring: main/155 (read) main/155 (read) main/155 (write) main/155 (read) 
   Availability: not-ready
   Varpool flags: initialized
 MXC_SYS_In_Crit_Section/141 (MXC_SYS_In_Crit_Section)
@@ -1429,11 +1429,11 @@ gpio_init_input/156 (gpio_init_input)
 main/155 (main)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  References: mode/142 (read) mode/142 (write) mode/142 (read) mode/142 (read) 
+  References: mode/142 (read) mode/142 (read) mode/142 (write) mode/142 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: snake_pattern/154 heartbeat_pattern/153 MXC_Delay/158 printf/165 button_pressed/145 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
+  Calls: MXC_Delay/158 printf/165 all_leds_off/150 snake_pattern/154 heartbeat_pattern/153 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
 snake_pattern/154 (snake_pattern)
   Type: function definition analyzed
   Visibility: semantic_interposition public
@@ -1441,7 +1441,7 @@ snake_pattern/154 (snake_pattern)
   Referring: 
   Function flags: body
   Called by: main/155 
-  Calls: MXC_Delay/158 led_off/148 led_off/148 MXC_Delay/158 led_on/147 led_on/147 all_leds_off/150 
+  Calls: button_pressed/145 MXC_Delay/158 led_off/148 led_off/148 button_pressed/145 MXC_Delay/158 led_on/147 led_on/147 button_pressed/145 all_leds_off/150 
 heartbeat_pattern/153 (heartbeat_pattern)
   Type: function definition analyzed
   Visibility: semantic_interposition public
@@ -1449,7 +1449,7 @@ heartbeat_pattern/153 (heartbeat_pattern)
   Referring: 
   Function flags: body
   Called by: main/155 
-  Calls: MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 
+  Calls: button_pressed/145 MXC_Delay/158 all_leds_off/150 button_pressed/145 MXC_Delay/158 all_leds_on/151 button_pressed/145 MXC_Delay/158 all_leds_off/150 button_pressed/145 MXC_Delay/158 all_leds_on/151 
 fade_led/152 (fade_led)
   Type: function definition analyzed
   Visibility: semantic_interposition public
@@ -1472,7 +1472,7 @@ all_leds_off/150 (all_leds_off)
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
-  Called by: snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
+  Called by: main/155 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
   Calls: gpio_clear/160 
 led_toggle/149 (led_toggle)
   Type: function definition analyzed
@@ -1512,7 +1512,7 @@ button_pressed/145 (button_pressed)
   References: 
   Referring: 
   Function flags: body
-  Called by: main/155 
+  Called by: snake_pattern/154 snake_pattern/154 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 
   Calls: gpio_read/157 MXC_Delay/158 gpio_read/157 
 button_init/144 (button_init)
   Type: function definition analyzed
@@ -1533,7 +1533,7 @@ mode/142 (mode)
   Type: variable definition analyzed
   Visibility: semantic_interposition public
   References: 
-  Referring: main/155 (read) main/155 (write) main/155 (read) main/155 (read) 
+  Referring: main/155 (read) main/155 (read) main/155 (write) main/155 (read) 
   Availability: not-ready
   Varpool flags: initialized
 
@@ -1622,11 +1622,11 @@ gpio_init_input/156 (gpio_init_input)
 main/155 (main)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  References: mode/142 (read) mode/142 (write) mode/142 (read) mode/142 (read) 
+  References: mode/142 (read) mode/142 (read) mode/142 (write) mode/142 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: snake_pattern/154 heartbeat_pattern/153 MXC_Delay/158 printf/165 button_pressed/145 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
+  Calls: MXC_Delay/158 printf/165 all_leds_off/150 snake_pattern/154 heartbeat_pattern/153 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
 snake_pattern/154 (snake_pattern)
   Type: function definition analyzed
   Visibility: semantic_interposition public
@@ -1634,7 +1634,7 @@ snake_pattern/154 (snake_pattern)
   Referring: 
   Function flags: body
   Called by: main/155 
-  Calls: MXC_Delay/158 led_off/148 led_off/148 MXC_Delay/158 led_on/147 led_on/147 all_leds_off/150 
+  Calls: button_pressed/145 MXC_Delay/158 led_off/148 led_off/148 button_pressed/145 MXC_Delay/158 led_on/147 led_on/147 button_pressed/145 all_leds_off/150 
 heartbeat_pattern/153 (heartbeat_pattern)
   Type: function definition analyzed
   Visibility: semantic_interposition public
@@ -1642,7 +1642,7 @@ heartbeat_pattern/153 (heartbeat_pattern)
   Referring: 
   Function flags: body
   Called by: main/155 
-  Calls: MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 
+  Calls: button_pressed/145 MXC_Delay/158 all_leds_off/150 button_pressed/145 MXC_Delay/158 all_leds_on/151 button_pressed/145 MXC_Delay/158 all_leds_off/150 button_pressed/145 MXC_Delay/158 all_leds_on/151 
 fade_led/152 (fade_led)
   Type: function definition analyzed
   Visibility: semantic_interposition public
@@ -1665,7 +1665,7 @@ all_leds_off/150 (all_leds_off)
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
-  Called by: snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
+  Called by: main/155 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
   Calls: gpio_clear/160 
 led_toggle/149 (led_toggle)
   Type: function definition analyzed
@@ -1705,7 +1705,7 @@ button_pressed/145 (button_pressed)
   References: 
   Referring: 
   Function flags: body
-  Called by: main/155 
+  Called by: snake_pattern/154 snake_pattern/154 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 
   Calls: gpio_read/157 MXC_Delay/158 gpio_read/157 
 button_init/144 (button_init)
   Type: function definition analyzed
@@ -1726,7 +1726,7 @@ mode/142 (mode)
   Type: variable definition analyzed
   Visibility: semantic_interposition public
   References: 
-  Referring: main/155 (read) main/155 (write) main/155 (read) main/155 (read) 
+  Referring: main/155 (read) main/155 (read) main/155 (write) main/155 (read) 
   Availability: not-ready
   Varpool flags: initialized
 
@@ -1816,11 +1816,11 @@ gpio_init_input/156 (gpio_init_input)
 main/155 (main)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  References: mode/142 (read) mode/142 (write) mode/142 (read) mode/142 (read) 
+  References: mode/142 (read) mode/142 (read) mode/142 (write) mode/142 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: snake_pattern/154 heartbeat_pattern/153 MXC_Delay/158 printf/165 button_pressed/145 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
+  Calls: MXC_Delay/158 printf/165 all_leds_off/150 snake_pattern/154 heartbeat_pattern/153 puts/164 led_off/148 MXC_Delay/158 led_on/147 printf/165 puts/164 puts/164 button_init/144 led_init/146 printf/165 puts/164 puts/164 puts/164 puts/164 
 snake_pattern/154 (snake_pattern)
   Type: function definition analyzed
   Visibility: semantic_interposition public
@@ -1828,7 +1828,7 @@ snake_pattern/154 (snake_pattern)
   Referring: 
   Function flags: body
   Called by: main/155 
-  Calls: MXC_Delay/158 led_off/148 led_off/148 MXC_Delay/158 led_on/147 led_on/147 all_leds_off/150 
+  Calls: button_pressed/145 MXC_Delay/158 led_off/148 led_off/148 button_pressed/145 MXC_Delay/158 led_on/147 led_on/147 button_pressed/145 all_leds_off/150 
 heartbeat_pattern/153 (heartbeat_pattern)
   Type: function definition analyzed
   Visibility: semantic_interposition public
@@ -1836,7 +1836,7 @@ heartbeat_pattern/153 (heartbeat_pattern)
   Referring: 
   Function flags: body
   Called by: main/155 
-  Calls: MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 MXC_Delay/158 all_leds_off/150 MXC_Delay/158 all_leds_on/151 
+  Calls: button_pressed/145 MXC_Delay/158 all_leds_off/150 button_pressed/145 MXC_Delay/158 all_leds_on/151 button_pressed/145 MXC_Delay/158 all_leds_off/150 button_pressed/145 MXC_Delay/158 all_leds_on/151 
 fade_led/152 (fade_led)
   Type: function definition analyzed
   Visibility: semantic_interposition public
@@ -1859,7 +1859,7 @@ all_leds_off/150 (all_leds_off)
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Function flags: body
-  Called by: snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
+  Called by: main/155 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 
   Calls: gpio_clear/160 
 led_toggle/149 (led_toggle)
   Type: function definition analyzed
@@ -1899,7 +1899,7 @@ button_pressed/145 (button_pressed)
   References: 
   Referring: 
   Function flags: body
-  Called by: main/155 
+  Called by: snake_pattern/154 snake_pattern/154 snake_pattern/154 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 heartbeat_pattern/153 
   Calls: gpio_read/157 MXC_Delay/158 gpio_read/157 
 button_init/144 (button_init)
   Type: function definition analyzed
@@ -1920,7 +1920,7 @@ mode/142 (mode)
   Type: variable definition analyzed
   Visibility: semantic_interposition public
   References: 
-  Referring: main/155 (read) main/155 (write) main/155 (read) main/155 (read) 
+  Referring: main/155 (read) main/155 (read) main/155 (write) main/155 (read) 
   Availability: not-ready
   Varpool flags: initialized
 
@@ -1929,243 +1929,270 @@ Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-all_leds_off/191 (all_leds_off)
+button_pressed/193 (button_pressed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 192
+  References: 
+  Referring: 
+  Function button_pressed/193 is inline copy in heartbeat_pattern/153
+  Clone of button_pressed/145
+  Availability: local
+  Function flags: count:125398821 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (125398821 (estimated locally),0.12 per call) 
+  Calls: gpio_read/157 (125398821 (estimated locally),0.12 per call) MXC_Delay/158 (41381611 (estimated locally),0.04 per call) gpio_read/157 (41381611 (estimated locally),0.04 per call) 
+button_pressed/192 (button_pressed)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 191
+  previous sharing asm name: 193
+  References: 
+  Referring: 
+  Function button_pressed/192 is inline copy in heartbeat_pattern/153
+  Clone of button_pressed/145
+  Availability: local
+  Function flags: count:256544234 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (256544234 (estimated locally),0.24 per call) 
+  Calls: gpio_read/157 (256544234 (estimated locally),0.24 per call) MXC_Delay/158 (84659597 (estimated locally),0.08 per call) gpio_read/157 (84659597 (estimated locally),0.08 per call) 
+button_pressed/191 (button_pressed)
   Type: function definition analyzed
   Visibility: semantic_interposition public
   next sharing asm name: 190
-  References: leds/143 (read) leds/143 (read) 
+  previous sharing asm name: 192
+  References: 
   Referring: 
-  Function all_leds_off/191 is inline copy in snake_pattern/154
-  Clone of all_leds_off/150
+  Function button_pressed/191 is inline copy in snake_pattern/154
+  Clone of button_pressed/145
   Availability: local
-  Function flags: count:107374182 (estimated locally) body local
-  Called by: snake_pattern/154 (inlined) (107374182 (estimated locally),1.00 per call) 
-  Calls: gpio_clear/160 (966367622 (estimated locally),9.00 per call) 
-all_leds_off/190 (all_leds_off)
+  Function flags: count:107374184 (estimated locally) body local
+  Called by: snake_pattern/154 (inlined) (107374184 (estimated locally),0.61 per call) 
+  Calls: gpio_read/157 (107374184 (estimated locally),0.61 per call) MXC_Delay/158 (35433481 (estimated locally),0.20 per call) gpio_read/157 (35433481 (estimated locally),0.20 per call) 
+button_pressed/190 (button_pressed)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  next sharing asm name: 189
+  next sharing asm name: 188
   previous sharing asm name: 191
-  References: leds/143 (read) leds/143 (read) 
+  References: 
   Referring: 
-  Function all_leds_off/190 is inline copy in heartbeat_pattern/153
-  Clone of all_leds_off/150
+  Function button_pressed/190 is inline copy in heartbeat_pattern/153
+  Clone of button_pressed/145
   Availability: local
-  Function flags: count:1073741824 (estimated locally) body local
-  Called by: heartbeat_pattern/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
-  Calls: gpio_clear/160 (9663676256 (estimated locally),9.00 per call) 
+  Function flags: count:524845000 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (524845000 (estimated locally),0.49 per call) 
+  Calls: gpio_read/157 (524845000 (estimated locally),0.49 per call) MXC_Delay/158 (173198849 (estimated locally),0.16 per call) gpio_read/157 (173198849 (estimated locally),0.16 per call) 
 all_leds_off/189 (all_leds_off)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  next sharing asm name: 184
-  previous sharing asm name: 190
+  next sharing asm name: 185
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Function all_leds_off/189 is inline copy in heartbeat_pattern/153
   Clone of all_leds_off/150
   Availability: local
-  Function flags: count:1073741824 (estimated locally) body local
-  Called by: heartbeat_pattern/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
-  Calls: gpio_clear/160 (9663676256 (estimated locally),9.00 per call) 
-all_leds_on/188 (all_leds_on)
+  Function flags: count:125398821 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (125398821 (estimated locally),0.12 per call) 
+  Calls: gpio_clear/160 (1128589370 (estimated locally),1.05 per call) 
+button_pressed/188 (button_pressed)
   Type: function definition analyzed
   Visibility: semantic_interposition public
   next sharing asm name: 187
-  References: leds/143 (read) leds/143 (read) 
+  previous sharing asm name: 190
+  References: 
   Referring: 
-  Function all_leds_on/188 is inline copy in heartbeat_pattern/153
-  Clone of all_leds_on/151
+  Function button_pressed/188 is inline copy in heartbeat_pattern/153
+  Clone of button_pressed/145
   Availability: local
   Function flags: count:1073741824 (estimated locally) body local
   Called by: heartbeat_pattern/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
-  Calls: gpio_set/161 (9663676256 (estimated locally),9.00 per call) 
-all_leds_on/187 (all_leds_on)
+  Calls: gpio_read/157 (1073741824 (estimated locally),1.00 per call) MXC_Delay/158 (354334800 (estimated locally),0.33 per call) gpio_read/157 (354334800 (estimated locally),0.33 per call) 
+button_pressed/187 (button_pressed)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  next sharing asm name: 178
+  next sharing asm name: 186
   previous sharing asm name: 188
-  References: leds/143 (read) leds/143 (read) 
+  References: 
   Referring: 
-  Function all_leds_on/187 is inline copy in heartbeat_pattern/153
-  Clone of all_leds_on/151
+  Function button_pressed/187 is inline copy in snake_pattern/154
+  Clone of button_pressed/145
   Availability: local
-  Function flags: count:1073741824 (estimated locally) body local
-  Called by: heartbeat_pattern/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
-  Calls: gpio_set/161 (9663676256 (estimated locally),9.00 per call) 
-led_on.part.0/186 (led_on.part.0)
-  Type: function definition analyzed
-  Visibility: semantic_interposition artificial
-  next sharing asm name: 182
-  References: leds/143 (read) leds/143 (read) 
-  Referring: 
-  Function led_on.part.0/186 is inline copy in snake_pattern/154
-  Clone of led_on.part.0/166
-  Availability: local
-  Function flags: count:204096845 (estimated locally) body local split_part
-  Called by: snake_pattern/154 (inlined) (204096845 (estimated locally),1.90 per call) 
-  Calls: gpio_set/161 (204096845 (estimated locally),1.90 per call) 
-led_off.part.0/185 (led_off.part.0)
-  Type: function definition analyzed
-  Visibility: semantic_interposition artificial
-  next sharing asm name: 181
-  References: leds/143 (read) leds/143 (read) 
-  Referring: 
-  Function led_off.part.0/185 is inline copy in snake_pattern/154
-  Clone of led_off.part.0/167
-  Availability: local
-  Function flags: count:204096846 (estimated locally) body local split_part
-  Called by: snake_pattern/154 (inlined) (204096846 (estimated locally),1.90 per call) 
-  Calls: gpio_clear/160 (204096846 (estimated locally),1.90 per call) 
-all_leds_off/184 (all_leds_off)
+  Function flags: count:930998584 (estimated locally) body local
+  Called by: snake_pattern/154 (inlined) (930998584 (estimated locally),5.27 per call) 
+  Calls: gpio_read/157 (930998584 (estimated locally),5.27 per call) MXC_Delay/158 (307229531 (estimated locally),1.74 per call) gpio_read/157 (307229531 (estimated locally),1.74 per call) 
+button_pressed/186 (button_pressed)
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  next sharing asm name: 183
+  next sharing asm name: 145
+  previous sharing asm name: 187
+  References: 
+  Referring: 
+  Function button_pressed/186 is inline copy in snake_pattern/154
+  Clone of button_pressed/145
+  Availability: local
+  Function flags: count:966367640 (estimated locally) body local
+  Called by: snake_pattern/154 (inlined) (966367640 (estimated locally),5.47 per call) 
+  Calls: gpio_read/157 (966367640 (estimated locally),5.47 per call) MXC_Delay/158 (318901319 (estimated locally),1.80 per call) gpio_read/157 (318901319 (estimated locally),1.80 per call) 
+all_leds_off/185 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 184
   previous sharing asm name: 189
   References: leds/143 (read) leds/143 (read) 
   Referring: 
-  Function all_leds_off/184 is inline copy in main/155
+  Function all_leds_off/185 is inline copy in heartbeat_pattern/153
   Clone of all_leds_off/150
   Availability: local
-  Function flags: count:719407024 (estimated locally) body local
-  Called by: heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) 
-  Calls: gpio_clear/160 (6474663109 (estimated locally),609.03 per call) 
-all_leds_off/183 (all_leds_off)
+  Function flags: count:524845000 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (524845000 (estimated locally),0.49 per call) 
+  Calls: gpio_clear/160 (4723604922 (estimated locally),4.40 per call) 
+all_leds_off/184 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 177
+  previous sharing asm name: 185
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_off/184 is inline copy in snake_pattern/154
+  Clone of all_leds_off/150
+  Availability: local
+  Function flags: count:176817788 (estimated locally) body local
+  Called by: snake_pattern/154 (inlined) (176817788 (estimated locally),1.00 per call) 
+  Calls: gpio_clear/160 (1591360066 (estimated locally),9.00 per call) 
+all_leds_on/183 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 182
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_on/183 is inline copy in heartbeat_pattern/153
+  Clone of all_leds_on/151
+  Availability: local
+  Function flags: count:256544234 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (256544234 (estimated locally),0.24 per call) 
+  Calls: gpio_set/161 (2308898068 (estimated locally),2.15 per call) 
+all_leds_on/182 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  next sharing asm name: 151
+  previous sharing asm name: 183
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function all_leds_on/182 is inline copy in heartbeat_pattern/153
+  Clone of all_leds_on/151
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: heartbeat_pattern/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: gpio_set/161 (9663676256 (estimated locally),9.00 per call) 
+led_off.part.0/181 (led_off.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 179
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_off.part.0/181 is inline copy in snake_pattern/154
+  Clone of led_off.part.0/167
+  Availability: local
+  Function flags: count:295984930 (estimated locally) body local split_part
+  Called by: snake_pattern/154 (inlined) (295984930 (estimated locally),1.67 per call) 
+  Calls: gpio_clear/160 (295984930 (estimated locally),1.67 per call) 
+led_on.part.0/180 (led_on.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 178
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_on.part.0/180 is inline copy in snake_pattern/154
+  Clone of led_on.part.0/166
+  Availability: local
+  Function flags: count:307229531 (estimated locally) body local split_part
+  Called by: snake_pattern/154 (inlined) (307229531 (estimated locally),1.74 per call) 
+  Calls: gpio_set/161 (307229531 (estimated locally),1.74 per call) 
+led_off.part.0/179 (led_off.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 176
+  previous sharing asm name: 181
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_off.part.0/179 is inline copy in led_off/148
+  Clone of led_off.part.0/167
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local split_part
+  Called by: led_off/148 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: gpio_clear/160 (354334800 (estimated locally),0.33 per call) 
+led_on.part.0/178 (led_on.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 175
+  previous sharing asm name: 180
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_on.part.0/178 is inline copy in led_on/147
+  Clone of led_on.part.0/166
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local split_part
+  Called by: led_on/147 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: gpio_set/161 (354334800 (estimated locally),0.33 per call) 
+all_leds_off/177 (all_leds_off)
   Type: function definition analyzed
   Visibility: semantic_interposition public
   next sharing asm name: 150
   previous sharing asm name: 184
   References: leds/143 (read) leds/143 (read) 
   Referring: 
-  Function all_leds_off/183 is inline copy in main/155
+  Function all_leds_off/177 is inline copy in main/155
   Clone of all_leds_off/150
   Availability: local
-  Function flags: count:719407024 (estimated locally) body local
-  Called by: heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) 
-  Calls: gpio_clear/160 (6474663109 (estimated locally),609.03 per call) 
-led_on.part.0/182 (led_on.part.0)
-  Type: function definition analyzed
-  Visibility: semantic_interposition artificial
-  next sharing asm name: 180
-  previous sharing asm name: 186
-  References: leds/143 (read) leds/143 (read) 
-  Referring: 
-  Function led_on.part.0/182 is inline copy in snake_pattern/154
-  Clone of led_on.part.0/166
-  Availability: local
-  Function flags: count:318901320 (estimated locally) body local split_part
-  Called by: snake_pattern/154 (inlined) (318901320 (estimated locally),2.97 per call) 
-  Calls: gpio_set/161 (318901320 (estimated locally),2.97 per call) 
-led_off.part.0/181 (led_off.part.0)
-  Type: function definition analyzed
-  Visibility: semantic_interposition artificial
-  next sharing asm name: 179
-  previous sharing asm name: 185
-  References: leds/143 (read) leds/143 (read) 
-  Referring: 
-  Function led_off.part.0/181 is inline copy in snake_pattern/154
-  Clone of led_off.part.0/167
-  Availability: local
-  Function flags: count:318901321 (estimated locally) body local split_part
-  Called by: snake_pattern/154 (inlined) (318901321 (estimated locally),2.97 per call) 
-  Calls: gpio_clear/160 (318901321 (estimated locally),2.97 per call) 
-led_on.part.0/180 (led_on.part.0)
-  Type: function definition analyzed
-  Visibility: semantic_interposition artificial
-  next sharing asm name: 166
-  previous sharing asm name: 182
-  References: leds/143 (read) leds/143 (read) 
-  Referring: 
-  Function led_on.part.0/180 is inline copy in main/155
-  Clone of led_on.part.0/166
-  Availability: local
-  Function flags: count:95679970 (estimated locally) body local split_part
-  Called by: main/155 (inlined) (95679970 (estimated locally),9.00 per call) 
-  Calls: gpio_set/161 (95679970 (estimated locally),9.00 per call) 
-led_off.part.0/179 (led_off.part.0)
+  Function flags: count:118111600 (estimated locally) body local
+  Called by: main/155 (inlined) (118111600 (estimated locally),101.00 per call) 
+  Calls: gpio_clear/160 (1063004382 (estimated locally),909.00 per call) 
+led_off.part.0/176 (led_off.part.0)
   Type: function definition analyzed
   Visibility: semantic_interposition artificial
   next sharing asm name: 167
-  previous sharing asm name: 181
-  References: leds/143 (read) leds/143 (read) 
-  Referring: 
-  Function led_off.part.0/179 is inline copy in main/155
-  Clone of led_off.part.0/167
-  Availability: local
-  Function flags: count:95679970 (estimated locally) body local split_part
-  Called by: main/155 (inlined) (95679970 (estimated locally),9.00 per call) 
-  Calls: gpio_clear/160 (95679970 (estimated locally),9.00 per call) 
-all_leds_on/178 (all_leds_on)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  next sharing asm name: 177
-  previous sharing asm name: 187
-  References: leds/143 (read) leds/143 (read) 
-  Referring: 
-  Function all_leds_on/178 is inline copy in main/155
-  Clone of all_leds_on/151
-  Availability: local
-  Function flags: count:719407024 (estimated locally) body local
-  Called by: heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) 
-  Calls: gpio_set/161 (6474663109 (estimated locally),609.03 per call) 
-all_leds_on/177 (all_leds_on)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  next sharing asm name: 151
-  previous sharing asm name: 178
-  References: leds/143 (read) leds/143 (read) 
-  Referring: 
-  Function all_leds_on/177 is inline copy in main/155
-  Clone of all_leds_on/151
-  Availability: local
-  Function flags: count:719407024 (estimated locally) body local
-  Called by: heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) 
-  Calls: gpio_set/161 (6474663109 (estimated locally),609.03 per call) 
-heartbeat_pattern/176 (heartbeat_pattern)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  next sharing asm name: 153
-  References: 
-  Referring: 
-  Function heartbeat_pattern/176 is inline copy in main/155
-  Clone of heartbeat_pattern/153
-  Availability: local
-  Function flags: count:719407024 (estimated locally) body local
-  Called by: main/155 (inlined) (719407024 (estimated locally),67.67 per call) 
-  Calls: all_leds_on/178 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (719407024 (estimated locally),67.67 per call) all_leds_off/184 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (719407024 (estimated locally),67.67 per call) all_leds_on/177 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (719407024 (estimated locally),67.67 per call) all_leds_off/183 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (719407024 (estimated locally),67.67 per call) 
-button_pressed/175 (button_pressed)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  next sharing asm name: 145
-  References: 
-  Referring: 
-  Function button_pressed/175 is inline copy in main/155
-  Clone of button_pressed/145
-  Availability: local
-  Function flags: count:1073741823 (estimated locally) body local
-  Called by: main/155 (inlined) (1073741823 (estimated locally),101.00 per call) 
-  Calls: gpio_read/157 (1073741823 (estimated locally),101.00 per call) MXC_Delay/158 (354334800 (estimated locally),33.33 per call) gpio_read/157 (354334800 (estimated locally),33.33 per call) 
-led_off.part.0/167 (led_off.part.0)
-  Type: function definition analyzed
-  Visibility: semantic_interposition prevailing_def_ironly artificial
   previous sharing asm name: 179
   References: leds/143 (read) leds/143 (read) 
   Referring: 
-  Function led_off.part.0/167 is inline copy in led_off/148
+  Function led_off.part.0/176 is inline copy in main/155
+  Clone of led_off.part.0/167
   Availability: local
-  Function flags: count:354334800 (estimated locally) body local split_part
-  Called by: led_off/148 (inlined) (354334800 (estimated locally),0.33 per call) 
-  Calls: gpio_clear/160 (354334800 (estimated locally),0.33 per call) 
+  Function flags: count:10524797 (estimated locally) body local split_part
+  Called by: main/155 (inlined) (10524797 (estimated locally),9.00 per call) 
+  Calls: gpio_clear/160 (10524797 (estimated locally),9.00 per call) 
+led_on.part.0/175 (led_on.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition artificial
+  next sharing asm name: 166
+  previous sharing asm name: 178
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_on.part.0/175 is inline copy in main/155
+  Clone of led_on.part.0/166
+  Availability: local
+  Function flags: count:10524797 (estimated locally) body local split_part
+  Called by: main/155 (inlined) (10524797 (estimated locally),9.00 per call) 
+  Calls: gpio_set/161 (10524797 (estimated locally),9.00 per call) 
+led_off.part.0/167 (led_off.part.0)
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly artificial
+  previous sharing asm name: 176
+  References: leds/143 (read) leds/143 (read) 
+  Referring: 
+  Function led_off.part.0/167 is inline copy in snake_pattern/154
+  Availability: local
+  Function flags: count:189430355 (estimated locally) body local split_part
+  Called by: snake_pattern/154 (inlined) (189430355 (estimated locally),1.07 per call) 
+  Calls: gpio_clear/160 (189430355 (estimated locally),1.07 per call) 
 led_on.part.0/166 (led_on.part.0)
   Type: function definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly artificial
-  previous sharing asm name: 180
+  previous sharing asm name: 175
   References: leds/143 (read) leds/143 (read) 
   Referring: 
-  Function led_on.part.0/166 is inline copy in led_on/147
+  Function led_on.part.0/166 is inline copy in snake_pattern/154
   Availability: local
-  Function flags: count:354334800 (estimated locally) body local split_part
-  Called by: led_on/147 (inlined) (354334800 (estimated locally),0.33 per call) 
-  Calls: gpio_set/161 (354334800 (estimated locally),0.33 per call) 
+  Function flags: count:196626900 (estimated locally) body local split_part
+  Called by: snake_pattern/154 (inlined) (196626900 (estimated locally),1.11 per call) 
+  Calls: gpio_set/161 (196626900 (estimated locally),1.11 per call) 
 printf/165 (printf)
   Type: function
   Visibility: semantic_interposition external public
@@ -2173,7 +2200,7 @@ printf/165 (printf)
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/155 (536870912 (estimated locally),50.50 per call) main/155 (95679970 (estimated locally),9.00 per call) main/155 (10631108 (estimated locally),1.00 per call) 
+  Called by: main/155 (118111600 (estimated locally),101.00 per call) main/155 (10524797 (estimated locally),9.00 per call) main/155 (1169422 (estimated locally),1.00 per call) 
   Calls: 
 puts/164 (__builtin_puts)
   Type: function
@@ -2182,7 +2209,7 @@ puts/164 (__builtin_puts)
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) main/155 (10631108 (estimated locally),1.00 per call) 
+  Called by: main/155 (1169422 (estimated locally),1.00 per call) main/155 (1169422 (estimated locally),1.00 per call) main/155 (1169422 (estimated locally),1.00 per call) main/155 (1169422 (estimated locally),1.00 per call) main/155 (1169422 (estimated locally),1.00 per call) main/155 (1169422 (estimated locally),1.00 per call) main/155 (1169422 (estimated locally),1.00 per call) 
   Calls: 
 *.LC0/163 (*.LC0)
   Type: variable definition analyzed
@@ -2207,7 +2234,7 @@ gpio_set/161 (gpio_set)
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: all_leds_on/188 (9663676256 (estimated locally),9.00 per call) all_leds_on/187 (9663676256 (estimated locally),9.00 per call) led_on.part.0/186 (204096845 (estimated locally),1.90 per call) led_on.part.0/182 (318901320 (estimated locally),2.97 per call) led_on.part.0/180 (95679970 (estimated locally),9.00 per call) all_leds_on/178 (6474663109 (estimated locally),609.03 per call) all_leds_on/177 (6474663109 (estimated locally),609.03 per call) fade_led/152 (531502204 (estimated locally),4900.49 per call) all_leds_on/151 (966367640 (estimated locally),9.00 per call) led_on.part.0/166 (354334800 (estimated locally),0.33 per call) 
+  Called by: all_leds_on/183 (2308898068 (estimated locally),2.15 per call) all_leds_on/182 (9663676256 (estimated locally),9.00 per call) led_on.part.0/180 (307229531 (estimated locally),1.74 per call) led_on.part.0/178 (354334800 (estimated locally),0.33 per call) led_on.part.0/175 (10524797 (estimated locally),9.00 per call) fade_led/152 (531502204 (estimated locally),4900.49 per call) all_leds_on/151 (966367640 (estimated locally),9.00 per call) led_on.part.0/166 (196626900 (estimated locally),1.11 per call) 
   Calls: 
 gpio_clear/160 (gpio_clear)
   Type: function
@@ -2216,7 +2243,7 @@ gpio_clear/160 (gpio_clear)
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: all_leds_off/191 (966367622 (estimated locally),9.00 per call) all_leds_off/190 (9663676256 (estimated locally),9.00 per call) all_leds_off/189 (9663676256 (estimated locally),9.00 per call) led_off.part.0/185 (204096846 (estimated locally),1.90 per call) all_leds_off/184 (6474663109 (estimated locally),609.03 per call) all_leds_off/183 (6474663109 (estimated locally),609.03 per call) led_off.part.0/181 (318901321 (estimated locally),2.97 per call) led_off.part.0/179 (95679970 (estimated locally),9.00 per call) fade_led/152 (531502204 (estimated locally),4900.49 per call) all_leds_off/150 (966367640 (estimated locally),9.00 per call) led_off.part.0/167 (354334800 (estimated locally),0.33 per call) led_init/146 (966367640 (estimated locally),9.00 per call) 
+  Called by: all_leds_off/189 (1128589370 (estimated locally),1.05 per call) all_leds_off/185 (4723604922 (estimated locally),4.40 per call) all_leds_off/184 (1591360066 (estimated locally),9.00 per call) led_off.part.0/181 (295984930 (estimated locally),1.67 per call) led_off.part.0/179 (354334800 (estimated locally),0.33 per call) all_leds_off/177 (1063004382 (estimated locally),909.00 per call) led_off.part.0/176 (10524797 (estimated locally),9.00 per call) fade_led/152 (531502204 (estimated locally),4900.49 per call) all_leds_off/150 (966367640 (estimated locally),9.00 per call) led_off.part.0/167 (189430355 (estimated locally),1.07 per call) led_init/146 (966367640 (estimated locally),9.00 per call) 
   Calls: 
 gpio_init_output/159 (gpio_init_output)
   Type: function
@@ -2234,7 +2261,7 @@ MXC_Delay/158 (MXC_Delay)
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: heartbeat_pattern/176 (719407024 (estimated locally),67.67 per call) heartbeat_pattern/176 (719407024 (estimated locally),67.67 per call) heartbeat_pattern/176 (719407024 (estimated locally),67.67 per call) heartbeat_pattern/176 (719407024 (estimated locally),67.67 per call) button_pressed/175 (354334800 (estimated locally),33.33 per call) main/155 (536870912 (estimated locally),50.50 per call) main/155 (95679970 (estimated locally),9.00 per call) snake_pattern/154 (107374184 (estimated locally),1.00 per call) snake_pattern/154 (966367643 (estimated locally),9.00 per call) heartbeat_pattern/153 (1073741824 (estimated locally),1.00 per call) heartbeat_pattern/153 (1073741824 (estimated locally),1.00 per call) heartbeat_pattern/153 (1073741824 (estimated locally),1.00 per call) heartbeat_pattern/153 (1073741824 (estimated locally),1.00 per call) fade_led/152 (1063004408 (estimated locally),9800.98 per call) button_pressed/145 (354334800 (estimated locally),0.33 per call) 
+  Called by: button_pressed/193 (41381611 (estimated locally),0.04 per call) button_pressed/192 (84659597 (estimated locally),0.08 per call) button_pressed/191 (35433481 (estimated locally),0.20 per call) button_pressed/190 (173198849 (estimated locally),0.16 per call) button_pressed/188 (354334800 (estimated locally),0.33 per call) button_pressed/187 (307229531 (estimated locally),1.74 per call) button_pressed/186 (318901319 (estimated locally),1.80 per call) main/155 (118111600 (estimated locally),101.00 per call) main/155 (10524797 (estimated locally),9.00 per call) snake_pattern/154 (107374184 (estimated locally),0.61 per call) snake_pattern/154 (930998584 (estimated locally),5.27 per call) heartbeat_pattern/153 (125398821 (estimated locally),0.12 per call) heartbeat_pattern/153 (256544234 (estimated locally),0.24 per call) heartbeat_pattern/153 (524845000 (estimated locally),0.49 per call) heartbeat_pattern/153 (1073741824 (estimated locally),1.00 per call) fade_led/152 (1063004408 (estimated locally),9800.98 per call) button_pressed/145 (354334800 (estimated locally),0.33 per call) 
   Calls: 
 gpio_read/157 (gpio_read)
   Type: function
@@ -2243,7 +2270,7 @@ gpio_read/157 (gpio_read)
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: button_pressed/175 (1073741823 (estimated locally),101.00 per call) button_pressed/175 (354334800 (estimated locally),33.33 per call) button_pressed/145 (354334800 (estimated locally),0.33 per call) button_pressed/145 (1073741824 (estimated locally),1.00 per call) 
+  Called by: button_pressed/193 (125398821 (estimated locally),0.12 per call) button_pressed/193 (41381611 (estimated locally),0.04 per call) button_pressed/192 (256544234 (estimated locally),0.24 per call) button_pressed/192 (84659597 (estimated locally),0.08 per call) button_pressed/191 (107374184 (estimated locally),0.61 per call) button_pressed/191 (35433481 (estimated locally),0.20 per call) button_pressed/190 (524845000 (estimated locally),0.49 per call) button_pressed/190 (173198849 (estimated locally),0.16 per call) button_pressed/188 (1073741824 (estimated locally),1.00 per call) button_pressed/188 (354334800 (estimated locally),0.33 per call) button_pressed/187 (930998584 (estimated locally),5.27 per call) button_pressed/187 (307229531 (estimated locally),1.74 per call) button_pressed/186 (966367640 (estimated locally),5.47 per call) button_pressed/186 (318901319 (estimated locally),1.80 per call) button_pressed/145 (354334800 (estimated locally),0.33 per call) button_pressed/145 (1073741824 (estimated locally),1.00 per call) 
   Calls: 
 gpio_init_input/156 (gpio_init_input)
   Type: function
@@ -2252,36 +2279,35 @@ gpio_init_input/156 (gpio_init_input)
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/155 (10631108 (estimated locally),1.00 per call) button_init/144 (1073741824 (estimated locally),1.00 per call) 
+  Called by: main/155 (1169422 (estimated locally),1.00 per call) button_init/144 (1073741824 (estimated locally),1.00 per call) 
   Calls: 
 main/155 (main)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
-  References: mode/142 (read) mode/142 (write) mode/142 (read) 
+  References: mode/142 (read) mode/142 (read) mode/142 (write) 
   Referring: 
   Availability: available
-  Function flags: count:10631108 (estimated locally) body only_called_at_startup executed_once
+  Function flags: count:1169422 (estimated locally) body only_called_at_startup executed_once
   Called by: 
-  Calls: snake_pattern/154 (354334800 (estimated locally),33.33 per call) heartbeat_pattern/176 (inlined) (719407024 (estimated locally),67.67 per call) MXC_Delay/158 (536870912 (estimated locally),50.50 per call) printf/165 (536870912 (estimated locally),50.50 per call) button_pressed/175 (inlined) (1073741823 (estimated locally),101.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) led_off.part.0/179 (inlined) (95679970 (estimated locally),9.00 per call) MXC_Delay/158 (95679970 (estimated locally),9.00 per call) led_on.part.0/180 (inlined) (95679970 (estimated locally),9.00 per call) printf/165 (95679970 (estimated locally),9.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) gpio_init_input/156 (10631108 (estimated locally),1.00 per call) led_init/146 (10631108 (estimated locally),1.00 per call) printf/165 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) puts/164 (10631108 (estimated locally),1.00 per call) 
+  Calls: MXC_Delay/158 (118111600 (estimated locally),101.00 per call) printf/165 (118111600 (estimated locally),101.00 per call) all_leds_off/177 (inlined) (118111600 (estimated locally),101.00 per call) snake_pattern/154 (536870912 (estimated locally),459.09 per call) heartbeat_pattern/153 (536870912 (estimated locally),459.09 per call) puts/164 (1169422 (estimated locally),1.00 per call) led_off.part.0/176 (inlined) (10524797 (estimated locally),9.00 per call) MXC_Delay/158 (10524797 (estimated locally),9.00 per call) led_on.part.0/175 (inlined) (10524797 (estimated locally),9.00 per call) printf/165 (10524797 (estimated locally),9.00 per call) puts/164 (1169422 (estimated locally),1.00 per call) puts/164 (1169422 (estimated locally),1.00 per call) gpio_init_input/156 (1169422 (estimated locally),1.00 per call) led_init/146 (1169422 (estimated locally),1.00 per call) printf/165 (1169422 (estimated locally),1.00 per call) puts/164 (1169422 (estimated locally),1.00 per call) puts/164 (1169422 (estimated locally),1.00 per call) puts/164 (1169422 (estimated locally),1.00 per call) puts/164 (1169422 (estimated locally),1.00 per call) 
 snake_pattern/154 (snake_pattern)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: *.LC0/163 (read) 
   Referring: 
   Availability: available
-  Function flags: count:107374182 (estimated locally) body
-  Called by: main/155 (354334800 (estimated locally),33.33 per call) 
-  Calls: MXC_Delay/158 (107374184 (estimated locally),1.00 per call) led_off.part.0/181 (inlined) (318901321 (estimated locally),2.97 per call) led_off.part.0/185 (inlined) (204096846 (estimated locally),1.90 per call) MXC_Delay/158 (966367643 (estimated locally),9.00 per call) led_on.part.0/186 (inlined) (204096845 (estimated locally),1.90 per call) led_on.part.0/182 (inlined) (318901320 (estimated locally),2.97 per call) all_leds_off/191 (inlined) (107374182 (estimated locally),1.00 per call) 
+  Function flags: count:176817788 (estimated locally) body
+  Called by: main/155 (536870912 (estimated locally),459.09 per call) 
+  Calls: button_pressed/191 (inlined) (107374184 (estimated locally),0.61 per call) MXC_Delay/158 (107374184 (estimated locally),0.61 per call) led_off.part.0/181 (inlined) (295984930 (estimated locally),1.67 per call) led_off.part.0/167 (inlined) (189430355 (estimated locally),1.07 per call) button_pressed/187 (inlined) (930998584 (estimated locally),5.27 per call) MXC_Delay/158 (930998584 (estimated locally),5.27 per call) led_on.part.0/166 (inlined) (196626900 (estimated locally),1.11 per call) led_on.part.0/180 (inlined) (307229531 (estimated locally),1.74 per call) button_pressed/186 (inlined) (966367640 (estimated locally),5.47 per call) all_leds_off/184 (inlined) (176817788 (estimated locally),1.00 per call) 
 heartbeat_pattern/153 (heartbeat_pattern)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
-  previous sharing asm name: 176
   References: 
   Referring: 
   Availability: available
   Function flags: count:1073741824 (estimated locally) body
-  Called by: 
-  Calls: MXC_Delay/158 (1073741824 (estimated locally),1.00 per call) all_leds_off/189 (inlined) (1073741824 (estimated locally),1.00 per call) MXC_Delay/158 (1073741824 (estimated locally),1.00 per call) all_leds_on/188 (inlined) (1073741824 (estimated locally),1.00 per call) MXC_Delay/158 (1073741824 (estimated locally),1.00 per call) all_leds_off/190 (inlined) (1073741824 (estimated locally),1.00 per call) MXC_Delay/158 (1073741824 (estimated locally),1.00 per call) all_leds_on/187 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Called by: main/155 (536870912 (estimated locally),459.09 per call) 
+  Calls: button_pressed/193 (inlined) (125398821 (estimated locally),0.12 per call) MXC_Delay/158 (125398821 (estimated locally),0.12 per call) all_leds_off/189 (inlined) (125398821 (estimated locally),0.12 per call) button_pressed/192 (inlined) (256544234 (estimated locally),0.24 per call) MXC_Delay/158 (256544234 (estimated locally),0.24 per call) all_leds_on/183 (inlined) (256544234 (estimated locally),0.24 per call) button_pressed/190 (inlined) (524845000 (estimated locally),0.49 per call) MXC_Delay/158 (524845000 (estimated locally),0.49 per call) all_leds_off/185 (inlined) (524845000 (estimated locally),0.49 per call) button_pressed/188 (inlined) (1073741824 (estimated locally),1.00 per call) MXC_Delay/158 (1073741824 (estimated locally),1.00 per call) all_leds_on/182 (inlined) (1073741824 (estimated locally),1.00 per call) 
 fade_led/152 (fade_led)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
@@ -2294,7 +2320,7 @@ fade_led/152 (fade_led)
 all_leds_on/151 (all_leds_on)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
-  previous sharing asm name: 177
+  previous sharing asm name: 182
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Availability: available
@@ -2304,7 +2330,7 @@ all_leds_on/151 (all_leds_on)
 all_leds_off/150 (all_leds_off)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
-  previous sharing asm name: 183
+  previous sharing asm name: 177
   References: leds/143 (read) leds/143 (read) 
   Referring: 
   Availability: available
@@ -2328,7 +2354,7 @@ led_off/148 (led_off)
   Availability: available
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
-  Calls: led_off.part.0/167 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: led_off.part.0/179 (inlined) (354334800 (estimated locally),0.33 per call) 
 led_on/147 (led_on)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
@@ -2337,7 +2363,7 @@ led_on/147 (led_on)
   Availability: available
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
-  Calls: led_on.part.0/166 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: led_on.part.0/178 (inlined) (354334800 (estimated locally),0.33 per call) 
 led_init/146 (led_init)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
@@ -2345,12 +2371,12 @@ led_init/146 (led_init)
   Referring: 
   Availability: available
   Function flags: count:107374184 (estimated locally) body
-  Called by: main/155 (10631108 (estimated locally),1.00 per call) 
+  Called by: main/155 (1169422 (estimated locally),1.00 per call) 
   Calls: gpio_clear/160 (966367640 (estimated locally),9.00 per call) gpio_init_output/159 (966367640 (estimated locally),9.00 per call) 
 button_pressed/145 (button_pressed)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
-  previous sharing asm name: 175
+  previous sharing asm name: 186
   References: 
   Referring: 
   Availability: available
@@ -2370,29 +2396,35 @@ leds/143 (leds)
   Type: variable definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: 
-  Referring: led_toggle/149 (read) led_toggle/149 (read) all_leds_off/150 (read) all_leds_off/150 (read) all_leds_on/151 (read) all_leds_on/151 (read) led_init/146 (read) led_init/146 (read) led_on.part.0/166 (read) led_on.part.0/166 (read) led_off.part.0/167 (read) led_off.part.0/167 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) all_leds_on/177 (read) all_leds_on/177 (read) all_leds_on/178 (read) all_leds_on/178 (read) led_off.part.0/179 (read) led_off.part.0/179 (read) led_on.part.0/180 (read) led_on.part.0/180 (read) led_off.part.0/181 (read) led_off.part.0/181 (read) led_on.part.0/182 (read) led_on.part.0/182 (read) all_leds_off/183 (read) all_leds_off/183 (read) all_leds_off/184 (read) all_leds_off/184 (read) led_off.part.0/185 (read) led_off.part.0/185 (read) led_on.part.0/186 (read) led_on.part.0/186 (read) all_leds_on/187 (read) all_leds_on/187 (read) all_leds_on/188 (read) all_leds_on/188 (read) all_leds_off/189 (read) all_leds_off/189 (read) all_leds_off/190 (read) all_leds_off/190 (read) all_leds_off/191 (read) all_leds_off/191 (read) 
+  Referring: led_toggle/149 (read) led_toggle/149 (read) all_leds_off/150 (read) all_leds_off/150 (read) all_leds_on/151 (read) all_leds_on/151 (read) led_init/146 (read) led_init/146 (read) led_on.part.0/166 (read) led_on.part.0/166 (read) led_off.part.0/167 (read) led_off.part.0/167 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) fade_led/152 (read) led_on.part.0/175 (read) led_on.part.0/175 (read) led_off.part.0/176 (read) led_off.part.0/176 (read) all_leds_off/177 (read) all_leds_off/177 (read) led_on.part.0/178 (read) led_on.part.0/178 (read) led_off.part.0/179 (read) led_off.part.0/179 (read) led_on.part.0/180 (read) led_on.part.0/180 (read) led_off.part.0/181 (read) led_off.part.0/181 (read) all_leds_on/182 (read) all_leds_on/182 (read) all_leds_on/183 (read) all_leds_on/183 (read) all_leds_off/184 (read) all_leds_off/184 (read) all_leds_off/185 (read) all_leds_off/185 (read) all_leds_off/189 (read) all_leds_off/189 (read) 
   Availability: available
   Varpool flags: initialized read-only const-value-known
 mode/142 (mode)
   Type: variable definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: 
-  Referring: main/155 (read) main/155 (write) main/155 (read) 
+  Referring: main/155 (read) main/155 (read) main/155 (write) 
   Availability: available
   Varpool flags: initialized
-updating call of heartbeat_pattern/153 -> all_leds_off/189: all_leds_off ();
+updating call of heartbeat_pattern/153 -> button_pressed/192: _3 = button_pressed ();
+  updated to:_3 = button_pressed ();
+updating call of heartbeat_pattern/153 -> button_pressed/190: _2 = button_pressed ();
+  updated to:_2 = button_pressed ();
+updating call of heartbeat_pattern/153 -> all_leds_off/185: all_leds_off ();
   updated to:all_leds_off ();
-updating call of heartbeat_pattern/153 -> all_leds_off/190: all_leds_off ();
+updating call of heartbeat_pattern/153 -> button_pressed/188: _1 = button_pressed ();
+  updated to:_1 = button_pressed ();
+updating call of heartbeat_pattern/153 -> all_leds_on/182: all_leds_on ();
+  updated to:all_leds_on ();
+updating call of snake_pattern/154 -> button_pressed/193: _8 = button_pressed ();
+  updated to:_8 = button_pressed ();
+updating call of snake_pattern/154 -> button_pressed/187: _5 = button_pressed ();
+  updated to:_5 = button_pressed ();
+updating call of snake_pattern/154 -> button_pressed/186: _1 = button_pressed ();
+  updated to:_1 = button_pressed ();
+updating call of snake_pattern/154 -> all_leds_off/189: all_leds_off ();
   updated to:all_leds_off ();
-updating call of heartbeat_pattern/153 -> all_leds_on/187: all_leds_on ();
-  updated to:all_leds_on ();
-updating call of main/155 -> all_leds_on/188: all_leds_on ();
-  updated to:all_leds_on ();
-updating call of main/155 -> all_leds_off/191: all_leds_off ();
-  updated to:all_leds_off ();
-updating call of main/155 -> all_leds_on/177: all_leds_on ();
-  updated to:all_leds_on ();
-updating call of main/155 -> all_leds_off/183: all_leds_off ();
+updating call of main/155 -> all_leds_off/189: all_leds_off ();
   updated to:all_leds_off ();
 Trivially needed variables: *.LC0/163 leds/143 mode/142
 Removing variables:
@@ -2494,7 +2526,7 @@ main/155 (main)
   References: 
   Referring: 
   Availability: available
-  Function flags: count:10631108 (estimated locally) only_called_at_startup executed_once
+  Function flags: count:1169422 (estimated locally) only_called_at_startup executed_once
   Called by: 
   Calls: 
 snake_pattern/154 (snake_pattern)
@@ -2503,7 +2535,7 @@ snake_pattern/154 (snake_pattern)
   References: 
   Referring: 
   Availability: available
-  Function flags: count:107374182 (estimated locally)
+  Function flags: count:176817788 (estimated locally)
   Called by: 
   Calls: 
 heartbeat_pattern/153 (heartbeat_pattern)
@@ -2599,7 +2631,7 @@ button_init/144 (button_init)
 leds/143 (leds)
   Type: variable definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.rodata.leds (implicit_section)
-  Aux: @0000025f0dd3c900
+  Aux: @000001cc3a898f80
   References: 
   Referring: 
   Availability: available
@@ -2607,7 +2639,7 @@ leds/143 (leds)
 mode/142 (mode)
   Type: variable definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.bss.mode (implicit_section)
-  Aux: @0000025f0dcf7280
+  Aux: @000001cc3a85b280
   References: 
   Referring: 
   Availability: available

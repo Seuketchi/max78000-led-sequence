@@ -9,45 +9,14 @@
 #include "board.h"
 #include "mxc_delay.h"
 #include "gpio.h"
+#include "led.h"
 
 /***** Definitions *****/
 
-// 3×3 matrix → 9 LEDs
-#define NUM_LEDS 9
 #define BUTTON_PORT MXC_GPIO1
 #define BUTTON_PIN  MXC_GPIO_PIN_7
 
-typedef struct {
-    mxc_gpio_regs_t *port;
-    uint32_t pin;
-} led_pin_t;
-
 int mode = 0;  // 0 = heartbeat, 1 = snake
-
-
-/**
- * LED layout (3×3):
- *
- *  [0] [1] [2]
- *  [3] [4] [5]
- *  [6] [7] [8]
- */
-
-// Pin mapping (you provided)
-const led_pin_t leds[NUM_LEDS] = {
-    {MXC_GPIO0, MXC_GPIO_PIN_17}, // LED 0 - top row
-    {MXC_GPIO0, MXC_GPIO_PIN_16}, // LED 1
-    {MXC_GPIO3, MXC_GPIO_PIN_1},  // LED 2
-
-    {MXC_GPIO0, MXC_GPIO_PIN_19}, // LED 3 - middle row
-    {MXC_GPIO0, MXC_GPIO_PIN_11}, // LED 4
-    {MXC_GPIO0, MXC_GPIO_PIN_8},  // LED 5
-
-    {MXC_GPIO1, MXC_GPIO_PIN_1},  // LED 7
-    {MXC_GPIO2, MXC_GPIO_PIN_4},   // LED 8
-    {MXC_GPIO2, MXC_GPIO_PIN_3},  // LED 6 - bottom row
-
-};
 
 /***** Basic Button Helpers *****/
 void button_init(void)
@@ -65,75 +34,31 @@ int button_pressed(void)
     return 0;
 }
 
-/***** Basic LED Helpers *****/
 
-void led_init(void)
-{
-    for (int i = 0; i < NUM_LEDS; i++) {
-        gpio_init_output(leds[i].port, leds[i].pin);
-        gpio_clear(leds[i].port, leds[i].pin);
-    }
-}
+/***** Patterns - now return 1 if button pressed *****/
 
-void led_on(int i) {
-    if (i >= 0 && i < NUM_LEDS) gpio_set(leds[i].port, leds[i].pin);
-}
-
-void led_off(int i) {
-    if (i >= 0 && i < NUM_LEDS) gpio_clear(leds[i].port, leds[i].pin);
-}
-
-void led_toggle(int i) {
-    if (i >= 0 && i < NUM_LEDS) gpio_toggle(leds[i].port, leds[i].pin);
-}
-
-void all_leds_off(void) {
-    for (int i = 0; i < NUM_LEDS; i++) gpio_clear(leds[i].port, leds[i].pin);
-}
-
-void all_leds_on(void) {
-    for (int i = 0; i < NUM_LEDS; i++) gpio_set(leds[i].port, leds[i].pin);
-}
-
-void fade_led(int led, int fade_in)
-{
-    // fade_in = 1 → fade-in
-    // fade_in = 0 → fade-out
-
-    for (int level = 0; level < 100; level++) {
-        int duty = fade_in ? level : (100 - level);
-
-        // Software PWM cycle
-        for (int t = 0; t < 100; t++) {
-            if (t < duty)
-                gpio_set(leds[led].port, leds[led].pin);
-            else
-                gpio_clear(leds[led].port, leds[led].pin);
-            
-            // small delay for PWM speed
-            MXC_Delay(MXC_DELAY_USEC(50));
-        }
-    }
-}
-
-
-/***** Patterns (still using heartbeat & snake) *****/
-
-void heartbeat_pattern(void)
+int heartbeat_pattern(void)
 {
     all_leds_on();
     MXC_Delay(MXC_DELAY_MSEC(100));
+    if (button_pressed()) return 1;
+    
     all_leds_off();
     MXC_Delay(MXC_DELAY_MSEC(100));
+    if (button_pressed()) return 1;
 
     all_leds_on();
     MXC_Delay(MXC_DELAY_MSEC(100));
+    if (button_pressed()) return 1;
+    
     all_leds_off();
-
     MXC_Delay(MXC_DELAY_MSEC(600));
+    if (button_pressed()) return 1;
+    
+    return 0;
 }
 
-void snake_pattern(void)
+int snake_pattern(void)
 {
     // 3x3 snake path (L→R, R→L, top→bottom)
     int snake_path[NUM_LEDS] = {
@@ -144,24 +69,48 @@ void snake_pattern(void)
 
     all_leds_off();
 
+    // Snake with trailing body (length 3)
+    #define SNAKE_BODY_LENGTH 3
+    int snake_body[SNAKE_BODY_LENGTH];
+    for (int i = 0; i < SNAKE_BODY_LENGTH; i++) {
+        snake_body[i] = -1;  // -1 means inactive
+    }
+
     for (int i = 0; i < NUM_LEDS; i++) {
+        // Check button before each LED
+        if (button_pressed()) return 1;
 
-        // Turn on head of the snake
-        led_on(snake_path[i]);
+        // Shift body back (tail disappears, new segments push from head)
+        for (int j = SNAKE_BODY_LENGTH - 1; j > 0; j--) {
+            snake_body[j] = snake_body[j - 1];
+        }
+        snake_body[0] = snake_path[i];  // Add head to front
 
-        // If not the first LED, turn on the trailing LED
-        if (i > 0) {
-            led_on(snake_path[i - 1]);
+        // Turn off the tail (last element)
+        if (snake_body[SNAKE_BODY_LENGTH - 1] >= 0) {
+            led_off(snake_body[SNAKE_BODY_LENGTH - 1]);
+        }
+
+        // Draw the entire snake body (head brightest, tail dimmer effect via timing)
+        for (int j = 0; j < SNAKE_BODY_LENGTH; j++) {
+            if (snake_body[j] >= 0) {
+                led_on(snake_body[j]);
+            }
         }
 
         MXC_Delay(MXC_DELAY_MSEC(150));
-
-        // Turn off both lights before next step
-        if (i > 0) led_off(snake_path[i - 1]);
-        led_off(snake_path[i]);
+        
+        // Check button after delay
+        if (button_pressed()) return 1;
     }
 
+    // Turn off remaining snake body
+    all_leds_off();
+
     MXC_Delay(MXC_DELAY_MSEC(200));
+    if (button_pressed()) return 1;
+    
+    return 0;
 }
 
 
@@ -191,19 +140,21 @@ int main(void)
     }
     printf("Test complete.\n\n");
 
-while (1) {
-    // If button pressed → switch mode
-    if (button_pressed()) {
-        mode = !mode;
-        printf("Mode changed: %s\n", mode ? "Snake" : "Heartbeat");
-        MXC_Delay(MXC_DELAY_MSEC(300)); // prevent fast toggling
+    while (1) {
+        int button_pressed_flag = 0;
+        
+        if (mode == 0) {
+            button_pressed_flag = heartbeat_pattern();
+        } else {
+            button_pressed_flag = snake_pattern();
+        }
+        
+        // If button was pressed during pattern, switch mode immediately
+        if (button_pressed_flag) {
+            all_leds_off();  // Clean slate
+            mode = !mode;
+            printf("Mode changed: %s\n", mode ? "Snake" : "Heartbeat");
+            MXC_Delay(MXC_DELAY_MSEC(300)); // prevent fast toggling
+        }
     }
-
-    if (mode == 0) {
-        heartbeat_pattern();
-    } else {
-        snake_pattern();
-    }
-}
-
 }
