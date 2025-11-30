@@ -11,6 +11,8 @@ This project demonstrates practical GPIO control, timing, and embedded pattern s
 1. **Heartbeat Pattern** – A pulsing effect mimicking a heartbeat.
 2. **Snake Pattern** – A multi-segment snake that traverses the 3×3 matrix in a sequential pattern (left-to-right, right-to-left, top-to-bottom).
 
+![LED Matrix Demo](demo.gif)
+
 The implementation uses:
 
 - Maxim Integrated's **MXC GPIO APIs**

@@ -47,8 +47,6 @@ C:/Users/jadma/cfs/2.0.0/Hello_World/build/main.o: main.c \
  gpio.h \
  C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/Display/fonts/fonts.h \
  C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/Touchscreen/tsc2046.h \
- C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/LED/led.h \
- C:/analog/cfs/1.1.0/SDK/MAX/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
- C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/PushButton/pb.h \
+ led.h C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/PushButton/pb.h \
  C:/analog/cfs/1.1.0/SDK/MAX/Libraries/PeriphDrivers/Include/MAX78000/mxc_delay.h \
- gpio.h
+ gpio.h led.h

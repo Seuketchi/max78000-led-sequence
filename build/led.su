@@ -1,4 +1,7 @@
-C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/LED/led.c:26:5:LED_Init	24	static
-C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/LED/led.c:44:6:LED_On	8	static
-C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/LED/led.c:55:6:LED_Off	8	static
-C:/analog/cfs/1.1.0/SDK/MAX/Libraries/MiscDrivers/LED/led.c:66:6:LED_Toggle	8	static
+led.c:43:6:led_init	24	static
+led.c:51:6:led_on	0	static
+led.c:58:6:led_off	0	static
+led.c:65:6:led_toggle	0	static
+led.c:72:6:all_leds_off	16	static
+led.c:79:6:all_leds_on	16	static
+led.c:86:6:fade_led	32	static

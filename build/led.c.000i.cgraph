@@ -1,162 +1,120 @@
-Trivially needed symbols: LED_Toggle/145 LED_Off/144 LED_On/143 LED_Init/142
+Trivially needed symbols: fade_led/141 all_leds_on/140 all_leds_off/139 led_toggle/138 led_off/137 led_on/136 led_init/135
 
 
 Initial Symbol table:
 
-MXC_GPIO_OutToggle/152 (MXC_GPIO_OutToggle)
+MXC_Delay/146 (MXC_Delay)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Toggle/145 
+  Called by: fade_led/141 
   Calls: 
-MXC_GPIO_OutSet/151 (MXC_GPIO_OutSet)
+gpio_toggle/145 (gpio_toggle)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Off/144 
+  Called by: led_toggle/138 
   Calls: 
-MXC_GPIO_OutClr/150 (MXC_GPIO_OutClr)
+gpio_set/144 (gpio_set)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_On/143 
+  Called by: fade_led/141 all_leds_on/140 led_on/136 
   Calls: 
-mxc_assert/149 (mxc_assert)
+gpio_clear/143 (gpio_clear)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Toggle/145 LED_Off/144 LED_On/143 
+  Called by: fade_led/141 all_leds_off/139 led_off/137 led_init/135 
   Calls: 
-num_leds/148 (num_leds)
-  Type: variable
+gpio_init_output/142 (gpio_init_output)
+  Type: function
   Visibility: semantic_interposition external public
   References: 
-  Referring: LED_Init/142 (read) LED_On/143 (read) LED_Off/144 (read) LED_Toggle/145 (read) 
+  Referring: 
+  Function flags:
+  Called by: led_init/135 
+  Calls: 
+fade_led/141 (fade_led)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @00007ff6dcdc0e40
+  References: leds/134 (read) leds/134 (read) leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_Delay/146 gpio_clear/143 gpio_set/144 
+all_leds_on/140 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000011588feb7a8
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_set/144 
+all_leds_off/139 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000011588feb690
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 
+led_toggle/138 (led_toggle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000011588feb578
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_toggle/145 
+led_off/137 (led_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000011588feb460
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 
+led_on/136 (led_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000011588feb348
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_set/144 
+led_init/135 (led_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0000011588feb230
+  References: leds/134 (read) leds/134 (read) leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 gpio_init_output/142 
+leds/134 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0000011588feb230
+  References: 
+  Referring: led_init/135 (read) led_init/135 (read) led_init/135 (read) led_init/135 (read) led_on/136 (read) led_on/136 (read) led_off/137 (read) led_off/137 (read) led_toggle/138 (read) led_toggle/138 (read) all_leds_off/139 (read) all_leds_off/139 (read) all_leds_on/140 (read) all_leds_on/140 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) 
   Availability: not-ready
-  Varpool flags: read-only
-MXC_GPIO_Config/147 (MXC_GPIO_Config)
-  Type: function
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: LED_Init/142 
-  Calls: 
-led_pin/146 (led_pin)
-  Type: variable
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: LED_Init/142 (addr) LED_On/143 (read) LED_On/143 (read) LED_Off/144 (read) LED_Off/144 (read) LED_Toggle/145 (read) LED_Toggle/145 (read) 
-  Availability: not-ready
-  Varpool flags: read-only
-LED_Toggle/145 (LED_Toggle)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  Aux: @00007ff6ba510e40
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_OutToggle/152 mxc_assert/149 
-LED_Off/144 (LED_Off)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  Aux: @0000027453034e38
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: LED_Init/142 
-  Calls: MXC_GPIO_OutSet/151 mxc_assert/149 
-LED_On/143 (LED_On)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  Aux: @0000027453034d20
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_OutClr/150 mxc_assert/149 
-LED_Init/142 (LED_Init)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  Aux: @0000027453034c08
-  References: led_pin/146 (addr) num_leds/148 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_Config/147 LED_Off/144 
-MXC_SYS_In_Crit_Section/141 (MXC_SYS_In_Crit_Section)
-  Type: function definition
-  Visibility: semantic_interposition
-  References: 
-  Referring: 
-  Function flags:
-  Called by: 
-  Calls: 
-MXC_SYS_Crit_Exit/140 (MXC_SYS_Crit_Exit)
-  Type: function definition
-  Visibility: semantic_interposition
-  References: 
-  Referring: 
-  Function flags:
-  Called by: 
-  Calls: 
-MXC_SYS_Crit_Enter/139 (MXC_SYS_Crit_Enter)
-  Type: function definition
-  Visibility: semantic_interposition
-  References: 
-  Referring: 
-  Function flags:
-  Called by: 
-  Calls: 
-_mxc_crit_get_state/138 (_mxc_crit_get_state)
-  Type: function definition
-  Visibility: semantic_interposition
-  References: 
-  Referring: 
-  Function flags:
-  Called by: 
-  Calls: 
-_state/137 (_state)
-  Type: variable definition
-  Visibility: semantic_interposition
-  References: 
-  Referring: 
-  Availability: not-ready
-  Varpool flags: initialized
-ITM_CheckChar/136 (ITM_CheckChar)
-  Type: function definition
-  Visibility: semantic_interposition
-  References: 
-  Referring: 
-  Function flags:
-  Called by: 
-  Calls: 
-ITM_ReceiveChar/135 (ITM_ReceiveChar)
-  Type: function definition
-  Visibility: semantic_interposition
-  References: 
-  Referring: 
-  Function flags:
-  Called by: 
-  Calls: 
-ITM_SendChar/134 (ITM_SendChar)
-  Type: function definition
-  Visibility: semantic_interposition
-  References: 
-  Referring: 
-  Function flags:
-  Called by: 
-  Calls: 
-SysTick_Config/133 (SysTick_Config)
+  Varpool flags: initialized read-only const-value-known
+ITM_CheckChar/133 (ITM_CheckChar)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -164,7 +122,7 @@ SysTick_Config/133 (SysTick_Config)
   Function flags:
   Called by: 
   Calls: 
-SCB_GetFPUType/132 (SCB_GetFPUType)
+ITM_ReceiveChar/132 (ITM_ReceiveChar)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -172,7 +130,7 @@ SCB_GetFPUType/132 (SCB_GetFPUType)
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_Load/131 (ARM_MPU_Load)
+ITM_SendChar/131 (ITM_SendChar)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -180,7 +138,7 @@ ARM_MPU_Load/131 (ARM_MPU_Load)
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_OrderedMemcpy/130 (ARM_MPU_OrderedMemcpy)
+SysTick_Config/130 (SysTick_Config)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -188,7 +146,7 @@ ARM_MPU_OrderedMemcpy/130 (ARM_MPU_OrderedMemcpy)
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_SetRegionEx/129 (ARM_MPU_SetRegionEx)
+SCB_GetFPUType/129 (SCB_GetFPUType)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -196,7 +154,7 @@ ARM_MPU_SetRegionEx/129 (ARM_MPU_SetRegionEx)
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_SetRegion/128 (ARM_MPU_SetRegion)
+ARM_MPU_Load/128 (ARM_MPU_Load)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -204,7 +162,7 @@ ARM_MPU_SetRegion/128 (ARM_MPU_SetRegion)
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_ClrRegion/127 (ARM_MPU_ClrRegion)
+ARM_MPU_OrderedMemcpy/127 (ARM_MPU_OrderedMemcpy)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -212,7 +170,7 @@ ARM_MPU_ClrRegion/127 (ARM_MPU_ClrRegion)
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_Disable/126 (ARM_MPU_Disable)
+ARM_MPU_SetRegionEx/126 (ARM_MPU_SetRegionEx)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -220,7 +178,7 @@ ARM_MPU_Disable/126 (ARM_MPU_Disable)
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_Enable/125 (ARM_MPU_Enable)
+ARM_MPU_SetRegion/125 (ARM_MPU_SetRegion)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -228,7 +186,7 @@ ARM_MPU_Enable/125 (ARM_MPU_Enable)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SystemReset/124 (__NVIC_SystemReset)
+ARM_MPU_ClrRegion/124 (ARM_MPU_ClrRegion)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -236,7 +194,7 @@ __NVIC_SystemReset/124 (__NVIC_SystemReset)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetVector/123 (__NVIC_GetVector)
+ARM_MPU_Disable/123 (ARM_MPU_Disable)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -244,7 +202,7 @@ __NVIC_GetVector/123 (__NVIC_GetVector)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SetVector/122 (__NVIC_SetVector)
+ARM_MPU_Enable/122 (ARM_MPU_Enable)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -252,7 +210,7 @@ __NVIC_SetVector/122 (__NVIC_SetVector)
   Function flags:
   Called by: 
   Calls: 
-NVIC_DecodePriority/121 (NVIC_DecodePriority)
+__NVIC_SystemReset/121 (__NVIC_SystemReset)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -260,7 +218,7 @@ NVIC_DecodePriority/121 (NVIC_DecodePriority)
   Function flags:
   Called by: 
   Calls: 
-NVIC_EncodePriority/120 (NVIC_EncodePriority)
+__NVIC_GetVector/120 (__NVIC_GetVector)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -268,7 +226,7 @@ NVIC_EncodePriority/120 (NVIC_EncodePriority)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetPriority/119 (__NVIC_GetPriority)
+__NVIC_SetVector/119 (__NVIC_SetVector)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -276,7 +234,7 @@ __NVIC_GetPriority/119 (__NVIC_GetPriority)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SetPriority/118 (__NVIC_SetPriority)
+NVIC_DecodePriority/118 (NVIC_DecodePriority)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -284,7 +242,7 @@ __NVIC_SetPriority/118 (__NVIC_SetPriority)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetActive/117 (__NVIC_GetActive)
+NVIC_EncodePriority/117 (NVIC_EncodePriority)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -292,7 +250,7 @@ __NVIC_GetActive/117 (__NVIC_GetActive)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_ClearPendingIRQ/116 (__NVIC_ClearPendingIRQ)
+__NVIC_GetPriority/116 (__NVIC_GetPriority)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -300,7 +258,7 @@ __NVIC_ClearPendingIRQ/116 (__NVIC_ClearPendingIRQ)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SetPendingIRQ/115 (__NVIC_SetPendingIRQ)
+__NVIC_SetPriority/115 (__NVIC_SetPriority)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -308,7 +266,7 @@ __NVIC_SetPendingIRQ/115 (__NVIC_SetPendingIRQ)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetPendingIRQ/114 (__NVIC_GetPendingIRQ)
+__NVIC_GetActive/114 (__NVIC_GetActive)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -316,7 +274,7 @@ __NVIC_GetPendingIRQ/114 (__NVIC_GetPendingIRQ)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_DisableIRQ/113 (__NVIC_DisableIRQ)
+__NVIC_ClearPendingIRQ/113 (__NVIC_ClearPendingIRQ)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -324,7 +282,7 @@ __NVIC_DisableIRQ/113 (__NVIC_DisableIRQ)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetEnableIRQ/112 (__NVIC_GetEnableIRQ)
+__NVIC_SetPendingIRQ/112 (__NVIC_SetPendingIRQ)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -332,7 +290,7 @@ __NVIC_GetEnableIRQ/112 (__NVIC_GetEnableIRQ)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_EnableIRQ/111 (__NVIC_EnableIRQ)
+__NVIC_GetPendingIRQ/111 (__NVIC_GetPendingIRQ)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -340,7 +298,7 @@ __NVIC_EnableIRQ/111 (__NVIC_EnableIRQ)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetPriorityGrouping/110 (__NVIC_GetPriorityGrouping)
+__NVIC_DisableIRQ/110 (__NVIC_DisableIRQ)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -348,7 +306,7 @@ __NVIC_GetPriorityGrouping/110 (__NVIC_GetPriorityGrouping)
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SetPriorityGrouping/109 (__NVIC_SetPriorityGrouping)
+__NVIC_GetEnableIRQ/109 (__NVIC_GetEnableIRQ)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -356,7 +314,7 @@ __NVIC_SetPriorityGrouping/109 (__NVIC_SetPriorityGrouping)
   Function flags:
   Called by: 
   Calls: 
-__SMMLA/108 (__SMMLA)
+__NVIC_EnableIRQ/108 (__NVIC_EnableIRQ)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -364,7 +322,7 @@ __SMMLA/108 (__SMMLA)
   Function flags:
   Called by: 
   Calls: 
-__QSUB/107 (__QSUB)
+__NVIC_GetPriorityGrouping/107 (__NVIC_GetPriorityGrouping)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -372,7 +330,7 @@ __QSUB/107 (__QSUB)
   Function flags:
   Called by: 
   Calls: 
-__QADD/106 (__QADD)
+__NVIC_SetPriorityGrouping/106 (__NVIC_SetPriorityGrouping)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -380,7 +338,7 @@ __QADD/106 (__QADD)
   Function flags:
   Called by: 
   Calls: 
-__SEL/105 (__SEL)
+__SMMLA/105 (__SMMLA)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -388,7 +346,7 @@ __SEL/105 (__SEL)
   Function flags:
   Called by: 
   Calls: 
-__SMLSLDX/104 (__SMLSLDX)
+__QSUB/104 (__QSUB)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -396,7 +354,7 @@ __SMLSLDX/104 (__SMLSLDX)
   Function flags:
   Called by: 
   Calls: 
-__SMLSLD/103 (__SMLSLD)
+__QADD/103 (__QADD)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -404,7 +362,7 @@ __SMLSLD/103 (__SMLSLD)
   Function flags:
   Called by: 
   Calls: 
-__SMLSDX/102 (__SMLSDX)
+__SEL/102 (__SEL)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -412,7 +370,7 @@ __SMLSDX/102 (__SMLSDX)
   Function flags:
   Called by: 
   Calls: 
-__SMLSD/101 (__SMLSD)
+__SMLSLDX/101 (__SMLSLDX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -420,7 +378,7 @@ __SMLSD/101 (__SMLSD)
   Function flags:
   Called by: 
   Calls: 
-__SMUSDX/100 (__SMUSDX)
+__SMLSLD/100 (__SMLSLD)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -428,7 +386,7 @@ __SMUSDX/100 (__SMUSDX)
   Function flags:
   Called by: 
   Calls: 
-__SMUSD/99 (__SMUSD)
+__SMLSDX/99 (__SMLSDX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -436,7 +394,7 @@ __SMUSD/99 (__SMUSD)
   Function flags:
   Called by: 
   Calls: 
-__SMLALDX/98 (__SMLALDX)
+__SMLSD/98 (__SMLSD)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -444,7 +402,7 @@ __SMLALDX/98 (__SMLALDX)
   Function flags:
   Called by: 
   Calls: 
-__SMLALD/97 (__SMLALD)
+__SMUSDX/97 (__SMUSDX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -452,7 +410,7 @@ __SMLALD/97 (__SMLALD)
   Function flags:
   Called by: 
   Calls: 
-__SMLADX/96 (__SMLADX)
+__SMUSD/96 (__SMUSD)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -460,7 +418,7 @@ __SMLADX/96 (__SMLADX)
   Function flags:
   Called by: 
   Calls: 
-__SMLAD/95 (__SMLAD)
+__SMLALDX/95 (__SMLALDX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -468,7 +426,7 @@ __SMLAD/95 (__SMLAD)
   Function flags:
   Called by: 
   Calls: 
-__SMUADX/94 (__SMUADX)
+__SMLALD/94 (__SMLALD)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -476,7 +434,7 @@ __SMUADX/94 (__SMUADX)
   Function flags:
   Called by: 
   Calls: 
-__SMUAD/93 (__SMUAD)
+__SMLADX/93 (__SMLADX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -484,7 +442,7 @@ __SMUAD/93 (__SMUAD)
   Function flags:
   Called by: 
   Calls: 
-__SXTAB16_RORn/92 (__SXTAB16_RORn)
+__SMLAD/92 (__SMLAD)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -492,7 +450,7 @@ __SXTAB16_RORn/92 (__SXTAB16_RORn)
   Function flags:
   Called by: 
   Calls: 
-__SXTAB16/91 (__SXTAB16)
+__SMUADX/91 (__SMUADX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -500,7 +458,7 @@ __SXTAB16/91 (__SXTAB16)
   Function flags:
   Called by: 
   Calls: 
-__SXTB16_RORn/90 (__SXTB16_RORn)
+__SMUAD/90 (__SMUAD)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -508,7 +466,7 @@ __SXTB16_RORn/90 (__SXTB16_RORn)
   Function flags:
   Called by: 
   Calls: 
-__SXTB16/89 (__SXTB16)
+__SXTAB16_RORn/89 (__SXTAB16_RORn)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -516,7 +474,7 @@ __SXTB16/89 (__SXTB16)
   Function flags:
   Called by: 
   Calls: 
-__UXTAB16/88 (__UXTAB16)
+__SXTAB16/88 (__SXTAB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -524,7 +482,7 @@ __UXTAB16/88 (__UXTAB16)
   Function flags:
   Called by: 
   Calls: 
-__UXTB16/87 (__UXTB16)
+__SXTB16_RORn/87 (__SXTB16_RORn)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -532,7 +490,7 @@ __UXTB16/87 (__UXTB16)
   Function flags:
   Called by: 
   Calls: 
-__USADA8/86 (__USADA8)
+__SXTB16/86 (__SXTB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -540,7 +498,7 @@ __USADA8/86 (__USADA8)
   Function flags:
   Called by: 
   Calls: 
-__USAD8/85 (__USAD8)
+__UXTAB16/85 (__UXTAB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -548,7 +506,7 @@ __USAD8/85 (__USAD8)
   Function flags:
   Called by: 
   Calls: 
-__UHSAX/84 (__UHSAX)
+__UXTB16/84 (__UXTB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -556,7 +514,7 @@ __UHSAX/84 (__UHSAX)
   Function flags:
   Called by: 
   Calls: 
-__UQSAX/83 (__UQSAX)
+__USADA8/83 (__USADA8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -564,7 +522,7 @@ __UQSAX/83 (__UQSAX)
   Function flags:
   Called by: 
   Calls: 
-__USAX/82 (__USAX)
+__USAD8/82 (__USAD8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -572,7 +530,7 @@ __USAX/82 (__USAX)
   Function flags:
   Called by: 
   Calls: 
-__SHSAX/81 (__SHSAX)
+__UHSAX/81 (__UHSAX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -580,7 +538,7 @@ __SHSAX/81 (__SHSAX)
   Function flags:
   Called by: 
   Calls: 
-__QSAX/80 (__QSAX)
+__UQSAX/80 (__UQSAX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -588,7 +546,7 @@ __QSAX/80 (__QSAX)
   Function flags:
   Called by: 
   Calls: 
-__SSAX/79 (__SSAX)
+__USAX/79 (__USAX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -596,7 +554,7 @@ __SSAX/79 (__SSAX)
   Function flags:
   Called by: 
   Calls: 
-__UHASX/78 (__UHASX)
+__SHSAX/78 (__SHSAX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -604,7 +562,7 @@ __UHASX/78 (__UHASX)
   Function flags:
   Called by: 
   Calls: 
-__UQASX/77 (__UQASX)
+__QSAX/77 (__QSAX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -612,7 +570,7 @@ __UQASX/77 (__UQASX)
   Function flags:
   Called by: 
   Calls: 
-__UASX/76 (__UASX)
+__SSAX/76 (__SSAX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -620,7 +578,7 @@ __UASX/76 (__UASX)
   Function flags:
   Called by: 
   Calls: 
-__SHASX/75 (__SHASX)
+__UHASX/75 (__UHASX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -628,7 +586,7 @@ __SHASX/75 (__SHASX)
   Function flags:
   Called by: 
   Calls: 
-__QASX/74 (__QASX)
+__UQASX/74 (__UQASX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -636,7 +594,7 @@ __QASX/74 (__QASX)
   Function flags:
   Called by: 
   Calls: 
-__SASX/73 (__SASX)
+__UASX/73 (__UASX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -644,7 +602,7 @@ __SASX/73 (__SASX)
   Function flags:
   Called by: 
   Calls: 
-__UHSUB16/72 (__UHSUB16)
+__SHASX/72 (__SHASX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -652,7 +610,7 @@ __UHSUB16/72 (__UHSUB16)
   Function flags:
   Called by: 
   Calls: 
-__UQSUB16/71 (__UQSUB16)
+__QASX/71 (__QASX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -660,7 +618,7 @@ __UQSUB16/71 (__UQSUB16)
   Function flags:
   Called by: 
   Calls: 
-__USUB16/70 (__USUB16)
+__SASX/70 (__SASX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -668,7 +626,7 @@ __USUB16/70 (__USUB16)
   Function flags:
   Called by: 
   Calls: 
-__SHSUB16/69 (__SHSUB16)
+__UHSUB16/69 (__UHSUB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -676,7 +634,7 @@ __SHSUB16/69 (__SHSUB16)
   Function flags:
   Called by: 
   Calls: 
-__QSUB16/68 (__QSUB16)
+__UQSUB16/68 (__UQSUB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -684,7 +642,7 @@ __QSUB16/68 (__QSUB16)
   Function flags:
   Called by: 
   Calls: 
-__SSUB16/67 (__SSUB16)
+__USUB16/67 (__USUB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -692,7 +650,7 @@ __SSUB16/67 (__SSUB16)
   Function flags:
   Called by: 
   Calls: 
-__UHADD16/66 (__UHADD16)
+__SHSUB16/66 (__SHSUB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -700,7 +658,7 @@ __UHADD16/66 (__UHADD16)
   Function flags:
   Called by: 
   Calls: 
-__UQADD16/65 (__UQADD16)
+__QSUB16/65 (__QSUB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -708,7 +666,7 @@ __UQADD16/65 (__UQADD16)
   Function flags:
   Called by: 
   Calls: 
-__UADD16/64 (__UADD16)
+__SSUB16/64 (__SSUB16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -716,7 +674,7 @@ __UADD16/64 (__UADD16)
   Function flags:
   Called by: 
   Calls: 
-__SHADD16/63 (__SHADD16)
+__UHADD16/63 (__UHADD16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -724,7 +682,7 @@ __SHADD16/63 (__SHADD16)
   Function flags:
   Called by: 
   Calls: 
-__QADD16/62 (__QADD16)
+__UQADD16/62 (__UQADD16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -732,7 +690,7 @@ __QADD16/62 (__QADD16)
   Function flags:
   Called by: 
   Calls: 
-__SADD16/61 (__SADD16)
+__UADD16/61 (__UADD16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -740,7 +698,7 @@ __SADD16/61 (__SADD16)
   Function flags:
   Called by: 
   Calls: 
-__UHSUB8/60 (__UHSUB8)
+__SHADD16/60 (__SHADD16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -748,7 +706,7 @@ __UHSUB8/60 (__UHSUB8)
   Function flags:
   Called by: 
   Calls: 
-__UQSUB8/59 (__UQSUB8)
+__QADD16/59 (__QADD16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -756,7 +714,7 @@ __UQSUB8/59 (__UQSUB8)
   Function flags:
   Called by: 
   Calls: 
-__USUB8/58 (__USUB8)
+__SADD16/58 (__SADD16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -764,7 +722,7 @@ __USUB8/58 (__USUB8)
   Function flags:
   Called by: 
   Calls: 
-__SHSUB8/57 (__SHSUB8)
+__UHSUB8/57 (__UHSUB8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -772,7 +730,7 @@ __SHSUB8/57 (__SHSUB8)
   Function flags:
   Called by: 
   Calls: 
-__QSUB8/56 (__QSUB8)
+__UQSUB8/56 (__UQSUB8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -780,7 +738,7 @@ __QSUB8/56 (__QSUB8)
   Function flags:
   Called by: 
   Calls: 
-__SSUB8/55 (__SSUB8)
+__USUB8/55 (__USUB8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -788,7 +746,7 @@ __SSUB8/55 (__SSUB8)
   Function flags:
   Called by: 
   Calls: 
-__UHADD8/54 (__UHADD8)
+__SHSUB8/54 (__SHSUB8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -796,7 +754,7 @@ __UHADD8/54 (__UHADD8)
   Function flags:
   Called by: 
   Calls: 
-__UQADD8/53 (__UQADD8)
+__QSUB8/53 (__QSUB8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -804,7 +762,7 @@ __UQADD8/53 (__UQADD8)
   Function flags:
   Called by: 
   Calls: 
-__UADD8/52 (__UADD8)
+__SSUB8/52 (__SSUB8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -812,7 +770,7 @@ __UADD8/52 (__UADD8)
   Function flags:
   Called by: 
   Calls: 
-__SHADD8/51 (__SHADD8)
+__UHADD8/51 (__UHADD8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -820,7 +778,7 @@ __SHADD8/51 (__SHADD8)
   Function flags:
   Called by: 
   Calls: 
-__QADD8/50 (__QADD8)
+__UQADD8/50 (__UQADD8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -828,7 +786,7 @@ __QADD8/50 (__QADD8)
   Function flags:
   Called by: 
   Calls: 
-__SADD8/49 (__SADD8)
+__UADD8/49 (__UADD8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -836,7 +794,7 @@ __SADD8/49 (__SADD8)
   Function flags:
   Called by: 
   Calls: 
-__set_FPSCR/48 (__set_FPSCR)
+__SHADD8/48 (__SHADD8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -844,7 +802,7 @@ __set_FPSCR/48 (__set_FPSCR)
   Function flags:
   Called by: 
   Calls: 
-__get_FPSCR/47 (__get_FPSCR)
+__QADD8/47 (__QADD8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -852,7 +810,7 @@ __get_FPSCR/47 (__get_FPSCR)
   Function flags:
   Called by: 
   Calls: 
-__set_FAULTMASK/46 (__set_FAULTMASK)
+__SADD8/46 (__SADD8)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -860,7 +818,7 @@ __set_FAULTMASK/46 (__set_FAULTMASK)
   Function flags:
   Called by: 
   Calls: 
-__get_FAULTMASK/45 (__get_FAULTMASK)
+__set_FPSCR/45 (__set_FPSCR)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -868,7 +826,7 @@ __get_FAULTMASK/45 (__get_FAULTMASK)
   Function flags:
   Called by: 
   Calls: 
-__set_BASEPRI_MAX/44 (__set_BASEPRI_MAX)
+__get_FPSCR/44 (__get_FPSCR)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -876,7 +834,7 @@ __set_BASEPRI_MAX/44 (__set_BASEPRI_MAX)
   Function flags:
   Called by: 
   Calls: 
-__set_BASEPRI/43 (__set_BASEPRI)
+__set_FAULTMASK/43 (__set_FAULTMASK)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -884,7 +842,7 @@ __set_BASEPRI/43 (__set_BASEPRI)
   Function flags:
   Called by: 
   Calls: 
-__get_BASEPRI/42 (__get_BASEPRI)
+__get_FAULTMASK/42 (__get_FAULTMASK)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -892,7 +850,7 @@ __get_BASEPRI/42 (__get_BASEPRI)
   Function flags:
   Called by: 
   Calls: 
-__disable_fault_irq/41 (__disable_fault_irq)
+__set_BASEPRI_MAX/41 (__set_BASEPRI_MAX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -900,7 +858,7 @@ __disable_fault_irq/41 (__disable_fault_irq)
   Function flags:
   Called by: 
   Calls: 
-__enable_fault_irq/40 (__enable_fault_irq)
+__set_BASEPRI/40 (__set_BASEPRI)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -908,7 +866,7 @@ __enable_fault_irq/40 (__enable_fault_irq)
   Function flags:
   Called by: 
   Calls: 
-__set_PRIMASK/39 (__set_PRIMASK)
+__get_BASEPRI/39 (__get_BASEPRI)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -916,7 +874,7 @@ __set_PRIMASK/39 (__set_PRIMASK)
   Function flags:
   Called by: 
   Calls: 
-__get_PRIMASK/38 (__get_PRIMASK)
+__disable_fault_irq/38 (__disable_fault_irq)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -924,7 +882,7 @@ __get_PRIMASK/38 (__get_PRIMASK)
   Function flags:
   Called by: 
   Calls: 
-__set_MSP/37 (__set_MSP)
+__enable_fault_irq/37 (__enable_fault_irq)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -932,7 +890,7 @@ __set_MSP/37 (__set_MSP)
   Function flags:
   Called by: 
   Calls: 
-__get_MSP/36 (__get_MSP)
+__set_PRIMASK/36 (__set_PRIMASK)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -940,7 +898,7 @@ __get_MSP/36 (__get_MSP)
   Function flags:
   Called by: 
   Calls: 
-__set_PSP/35 (__set_PSP)
+__get_PRIMASK/35 (__get_PRIMASK)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -948,7 +906,7 @@ __set_PSP/35 (__set_PSP)
   Function flags:
   Called by: 
   Calls: 
-__get_PSP/34 (__get_PSP)
+__set_MSP/34 (__set_MSP)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -956,7 +914,7 @@ __get_PSP/34 (__get_PSP)
   Function flags:
   Called by: 
   Calls: 
-__get_xPSR/33 (__get_xPSR)
+__get_MSP/33 (__get_MSP)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -964,7 +922,7 @@ __get_xPSR/33 (__get_xPSR)
   Function flags:
   Called by: 
   Calls: 
-__get_APSR/32 (__get_APSR)
+__set_PSP/32 (__set_PSP)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -972,7 +930,7 @@ __get_APSR/32 (__get_APSR)
   Function flags:
   Called by: 
   Calls: 
-__get_IPSR/31 (__get_IPSR)
+__get_PSP/31 (__get_PSP)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -980,7 +938,7 @@ __get_IPSR/31 (__get_IPSR)
   Function flags:
   Called by: 
   Calls: 
-__set_CONTROL/30 (__set_CONTROL)
+__get_xPSR/30 (__get_xPSR)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -988,7 +946,7 @@ __set_CONTROL/30 (__set_CONTROL)
   Function flags:
   Called by: 
   Calls: 
-__get_CONTROL/29 (__get_CONTROL)
+__get_APSR/29 (__get_APSR)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -996,7 +954,7 @@ __get_CONTROL/29 (__get_CONTROL)
   Function flags:
   Called by: 
   Calls: 
-__disable_irq/28 (__disable_irq)
+__get_IPSR/28 (__get_IPSR)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1004,7 +962,7 @@ __disable_irq/28 (__disable_irq)
   Function flags:
   Called by: 
   Calls: 
-__enable_irq/27 (__enable_irq)
+__set_CONTROL/27 (__set_CONTROL)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1012,7 +970,7 @@ __enable_irq/27 (__enable_irq)
   Function flags:
   Called by: 
   Calls: 
-__STRT/26 (__STRT)
+__get_CONTROL/26 (__get_CONTROL)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1020,7 +978,7 @@ __STRT/26 (__STRT)
   Function flags:
   Called by: 
   Calls: 
-__STRHT/25 (__STRHT)
+__disable_irq/25 (__disable_irq)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1028,7 +986,7 @@ __STRHT/25 (__STRHT)
   Function flags:
   Called by: 
   Calls: 
-__STRBT/24 (__STRBT)
+__enable_irq/24 (__enable_irq)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1036,7 +994,7 @@ __STRBT/24 (__STRBT)
   Function flags:
   Called by: 
   Calls: 
-__LDRT/23 (__LDRT)
+__STRT/23 (__STRT)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1044,7 +1002,7 @@ __LDRT/23 (__LDRT)
   Function flags:
   Called by: 
   Calls: 
-__LDRHT/22 (__LDRHT)
+__STRHT/22 (__STRHT)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1052,7 +1010,7 @@ __LDRHT/22 (__LDRHT)
   Function flags:
   Called by: 
   Calls: 
-__LDRBT/21 (__LDRBT)
+__STRBT/21 (__STRBT)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1060,7 +1018,7 @@ __LDRBT/21 (__LDRBT)
   Function flags:
   Called by: 
   Calls: 
-__RRX/20 (__RRX)
+__LDRT/20 (__LDRT)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1068,7 +1026,7 @@ __RRX/20 (__RRX)
   Function flags:
   Called by: 
   Calls: 
-__CLREX/19 (__CLREX)
+__LDRHT/19 (__LDRHT)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1076,7 +1034,7 @@ __CLREX/19 (__CLREX)
   Function flags:
   Called by: 
   Calls: 
-__STREXW/18 (__STREXW)
+__LDRBT/18 (__LDRBT)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1084,7 +1042,7 @@ __STREXW/18 (__STREXW)
   Function flags:
   Called by: 
   Calls: 
-__STREXH/17 (__STREXH)
+__RRX/17 (__RRX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1092,7 +1050,7 @@ __STREXH/17 (__STREXH)
   Function flags:
   Called by: 
   Calls: 
-__STREXB/16 (__STREXB)
+__CLREX/16 (__CLREX)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1100,7 +1058,7 @@ __STREXB/16 (__STREXB)
   Function flags:
   Called by: 
   Calls: 
-__LDREXW/15 (__LDREXW)
+__STREXW/15 (__STREXW)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1108,7 +1066,7 @@ __LDREXW/15 (__LDREXW)
   Function flags:
   Called by: 
   Calls: 
-__LDREXH/14 (__LDREXH)
+__STREXH/14 (__STREXH)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1116,7 +1074,7 @@ __LDREXH/14 (__LDREXH)
   Function flags:
   Called by: 
   Calls: 
-__LDREXB/13 (__LDREXB)
+__STREXB/13 (__STREXB)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1124,7 +1082,7 @@ __LDREXB/13 (__LDREXB)
   Function flags:
   Called by: 
   Calls: 
-__CLZ/12 (__CLZ)
+__LDREXW/12 (__LDREXW)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1132,7 +1090,7 @@ __CLZ/12 (__CLZ)
   Function flags:
   Called by: 
   Calls: 
-__RBIT/11 (__RBIT)
+__LDREXH/11 (__LDREXH)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1140,7 +1098,7 @@ __RBIT/11 (__RBIT)
   Function flags:
   Called by: 
   Calls: 
-__ROR/10 (__ROR)
+__LDREXB/10 (__LDREXB)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1148,7 +1106,7 @@ __ROR/10 (__ROR)
   Function flags:
   Called by: 
   Calls: 
-__REVSH/9 (__REVSH)
+__CLZ/9 (__CLZ)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1156,7 +1114,7 @@ __REVSH/9 (__REVSH)
   Function flags:
   Called by: 
   Calls: 
-__REV16/8 (__REV16)
+__RBIT/8 (__RBIT)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1164,7 +1122,7 @@ __REV16/8 (__REV16)
   Function flags:
   Called by: 
   Calls: 
-__REV/7 (__REV)
+__ROR/7 (__ROR)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1172,7 +1130,7 @@ __REV/7 (__REV)
   Function flags:
   Called by: 
   Calls: 
-__DMB/6 (__DMB)
+__REVSH/6 (__REVSH)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1180,7 +1138,7 @@ __DMB/6 (__DMB)
   Function flags:
   Called by: 
   Calls: 
-__DSB/5 (__DSB)
+__REV16/5 (__REV16)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1188,7 +1146,7 @@ __DSB/5 (__DSB)
   Function flags:
   Called by: 
   Calls: 
-__ISB/4 (__ISB)
+__REV/4 (__REV)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1196,7 +1154,7 @@ __ISB/4 (__ISB)
   Function flags:
   Called by: 
   Calls: 
-__cmsis_start/3 (__cmsis_start)
+__DMB/3 (__DMB)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1204,7 +1162,7 @@ __cmsis_start/3 (__cmsis_start)
   Function flags:
   Called by: 
   Calls: 
-_putchar_unlocked/2 (_putchar_unlocked)
+__DSB/2 (__DSB)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1212,7 +1170,7 @@ _putchar_unlocked/2 (_putchar_unlocked)
   Function flags:
   Called by: 
   Calls: 
-_getchar_unlocked/1 (_getchar_unlocked)
+__ISB/1 (__ISB)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1220,7 +1178,7 @@ _getchar_unlocked/1 (_getchar_unlocked)
   Function flags:
   Called by: 
   Calls: 
-__sputc_r/0 (__sputc_r)
+__cmsis_start/0 (__cmsis_start)
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1229,399 +1187,455 @@ __sputc_r/0 (__sputc_r)
   Called by: 
   Calls: 
 
-Removing unused symbols: MXC_SYS_In_Crit_Section/141 MXC_SYS_Crit_Exit/140 MXC_SYS_Crit_Enter/139 _mxc_crit_get_state/138 _state/137 ITM_CheckChar/136 ITM_ReceiveChar/135 ITM_SendChar/134 SysTick_Config/133 SCB_GetFPUType/132 ARM_MPU_Load/131 ARM_MPU_OrderedMemcpy/130 ARM_MPU_SetRegionEx/129 ARM_MPU_SetRegion/128 ARM_MPU_ClrRegion/127 ARM_MPU_Disable/126 ARM_MPU_Enable/125 __NVIC_SystemReset/124 __NVIC_GetVector/123 __NVIC_SetVector/122 NVIC_DecodePriority/121 NVIC_EncodePriority/120 __NVIC_GetPriority/119 __NVIC_SetPriority/118 __NVIC_GetActive/117 __NVIC_ClearPendingIRQ/116 __NVIC_SetPendingIRQ/115 __NVIC_GetPendingIRQ/114 __NVIC_DisableIRQ/113 __NVIC_GetEnableIRQ/112 __NVIC_EnableIRQ/111 __NVIC_GetPriorityGrouping/110 __NVIC_SetPriorityGrouping/109 __SMMLA/108 __QSUB/107 __QADD/106 __SEL/105 __SMLSLDX/104 __SMLSLD/103 __SMLSDX/102 __SMLSD/101 __SMUSDX/100 __SMUSD/99 __SMLALDX/98 __SMLALD/97 __SMLADX/96 __SMLAD/95 __SMUADX/94 __SMUAD/93 __SXTAB16_RORn/92 __SXTAB16/91 __SXTB16_RORn/90 __SXTB16/89 __UXTAB16/88 __UXTB16/87 __USADA8/86 __USAD8/85 __UHSAX/84 __UQSAX/83 __USAX/82 __SHSAX/81 __QSAX/80 __SSAX/79 __UHASX/78 __UQASX/77 __UASX/76 __SHASX/75 __QASX/74 __SASX/73 __UHSUB16/72 __UQSUB16/71 __USUB16/70 __SHSUB16/69 __QSUB16/68 __SSUB16/67 __UHADD16/66 __UQADD16/65 __UADD16/64 __SHADD16/63 __QADD16/62 __SADD16/61 __UHSUB8/60 __UQSUB8/59 __USUB8/58 __SHSUB8/57 __QSUB8/56 __SSUB8/55 __UHADD8/54 __UQADD8/53 __UADD8/52 __SHADD8/51 __QADD8/50 __SADD8/49 __set_FPSCR/48 __get_FPSCR/47 __set_FAULTMASK/46 __get_FAULTMASK/45 __set_BASEPRI_MAX/44 __set_BASEPRI/43 __get_BASEPRI/42 __disable_fault_irq/41 __enable_fault_irq/40 __set_PRIMASK/39 __get_PRIMASK/38 __set_MSP/37 __get_MSP/36 __set_PSP/35 __get_PSP/34 __get_xPSR/33 __get_APSR/32 __get_IPSR/31 __set_CONTROL/30 __get_CONTROL/29 __disable_irq/28 __enable_irq/27 __STRT/26 __STRHT/25 __STRBT/24 __LDRT/23 __LDRHT/22 __LDRBT/21 __RRX/20 __CLREX/19 __STREXW/18 __STREXH/17 __STREXB/16 __LDREXW/15 __LDREXH/14 __LDREXB/13 __CLZ/12 __RBIT/11 __ROR/10 __REVSH/9 __REV16/8 __REV/7 __DMB/6 __DSB/5 __ISB/4 __cmsis_start/3 _putchar_unlocked/2 _getchar_unlocked/1 __sputc_r/0
+Removing unused symbols: ITM_CheckChar/133 ITM_ReceiveChar/132 ITM_SendChar/131 SysTick_Config/130 SCB_GetFPUType/129 ARM_MPU_Load/128 ARM_MPU_OrderedMemcpy/127 ARM_MPU_SetRegionEx/126 ARM_MPU_SetRegion/125 ARM_MPU_ClrRegion/124 ARM_MPU_Disable/123 ARM_MPU_Enable/122 __NVIC_SystemReset/121 __NVIC_GetVector/120 __NVIC_SetVector/119 NVIC_DecodePriority/118 NVIC_EncodePriority/117 __NVIC_GetPriority/116 __NVIC_SetPriority/115 __NVIC_GetActive/114 __NVIC_ClearPendingIRQ/113 __NVIC_SetPendingIRQ/112 __NVIC_GetPendingIRQ/111 __NVIC_DisableIRQ/110 __NVIC_GetEnableIRQ/109 __NVIC_EnableIRQ/108 __NVIC_GetPriorityGrouping/107 __NVIC_SetPriorityGrouping/106 __SMMLA/105 __QSUB/104 __QADD/103 __SEL/102 __SMLSLDX/101 __SMLSLD/100 __SMLSDX/99 __SMLSD/98 __SMUSDX/97 __SMUSD/96 __SMLALDX/95 __SMLALD/94 __SMLADX/93 __SMLAD/92 __SMUADX/91 __SMUAD/90 __SXTAB16_RORn/89 __SXTAB16/88 __SXTB16_RORn/87 __SXTB16/86 __UXTAB16/85 __UXTB16/84 __USADA8/83 __USAD8/82 __UHSAX/81 __UQSAX/80 __USAX/79 __SHSAX/78 __QSAX/77 __SSAX/76 __UHASX/75 __UQASX/74 __UASX/73 __SHASX/72 __QASX/71 __SASX/70 __UHSUB16/69 __UQSUB16/68 __USUB16/67 __SHSUB16/66 __QSUB16/65 __SSUB16/64 __UHADD16/63 __UQADD16/62 __UADD16/61 __SHADD16/60 __QADD16/59 __SADD16/58 __UHSUB8/57 __UQSUB8/56 __USUB8/55 __SHSUB8/54 __QSUB8/53 __SSUB8/52 __UHADD8/51 __UQADD8/50 __UADD8/49 __SHADD8/48 __QADD8/47 __SADD8/46 __set_FPSCR/45 __get_FPSCR/44 __set_FAULTMASK/43 __get_FAULTMASK/42 __set_BASEPRI_MAX/41 __set_BASEPRI/40 __get_BASEPRI/39 __disable_fault_irq/38 __enable_fault_irq/37 __set_PRIMASK/36 __get_PRIMASK/35 __set_MSP/34 __get_MSP/33 __set_PSP/32 __get_PSP/31 __get_xPSR/30 __get_APSR/29 __get_IPSR/28 __set_CONTROL/27 __get_CONTROL/26 __disable_irq/25 __enable_irq/24 __STRT/23 __STRHT/22 __STRBT/21 __LDRT/20 __LDRHT/19 __LDRBT/18 __RRX/17 __CLREX/16 __STREXW/15 __STREXH/14 __STREXB/13 __LDREXW/12 __LDREXH/11 __LDREXB/10 __CLZ/9 __RBIT/8 __ROR/7 __REVSH/6 __REV16/5 __REV/4 __DMB/3 __DSB/2 __ISB/1 __cmsis_start/0
 
 Reclaimed Symbol table:
 
-MXC_GPIO_OutToggle/152 (MXC_GPIO_OutToggle)
+MXC_Delay/146 (MXC_Delay)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Toggle/145 
+  Called by: fade_led/141 
   Calls: 
-MXC_GPIO_OutSet/151 (MXC_GPIO_OutSet)
+gpio_toggle/145 (gpio_toggle)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Off/144 
+  Called by: led_toggle/138 
   Calls: 
-MXC_GPIO_OutClr/150 (MXC_GPIO_OutClr)
+gpio_set/144 (gpio_set)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_On/143 
+  Called by: fade_led/141 all_leds_on/140 led_on/136 
   Calls: 
-mxc_assert/149 (mxc_assert)
+gpio_clear/143 (gpio_clear)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Toggle/145 LED_Off/144 LED_On/143 
+  Called by: fade_led/141 all_leds_off/139 led_off/137 led_init/135 
   Calls: 
-num_leds/148 (num_leds)
-  Type: variable
+gpio_init_output/142 (gpio_init_output)
+  Type: function
   Visibility: semantic_interposition external public
   References: 
-  Referring: LED_Init/142 (read) LED_On/143 (read) LED_Off/144 (read) LED_Toggle/145 (read) 
+  Referring: 
+  Function flags:
+  Called by: led_init/135 
+  Calls: 
+fade_led/141 (fade_led)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_Delay/146 gpio_clear/143 gpio_set/144 
+all_leds_on/140 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_set/144 
+all_leds_off/139 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 
+led_toggle/138 (led_toggle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_toggle/145 
+led_off/137 (led_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 
+led_on/136 (led_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_set/144 
+led_init/135 (led_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 gpio_init_output/142 
+leds/134 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: led_init/135 (read) led_init/135 (read) led_init/135 (read) led_init/135 (read) led_on/136 (read) led_on/136 (read) led_off/137 (read) led_off/137 (read) led_toggle/138 (read) led_toggle/138 (read) all_leds_off/139 (read) all_leds_off/139 (read) all_leds_on/140 (read) all_leds_on/140 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) 
   Availability: not-ready
-  Varpool flags: read-only
-MXC_GPIO_Config/147 (MXC_GPIO_Config)
-  Type: function
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: LED_Init/142 
-  Calls: 
-led_pin/146 (led_pin)
-  Type: variable
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: LED_Init/142 (addr) LED_On/143 (read) LED_On/143 (read) LED_Off/144 (read) LED_Off/144 (read) LED_Toggle/145 (read) LED_Toggle/145 (read) 
-  Availability: not-ready
-  Varpool flags: read-only
-LED_Toggle/145 (LED_Toggle)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_OutToggle/152 mxc_assert/149 
-LED_Off/144 (LED_Off)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: LED_Init/142 
-  Calls: MXC_GPIO_OutSet/151 mxc_assert/149 
-LED_On/143 (LED_On)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_OutClr/150 mxc_assert/149 
-LED_Init/142 (LED_Init)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: led_pin/146 (addr) num_leds/148 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_Config/147 LED_Off/144 
+  Varpool flags: initialized read-only const-value-known
 
 
 Initial Symbol table:
 
-MXC_GPIO_OutToggle/152 (MXC_GPIO_OutToggle)
+MXC_Delay/146 (MXC_Delay)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Toggle/145 
+  Called by: fade_led/141 
   Calls: 
-MXC_GPIO_OutSet/151 (MXC_GPIO_OutSet)
+gpio_toggle/145 (gpio_toggle)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Off/144 
+  Called by: led_toggle/138 
   Calls: 
-MXC_GPIO_OutClr/150 (MXC_GPIO_OutClr)
+gpio_set/144 (gpio_set)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_On/143 
+  Called by: fade_led/141 all_leds_on/140 led_on/136 
   Calls: 
-mxc_assert/149 (mxc_assert)
+gpio_clear/143 (gpio_clear)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Toggle/145 LED_Off/144 LED_On/143 
+  Called by: fade_led/141 all_leds_off/139 led_off/137 led_init/135 
   Calls: 
-num_leds/148 (num_leds)
-  Type: variable
+gpio_init_output/142 (gpio_init_output)
+  Type: function
   Visibility: semantic_interposition external public
   References: 
-  Referring: LED_Init/142 (read) LED_On/143 (read) LED_Off/144 (read) LED_Toggle/145 (read) 
+  Referring: 
+  Function flags:
+  Called by: led_init/135 
+  Calls: 
+fade_led/141 (fade_led)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_Delay/146 gpio_clear/143 gpio_set/144 
+all_leds_on/140 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_set/144 
+all_leds_off/139 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 
+led_toggle/138 (led_toggle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_toggle/145 
+led_off/137 (led_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 
+led_on/136 (led_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_set/144 
+led_init/135 (led_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 gpio_init_output/142 
+leds/134 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: led_init/135 (read) led_init/135 (read) led_init/135 (read) led_init/135 (read) led_on/136 (read) led_on/136 (read) led_off/137 (read) led_off/137 (read) led_toggle/138 (read) led_toggle/138 (read) all_leds_off/139 (read) all_leds_off/139 (read) all_leds_on/140 (read) all_leds_on/140 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) 
   Availability: not-ready
-  Varpool flags: read-only
-MXC_GPIO_Config/147 (MXC_GPIO_Config)
-  Type: function
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: LED_Init/142 
-  Calls: 
-led_pin/146 (led_pin)
-  Type: variable
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: LED_Init/142 (addr) LED_On/143 (read) LED_On/143 (read) LED_Off/144 (read) LED_Off/144 (read) LED_Toggle/145 (read) LED_Toggle/145 (read) 
-  Availability: not-ready
-  Varpool flags: read-only
-LED_Toggle/145 (LED_Toggle)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_OutToggle/152 mxc_assert/149 
-LED_Off/144 (LED_Off)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: LED_Init/142 
-  Calls: MXC_GPIO_OutSet/151 mxc_assert/149 
-LED_On/143 (LED_On)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_OutClr/150 mxc_assert/149 
-LED_Init/142 (LED_Init)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: led_pin/146 (addr) num_leds/148 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_Config/147 LED_Off/144 
+  Varpool flags: initialized read-only const-value-known
 
 Removing unused symbols:
 
 Reclaimed Symbol table:
 
-MXC_GPIO_OutToggle/152 (MXC_GPIO_OutToggle)
+MXC_Delay/146 (MXC_Delay)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Toggle/145 
+  Called by: fade_led/141 
   Calls: 
-MXC_GPIO_OutSet/151 (MXC_GPIO_OutSet)
+gpio_toggle/145 (gpio_toggle)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Off/144 
+  Called by: led_toggle/138 
   Calls: 
-MXC_GPIO_OutClr/150 (MXC_GPIO_OutClr)
+gpio_set/144 (gpio_set)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_On/143 
+  Called by: fade_led/141 all_leds_on/140 led_on/136 
   Calls: 
-mxc_assert/149 (mxc_assert)
+gpio_clear/143 (gpio_clear)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Function flags:
-  Called by: LED_Toggle/145 LED_Off/144 LED_On/143 
+  Called by: fade_led/141 all_leds_off/139 led_off/137 led_init/135 
   Calls: 
-num_leds/148 (num_leds)
-  Type: variable
+gpio_init_output/142 (gpio_init_output)
+  Type: function
   Visibility: semantic_interposition external public
   References: 
-  Referring: LED_Init/142 (read) LED_On/143 (read) LED_Off/144 (read) LED_Toggle/145 (read) 
+  Referring: 
+  Function flags:
+  Called by: led_init/135 
+  Calls: 
+fade_led/141 (fade_led)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_Delay/146 gpio_clear/143 gpio_set/144 
+all_leds_on/140 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_set/144 
+all_leds_off/139 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 
+led_toggle/138 (led_toggle)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_toggle/145 
+led_off/137 (led_off)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 
+led_on/136 (led_on)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_set/144 
+led_init/135 (led_init)
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: leds/134 (read) leds/134 (read) leds/134 (read) leds/134 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: gpio_clear/143 gpio_init_output/142 
+leds/134 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: led_init/135 (read) led_init/135 (read) led_init/135 (read) led_init/135 (read) led_on/136 (read) led_on/136 (read) led_off/137 (read) led_off/137 (read) led_toggle/138 (read) led_toggle/138 (read) all_leds_off/139 (read) all_leds_off/139 (read) all_leds_on/140 (read) all_leds_on/140 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) 
   Availability: not-ready
-  Varpool flags: read-only
-MXC_GPIO_Config/147 (MXC_GPIO_Config)
-  Type: function
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: LED_Init/142 
-  Calls: 
-led_pin/146 (led_pin)
-  Type: variable
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: LED_Init/142 (addr) LED_On/143 (read) LED_On/143 (read) LED_Off/144 (read) LED_Off/144 (read) LED_Toggle/145 (read) LED_Toggle/145 (read) 
-  Availability: not-ready
-  Varpool flags: read-only
-LED_Toggle/145 (LED_Toggle)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_OutToggle/152 mxc_assert/149 
-LED_Off/144 (LED_Off)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: LED_Init/142 
-  Calls: MXC_GPIO_OutSet/151 mxc_assert/149 
-LED_On/143 (LED_On)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_OutClr/150 mxc_assert/149 
-LED_Init/142 (LED_Init)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  References: led_pin/146 (addr) num_leds/148 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: MXC_GPIO_Config/147 LED_Off/144 
+  Varpool flags: initialized read-only const-value-known
 
 Reclaiming functions:
 Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-LED_Off/153 (LED_Off)
-  Type: function definition analyzed
-  Visibility: semantic_interposition public
-  next sharing asm name: 144
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
-  Referring: 
-  Function LED_Off/153 is inline copy in LED_Init/142
-  Clone of LED_Off/144
-  Availability: local
-  Function flags: count:955630224 (estimated locally) body local
-  Called by: LED_Init/142 (inlined) (955630224 (estimated locally),8.09 per call) 
-  Calls: mxc_assert/149 (315357972 (estimated locally),2.67 per call) MXC_GPIO_OutSet/151 (955630224 (estimated locally),8.09 per call) 
-MXC_GPIO_OutToggle/152 (MXC_GPIO_OutToggle)
+MXC_Delay/146 (MXC_Delay)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: LED_Toggle/145 (1073741824 (estimated locally),1.00 per call) 
+  Called by: fade_led/141 (1063004408 (estimated locally),9800.98 per call) 
   Calls: 
-MXC_GPIO_OutSet/151 (MXC_GPIO_OutSet)
+gpio_toggle/145 (gpio_toggle)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: LED_Off/153 (955630224 (estimated locally),8.09 per call) LED_Off/144 (1073741824 (estimated locally),1.00 per call) 
+  Called by: led_toggle/138 (354334800 (estimated locally),0.33 per call) 
   Calls: 
-MXC_GPIO_OutClr/150 (MXC_GPIO_OutClr)
+gpio_set/144 (gpio_set)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: LED_On/143 (1073741824 (estimated locally),1.00 per call) 
+  Called by: fade_led/141 (531502204 (estimated locally),4900.49 per call) all_leds_on/140 (966367640 (estimated locally),9.00 per call) led_on/136 (354334800 (estimated locally),0.33 per call) 
   Calls: 
-mxc_assert/149 (mxc_assert)
+gpio_clear/143 (gpio_clear)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: LED_Off/153 (315357972 (estimated locally),2.67 per call) LED_Toggle/145 (354334800 (estimated locally),0.33 per call) LED_Off/144 (354334800 (estimated locally),0.33 per call) LED_On/143 (354334800 (estimated locally),0.33 per call) 
+  Called by: fade_led/141 (531502204 (estimated locally),4900.49 per call) all_leds_off/139 (966367640 (estimated locally),9.00 per call) led_off/137 (354334800 (estimated locally),0.33 per call) led_init/135 (966367640 (estimated locally),9.00 per call) 
   Calls: 
-num_leds/148 (num_leds)
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: LED_On/143 (read) LED_Off/144 (read) LED_Init/142 (read) LED_Toggle/145 (read) LED_Off/153 (read) 
-  Availability: not_available
-  Varpool flags: read-only
-MXC_GPIO_Config/147 (MXC_GPIO_Config)
+gpio_init_output/142 (gpio_init_output)
   Type: function
   Visibility: semantic_interposition external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: LED_Init/142 (955630224 (estimated locally),8.09 per call) 
+  Called by: led_init/135 (966367640 (estimated locally),9.00 per call) 
   Calls: 
-led_pin/146 (led_pin)
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: LED_On/143 (read) LED_On/143 (read) LED_Off/144 (read) LED_Off/144 (read) LED_Init/142 (addr) LED_Toggle/145 (read) LED_Toggle/145 (read) LED_Off/153 (read) LED_Off/153 (read) 
-  Availability: not_available
-  Varpool flags: read-only
-LED_Toggle/145 (LED_Toggle)
+fade_led/141 (fade_led)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
+  References: leds/134 (read) leds/134 (read) leds/134 (read) leds/134 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:108459 (estimated locally) body
+  Called by: 
+  Calls: MXC_Delay/146 (1063004408 (estimated locally),9800.98 per call) gpio_clear/143 (531502204 (estimated locally),4900.49 per call) gpio_set/144 (531502204 (estimated locally),4900.49 per call) 
+all_leds_on/140 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally) body
+  Called by: 
+  Calls: gpio_set/144 (966367640 (estimated locally),9.00 per call) 
+all_leds_off/139 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally) body
+  Called by: 
+  Calls: gpio_clear/143 (966367640 (estimated locally),9.00 per call) 
+led_toggle/138 (led_toggle)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: leds/134 (read) leds/134 (read) 
   Referring: 
   Availability: available
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
-  Calls: MXC_GPIO_OutToggle/152 (1073741824 (estimated locally),1.00 per call) mxc_assert/149 (354334800 (estimated locally),0.33 per call) 
-LED_Off/144 (LED_Off)
+  Calls: gpio_toggle/145 (354334800 (estimated locally),0.33 per call) 
+led_off/137 (led_off)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
-  previous sharing asm name: 153
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
+  References: leds/134 (read) leds/134 (read) 
   Referring: 
   Availability: available
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
-  Calls: MXC_GPIO_OutSet/151 (1073741824 (estimated locally),1.00 per call) mxc_assert/149 (354334800 (estimated locally),0.33 per call) 
-LED_On/143 (LED_On)
+  Calls: gpio_clear/143 (354334800 (estimated locally),0.33 per call) 
+led_on/136 (led_on)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
-  References: num_leds/148 (read) led_pin/146 (read) led_pin/146 (read) 
+  References: leds/134 (read) leds/134 (read) 
   Referring: 
   Availability: available
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
-  Calls: MXC_GPIO_OutClr/150 (1073741824 (estimated locally),1.00 per call) mxc_assert/149 (354334800 (estimated locally),0.33 per call) 
-LED_Init/142 (LED_Init)
+  Calls: gpio_set/144 (354334800 (estimated locally),0.33 per call) 
+led_init/135 (led_init)
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
-  References: led_pin/146 (addr) num_leds/148 (read) 
+  References: leds/134 (read) leds/134 (read) 
   Referring: 
   Availability: available
-  Function flags: count:118111600 (estimated locally) body
+  Function flags: count:107374184 (estimated locally) body
   Called by: 
-  Calls: MXC_GPIO_Config/147 (955630224 (estimated locally),8.09 per call) LED_Off/153 (inlined) (955630224 (estimated locally),8.09 per call) 
-Trivially needed variables:
+  Calls: gpio_clear/143 (966367640 (estimated locally),9.00 per call) gpio_init_output/142 (966367640 (estimated locally),9.00 per call) 
+leds/134 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: led_toggle/138 (read) led_toggle/138 (read) all_leds_off/139 (read) all_leds_off/139 (read) all_leds_on/140 (read) all_leds_on/140 (read) led_init/135 (read) led_init/135 (read) led_on/136 (read) led_on/136 (read) led_off/137 (read) led_off/137 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) fade_led/141 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Trivially needed variables: leds/134
 Removing variables:
 
 Final Symbol table:
 
-MXC_GPIO_OutToggle/152 (MXC_GPIO_OutToggle)
+MXC_Delay/146 (MXC_Delay)
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1630,7 +1644,7 @@ MXC_GPIO_OutToggle/152 (MXC_GPIO_OutToggle)
   Function flags:
   Called by: 
   Calls: 
-MXC_GPIO_OutSet/151 (MXC_GPIO_OutSet)
+gpio_toggle/145 (gpio_toggle)
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1639,7 +1653,7 @@ MXC_GPIO_OutSet/151 (MXC_GPIO_OutSet)
   Function flags:
   Called by: 
   Calls: 
-MXC_GPIO_OutClr/150 (MXC_GPIO_OutClr)
+gpio_set/144 (gpio_set)
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1648,7 +1662,7 @@ MXC_GPIO_OutClr/150 (MXC_GPIO_OutClr)
   Function flags:
   Called by: 
   Calls: 
-mxc_assert/149 (mxc_assert)
+gpio_clear/143 (gpio_clear)
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1657,15 +1671,7 @@ mxc_assert/149 (mxc_assert)
   Function flags:
   Called by: 
   Calls: 
-num_leds/148 (num_leds)
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Varpool flags: read-only
-MXC_GPIO_Config/147 (MXC_GPIO_Config)
+gpio_init_output/142 (gpio_init_output)
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1674,47 +1680,74 @@ MXC_GPIO_Config/147 (MXC_GPIO_Config)
   Function flags:
   Called by: 
   Calls: 
-led_pin/146 (led_pin)
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: semantic_interposition external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Varpool flags: read-only
-LED_Toggle/145 (LED_Toggle)
+fade_led/141 (fade_led)
   Type: function definition analyzed
-  Visibility: externally_visible semantic_interposition asm_written public section:.text.LED_Toggle (implicit_section)
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.fade_led (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:108459 (estimated locally)
+  Called by: 
+  Calls: 
+all_leds_on/140 (all_leds_on)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.all_leds_on (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally)
+  Called by: 
+  Calls: 
+all_leds_off/139 (all_leds_off)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.all_leds_off (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:107374184 (estimated locally)
+  Called by: 
+  Calls: 
+led_toggle/138 (led_toggle)
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.led_toggle (implicit_section)
   References: 
   Referring: 
   Availability: available
   Function flags: count:1073741824 (estimated locally)
   Called by: 
   Calls: 
-LED_Off/144 (LED_Off)
+led_off/137 (led_off)
   Type: function definition analyzed
-  Visibility: externally_visible semantic_interposition asm_written public section:.text.LED_Off (implicit_section)
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.led_off (implicit_section)
   References: 
   Referring: 
   Availability: available
   Function flags: count:1073741824 (estimated locally)
   Called by: 
   Calls: 
-LED_On/143 (LED_On)
+led_on/136 (led_on)
   Type: function definition analyzed
-  Visibility: externally_visible semantic_interposition asm_written public section:.text.LED_On (implicit_section)
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.led_on (implicit_section)
   References: 
   Referring: 
   Availability: available
   Function flags: count:1073741824 (estimated locally)
   Called by: 
   Calls: 
-LED_Init/142 (LED_Init)
+led_init/135 (led_init)
   Type: function definition analyzed
-  Visibility: externally_visible semantic_interposition asm_written public section:.text.LED_Init (implicit_section)
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.led_init (implicit_section)
   References: 
   Referring: 
   Availability: available
-  Function flags: count:118111600 (estimated locally)
+  Function flags: count:107374184 (estimated locally)
   Called by: 
   Calls: 
+leds/134 (leds)
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.leds (implicit_section)
+  Aux: @0000000000000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
